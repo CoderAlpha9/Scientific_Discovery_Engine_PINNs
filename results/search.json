@@ -1,0 +1,14 @@
+{
+  "evaluated_supports": 53,
+  "weak_rows": 63,
+  "search_terms": [
+    "u_xx",
+    "u_x",
+    "u",
+    "u2",
+    "u3",
+    "u*u_x",
+    "1"
+  ],
+  "generation": "two rounds of evidence-seeded term addition/removal"
+}

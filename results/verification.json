@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "benchmark_counts": {
+    "scientific": 50,
+    "multi_hop": 25,
+    "adversarial": 20
+  },
+  "generated_hypotheses": 3,
+  "rejected_candidates": 1,
+  "model_reload_max_error": 4.440892098500626e-16,
+  "prediction_hashes_verified": true,
+  "ground_truth_absent_from_discovery_file": true,
+  "research_targets": {
+    "inverse_field_error_below": 0.05,
+    "parameter_error_below": 0.1,
+    "forward_field_error_below": 0.05
+  }
+}

@@ -1,0 +1,4698 @@
+{
+  "summary": {
+    "scientific": {
+      "count": 50,
+      "rag": {
+        "answer_accuracy": 0.44,
+        "concept_fraction": 0.97,
+        "evidence_recall": 0.99,
+        "citation_validity": 0.44
+      },
+      "rag_kg": {
+        "answer_accuracy": 0.44,
+        "concept_fraction": 0.99,
+        "evidence_recall": 0.99,
+        "citation_validity": 0.44
+      }
+    },
+    "multi_hop": {
+      "count": 25,
+      "rag": {
+        "answer_accuracy": 0.16,
+        "concept_fraction": 0.8333333333333333,
+        "evidence_recall": 0.84,
+        "citation_validity": 0.24
+      },
+      "rag_kg": {
+        "answer_accuracy": 0.36,
+        "concept_fraction": 0.94,
+        "evidence_recall": 0.8533333333333333,
+        "citation_validity": 0.36
+      }
+    },
+    "adversarial": {
+      "count": 20,
+      "accuracy": 1.0
+    },
+    "answer_metric": "Deterministic synonym-group coverage with citation validation; heuristic, not an expert semantic grader."
+  },
+  "items": [
+    {
+      "id": "Q001",
+      "category": "scientific",
+      "question": "What does an advective mechanism do to a concentration profile?",
+      "systems": {
+        "rag": {
+          "answer": "An advective mechanism displaces a concentration profile by carrying it along with the flow of a fluid or medium. This occurs because advection moves substances from regions of high concentration to low concentration as they are transported by the bulk motion of the fluid.",
+          "evidence": [
+            "E03",
+            "E06",
+            "E10",
+            "E07",
+            "E09",
+            "E02"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "69bbef1523139da9062aba0c562b3ef4ce6587515bb4684828184523c230a139",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "An advective mechanism displaces a concentration profile by carrying it along with the flow of a fluid or medium. This occurs because advection moves substances from regions of high concentration to low concentration as they are transported by the bulk motion of the fluid.",
+          "evidence": [
+            "E03",
+            "E06",
+            "E10",
+            "E07",
+            "E09",
+            "E02"
+          ],
+          "paths": [
+            [
+              "E03",
+              "advection",
+              "E07"
+            ],
+            [
+              "E10",
+              "reaction",
+              "E09"
+            ],
+            [
+              "E10",
+              "reaction",
+              "E02"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "69bbef1523139da9062aba0c562b3ef4ce6587515bb4684828184523c230a139",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q002",
+      "category": "scientific",
+      "question": "What does diffusion do to a localized concentration profile?",
+      "systems": {
+        "rag": {
+          "answer": "Diffusion spreads a localized concentration profile over time.",
+          "evidence": [
+            "E06",
+            "E03",
+            "E10",
+            "E08",
+            "E09",
+            "E07"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "44b16c1cddb6c15ced5c8655a659c2a65b816c6a38d611b3ac37d2483acc1a47",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Diffusion spreads out a localized concentration profile over time.",
+          "evidence": [
+            "E06",
+            "E03",
+            "E10",
+            "E08",
+            "E07",
+            "E09"
+          ],
+          "paths": [
+            [
+              "E06",
+              "advection",
+              "E08"
+            ],
+            [
+              "E06",
+              "advection",
+              "E07"
+            ],
+            [
+              "E10",
+              "reaction",
+              "E09"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "b85b526384092a5a3a5a0bd8b9e1ee46678d5bbf2b7caa01da074d7ebb627ee7",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q003",
+      "category": "scientific",
+      "question": "Can advection and diffusion act in the same experiment?",
+      "systems": {
+        "rag": {
+          "answer": "Yes, advection and diffusion can act simultaneously in the same experiment as evidenced by E06 which states \"Advection displaces a concentration profile while diffusion spreads it.\" This indicates that both processes are occurring concurrently within the same system under study.",
+          "evidence": [
+            "E06",
+            "E03",
+            "E07",
+            "E10",
+            "E08",
+            "E04"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E06"
+          ],
+          "cache_key": "6726e6be2c230f262ec4d238484e9f83c86ce5396714a44463b404f27f8690d6",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Yes, advection and diffusion can act simultaneously in the same experiment as evidenced by E06 which states \"Advection displaces a concentration profile while diffusion spreads it.\" This indicates that both processes are occurring concurrently within the same system under study.",
+          "evidence": [
+            "E06",
+            "E03",
+            "E07",
+            "E10",
+            "E08",
+            "E04"
+          ],
+          "paths": [
+            [
+              "E06",
+              "advection",
+              "E10"
+            ],
+            [
+              "E06",
+              "advection",
+              "E08"
+            ],
+            [
+              "E03",
+              "flux",
+              "E04"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E06"
+          ],
+          "cache_key": "6726e6be2c230f262ec4d238484e9f83c86ce5396714a44463b404f27f8690d6",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q004",
+      "category": "scientific",
+      "question": "Which spatial derivative represents constant-coefficient diffusion in one dimension?",
+      "systems": {
+        "rag": {
+          "answer": "The second spatial derivative represents constant-coefficient diffusion in one dimension. This is evidenced by E06 which states \"Advection displaces a concentration profile while diffusion spreads it,\" implying that diffusion involves a second spatial derivative to describe its effect on concentration profiles.",
+          "evidence": [
+            "E08",
+            "E06",
+            "E03",
+            "E07",
+            "E10",
+            "E21"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E06"
+          ],
+          "cache_key": "358e3711b3457dd1b5cae3a93fc90cf307061edec0048417a02abf008d454f28",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "The second spatial derivative represents constant-coefficient diffusion in one dimension. This is evidenced by E06 which states \"Advection displaces a concentration profile while diffusion spreads it,\" implying that diffusion introduces a second-order term (second derivative) into the concentration profile equation.",
+          "evidence": [
+            "E08",
+            "E06",
+            "E03",
+            "E07",
+            "E10",
+            "E01"
+          ],
+          "paths": [
+            [
+              "E08",
+              "advection",
+              "E07"
+            ],
+            [
+              "E08",
+              "advection",
+              "E10"
+            ],
+            [
+              "E03",
+              "flux",
+              "E01"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E06"
+          ],
+          "cache_key": "62a35afe3b985e346faa2f1aed8db0dd3a79b7f6072ad1900e04e58af6e6f519",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q005",
+      "category": "scientific",
+      "question": "Which spatial derivative represents constant-velocity advection in one dimension?",
+      "systems": {
+        "rag": {
+          "answer": "The first spatial derivative represents constant-velocity advection in one dimension. This is evidenced by E08 which states \"With constant coefficients, one-dimensional transport contributes a first spatial derivative.\"",
+          "evidence": [
+            "E08",
+            "E07",
+            "E03",
+            "E06",
+            "E21",
+            "E23"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E08"
+          ],
+          "cache_key": "5fc29c4173a8b2688849830b3127b199c872e901d8e70df06f469cdb8ea33fc3",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "The first spatial derivative represents constant-velocity advection in one dimension. This is evidenced by E08 which states \"With constant coefficients, one-dimensional transport contributes a first spatial derivative.\"",
+          "evidence": [
+            "E08",
+            "E07",
+            "E03",
+            "E06",
+            "E10",
+            "E21"
+          ],
+          "paths": [
+            [
+              "E08",
+              "advection",
+              "E06"
+            ],
+            [
+              "E08",
+              "advection",
+              "E10"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E08"
+          ],
+          "cache_key": "aa22ed33f475b18870109b5ab5b4ec0b2fc0c8615ca87d8a351430ddebd65009",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q006",
+      "category": "scientific",
+      "question": "What physical mechanisms make up concentration flux?",
+      "systems": {
+        "rag": {
+          "answer": "The concentration flux consists of advection (transport due to bulk flow) and diffusion (spreading out from high to low concentrations). These mechanisms work together as described by E06. Additionally, reactions add internal processes that affect the concentration distribution, as noted in E10.",
+          "evidence": [
+            "E03",
+            "E06",
+            "E09",
+            "E10",
+            "E01",
+            "E02"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E06",
+            "E10"
+          ],
+          "cache_key": "0905e7295f7c0e800801444e440dcfb40560b0ca1552aed4ebd331774c8d224f",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "The concentration flux consists of advection (transport due to bulk flow) and diffusion (spreading out from high to low concentrations). These mechanisms work together as described by E06. Additionally, reactions add internal processes that affect the concentration distribution, as noted in E10.",
+          "evidence": [
+            "E03",
+            "E06",
+            "E09",
+            "E10",
+            "E01",
+            "E02"
+          ],
+          "paths": [
+            [
+              "E03",
+              "advection",
+              "E10"
+            ],
+            [
+              "E03",
+              "flux",
+              "E01"
+            ],
+            [
+              "E09",
+              "mass_balance",
+              "E02"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E06",
+            "E10"
+          ],
+          "cache_key": "0905e7295f7c0e800801444e440dcfb40560b0ca1552aed4ebd331774c8d224f",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q007",
+      "category": "scientific",
+      "question": "What is the purpose of a control-volume mass balance?",
+      "systems": {
+        "rag": {
+          "answer": "The purpose of a control-volume mass balance is to equate the accumulation within a volume with the net inward transport into that volume plus any internal production (or removal) within the volume. This helps in understanding how substances move through space over time, accounting for both external inputs/outputs and internal processes like reactions or changes due to advection and diffusion.",
+          "evidence": [
+            "E01",
+            "E09",
+            "E02",
+            "E11",
+            "E13",
+            "E06"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "793e4b9c7442a2cb8732bb7060990579d231e6a612be15f4c094527fd208b798",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "The purpose of a control-volume mass balance is to equate the accumulation within a volume with the net inward transport into that volume plus any internal production (or removal) within the volume. This helps in understanding how substances move through a system over time, accounting for both external inputs/outputs and internal processes like reactions or diffusion.",
+          "evidence": [
+            "E01",
+            "E09",
+            "E02",
+            "E11",
+            "E10",
+            "E13"
+          ],
+          "paths": [
+            [
+              "E09",
+              "reaction",
+              "E11"
+            ],
+            [
+              "E09",
+              "reaction",
+              "E10"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "49e6fe06f0bd587f9a36bc12e2bf442762d18ea5dd22b35ed1b58f1af89e53cc",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q008",
+      "category": "scientific",
+      "question": "Must total concentration remain constant when an internal reaction produces material?",
+      "systems": {
+        "rag": {
+          "answer": "Yes, according to E02, for a periodic domain, opposite boundary fluxes cancel, implying that internal reactions do not directly affect the overall total concentration within the system. However, this cancellation does not preclude changes due to internal reactions affecting other aspects such as internal production or removal (as per E09). Therefore, while total concentration may not be strictly conserved by itself, it could potentially change through these internal processes.",
+          "evidence": [
+            "E02",
+            "E09",
+            "E10",
+            "E01",
+            "E06",
+            "E03"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E02",
+            "E09"
+          ],
+          "cache_key": "c02ca12bacb49078c8c3c5490c904360dfc270e0ae69fe44fd8fc2de64809eb4",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Yes, according to E02, for a periodic domain, opposite boundary fluxes cancel, implying that internal reactions do not directly affect the overall total concentration within the system. However, this cancellation does not preclude changes due to internal reactions affecting other aspects such as internal production or removal (as per E09). Therefore, while total concentration may not be strictly conserved by itself, it could potentially change through these internal processes.",
+          "evidence": [
+            "E02",
+            "E09",
+            "E10",
+            "E01",
+            "E06",
+            "E03"
+          ],
+          "paths": [
+            [
+              "E02",
+              "mass_balance",
+              "E01"
+            ],
+            [
+              "E10",
+              "advection",
+              "E06"
+            ],
+            [
+              "E10",
+              "advection",
+              "E03"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E02",
+            "E09"
+          ],
+          "cache_key": "c02ca12bacb49078c8c3c5490c904360dfc270e0ae69fe44fd8fc2de64809eb4",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q009",
+      "category": "scientific",
+      "question": "Which boundary transport contribution remains after integrating over a periodic domain?",
+      "systems": {
+        "rag": {
+          "answer": "Advection displaces a concentration profile while diffusion spreads it. The two mechanisms can act together.",
+          "evidence": [
+            "E08",
+            "E02",
+            "E06",
+            "E04",
+            "E10",
+            "E09"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "2fd43b396482a17d90a9a577e378790db69787ca8aa88995ed0951a796cde662",
+          "correct": false,
+          "concept_fraction": 0.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Opposite boundary fluxes cancel out in a periodic domain for advection and diffusion. Therefore, the remaining contributions are from internal reactions.",
+          "evidence": [
+            "E08",
+            "E02",
+            "E06",
+            "E10",
+            "E09",
+            "E07"
+          ],
+          "paths": [
+            [
+              "E08",
+              "advection",
+              "E10"
+            ],
+            [
+              "E02",
+              "mass_balance",
+              "E09"
+            ],
+            [
+              "E08",
+              "advection",
+              "E07"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "f670087d0a4622bbdd99e57d15c3d30296d412613ad3ca4cd321073776608e99",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q010",
+      "category": "scientific",
+      "question": "How is an internal reaction different from boundary transport?",
+      "systems": {
+        "rag": {
+          "answer": "An internal reaction changes the total concentration within a system without directly affecting the external boundary fluxes, unlike boundary transport which involves direct interaction with the environment through boundary conditions such as no-flux or absorbing boundaries. Internal reactions alter the internal dynamics but do not necessarily result in equalizing boundary fluxes across all sides of a domain.",
+          "evidence": [
+            "E09",
+            "E02",
+            "E10",
+            "E01",
+            "E04",
+            "E08"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "ffa79fcecdcc5d99b2c0217f1af5047c111f326146fa12ae4104c1ed7bcc9ab3",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "An internal reaction involves changes within the system that do not directly involve external boundaries but rather alter the internal dynamics through chemical processes or other internal interactions. This contrasts with boundary transport, which primarily deals with material movement across interfaces between different regions of space, such as air and water surfaces.\n\nThe key difference lies in whether the process affects the overall concentration distribution (internal reaction) versus how it influences the flow of substances at the interface (boundary transport). Internal reactions modify concentrations internally without necessarily changing the outward fluxes",
+          "evidence": [
+            "E09",
+            "E02",
+            "E10",
+            "E01",
+            "E08",
+            "E06"
+          ],
+          "paths": [
+            [
+              "E09",
+              "mass_balance",
+              "E01"
+            ],
+            [
+              "E10",
+              "advection",
+              "E08"
+            ],
+            [
+              "E10",
+              "advection",
+              "E06"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "a1aec21c727bb6a8b61dc24f5f2a2e8215dc66a9fa3f2b5a3fc1f766b4eccade",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q011",
+      "category": "scientific",
+      "question": "What does a perfectly absorbing boundary do compared with a no-flux boundary?",
+      "systems": {
+        "rag": {
+          "answer": "A perfectly absorbing boundary absorbs all incident radiation without reflection, whereas a no-flux boundary allows some amount of radiation to pass through while maintaining conservation of energy within the system. This difference in behavior affects how radiative heat transfer models are set up and solved, as well as their implications for thermal analysis and design.",
+          "evidence": [
+            "E04",
+            "E05",
+            "E02",
+            "E09",
+            "E03",
+            "E08"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "9d5b650fc9ec704dc0b12739ad3f510bec77179cbc7504c9a4c7949f589a18d1",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "A perfectly absorbing boundary absorbs all incident radiation without reflection, whereas a no-flux boundary allows some amount of radiation to pass through while maintaining conservation of energy within the system. This difference in behavior affects how radiative heat transfer is modeled and simulated.",
+          "evidence": [
+            "E04",
+            "E05",
+            "E02",
+            "E09",
+            "E01",
+            "E03"
+          ],
+          "paths": [
+            [
+              "E02",
+              "mass_balance",
+              "E09"
+            ],
+            [
+              "E04",
+              "flux",
+              "E01"
+            ],
+            [
+              "E04",
+              "flux",
+              "E03"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "7c94c5ec5a5c166c0a66a3579244e56032bdd56b2e07f5b8b6424811a0002c82",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q012",
+      "category": "scientific",
+      "question": "Are no-flux and absorbing boundary conditions interchangeable?",
+      "systems": {
+        "rag": {
+          "answer": "No, no-flux and absorbing boundary conditions are not interchangeable. E04 states that they describe different physical experiments and produce different solutions, indicating distinct uses in modeling.",
+          "evidence": [
+            "E04",
+            "E05",
+            "E02",
+            "E09",
+            "E03",
+            "E21"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E04"
+          ],
+          "cache_key": "8cdf0ba92ec9825502ba3725d2a3677667c311b4c610e78c503aa30d34287d5c",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "No, no-flux and absorbing boundary conditions are not interchangeable. E04 explicitly states that they describe different physical experiments and produce different solutions. Additionally, E05 emphasizes that the boundary condition depends on the physical model, including whether there are sparse interior measurements. This indicates that while both types of boundaries may be used in certain contexts, their application requires careful consideration based on the specific physical scenario being modeled.",
+          "evidence": [
+            "E04",
+            "E05",
+            "E02",
+            "E09",
+            "E01",
+            "E10"
+          ],
+          "paths": [
+            [
+              "E02",
+              "mass_balance",
+              "E09"
+            ],
+            [
+              "E04",
+              "flux",
+              "E01"
+            ],
+            [
+              "E05",
+              "inverse",
+              "E10"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E04",
+            "E05"
+          ],
+          "cache_key": "0335b6fa7848dcba502b333bbb4f33faec8ed251e3d6085b3fa338f047d0a69b",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q013",
+      "category": "scientific",
+      "question": "Can sparse interior measurements always determine an unknown boundary condition?",
+      "systems": {
+        "rag": {
+          "answer": "No, sparse interior measurements cannot always determine an unknown boundary condition. This is supported by E05 which states that \"sparse interior measurements do not automatically determine it.\" Additionally, E04 clarifies that no-flux and absorbing boundaries describe different physical experiments and produce different solutions, indicating that boundary conditions are distinct from interior measurements in determining the solution.",
+          "evidence": [
+            "E05",
+            "E18",
+            "E04",
+            "E14",
+            "E22",
+            "E19"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E05",
+            "E04"
+          ],
+          "cache_key": "1e7eea3a03391063ee6a3131a40bd4d2c1de9911bbcd9903608a88f486ff244a",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "No, sparse interior measurements cannot always determine an unknown boundary condition. This is because:\n\n- E05 states that \"sparse interior measurements do not automatically determine it,\" indicating that these measurements alone are insufficient.\n\n- E04 clarifies that no-flux and absorbing boundaries describe different physical experiments producing distinct solutions, suggesting variability in how boundary conditions affect the system.\n\n- E14 mentions that sparse identification selects a small set of active terms based on observations, implying reliance on other information beyond just interior measurements",
+          "evidence": [
+            "E05",
+            "E18",
+            "E04",
+            "E14",
+            "E22",
+            "E17"
+          ],
+          "paths": [
+            [
+              "E18",
+              "discovery",
+              "E14"
+            ],
+            [
+              "E05",
+              "inverse",
+              "E22"
+            ],
+            [
+              "E18",
+              "noise",
+              "E17"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E05",
+            "E04",
+            "E14"
+          ],
+          "cache_key": "9f8d1aaef2acbcd1d710c225cb977a3641832f49cd11982713cb3e369d2fe897",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q014",
+      "category": "scientific",
+      "question": "What inputs define a forward physics problem?",
+      "systems": {
+        "rag": {
+          "answer": "A forward physics problem specifies its equation and initial or boundary conditions and solves for the field.",
+          "evidence": [
+            "E21",
+            "E20",
+            "E27",
+            "E23",
+            "E25",
+            "E22"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "edc749728d07de4b30196068cf67d8960f20eab57a4694084218025676c76a13",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "A forward physics problem specifies its equation and initial or boundary conditions and solves for the field.",
+          "evidence": [
+            "E21",
+            "E20",
+            "E27",
+            "E23",
+            "E25",
+            "E22"
+          ],
+          "paths": [
+            [
+              "E21",
+              "forward",
+              "E23"
+            ],
+            [
+              "E21",
+              "pinn",
+              "E25"
+            ],
+            [
+              "E21",
+              "pinn",
+              "E22"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "edc749728d07de4b30196068cf67d8960f20eab57a4694084218025676c76a13",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q015",
+      "category": "scientific",
+      "question": "What unknowns are estimated in an inverse PINN problem?",
+      "systems": {
+        "rag": {
+          "answer": "In an inverse PINN (Physics-Informed Neural Network) problem, unknown physical coefficients are estimated along with the field. This estimation process involves discovering a partial differential equation (PDE) that best fits the observed data while accounting for uncertainties inherent in the inverse problem. The use of physics constraints ensures that the solution remains consistent with known laws of nature, thereby providing a more reliable and accurate representation of the underlying system.",
+          "evidence": [
+            "E22",
+            "E26",
+            "E23",
+            "E24",
+            "E27",
+            "E20"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "4e6ba0977288f767f6b0a96425b5129f040a644056d4efffacd3d85661ac0d08",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "In an inverse PINN (Physics-Informed Neural Network) problem, unknown physical coefficients are estimated along with the field. This estimation process involves discovering a partial differential equation (PDE) that fits the observed data, thereby inferring the underlying physical laws governing the system being modeled.",
+          "evidence": [
+            "E22",
+            "E26",
+            "E23",
+            "E24",
+            "E27",
+            "E18"
+          ],
+          "paths": [
+            [
+              "E22",
+              "pinn",
+              "E24"
+            ],
+            [
+              "E22",
+              "pinn",
+              "E27"
+            ],
+            [
+              "E22",
+              "inverse",
+              "E18"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "3bf9d981ad5501762d568587a2a424d06badcaf8c17095d40e4633c69c64f9cc",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q016",
+      "category": "scientific",
+      "question": "Does solving a supplied PDE demonstrate discovery of its structure?",
+      "systems": {
+        "rag": {
+          "answer": "No, solving a supplied PDE does not demonstrate discovery of its structure. According to E23, discovering a PDE from data involves finding the governing equations that describe the system, which differs fundamentally from solving an existing PDE with known structure.",
+          "evidence": [
+            "E23",
+            "E18",
+            "E14",
+            "E21",
+            "E05",
+            "E15"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E23"
+          ],
+          "cache_key": "dfe94fbf8167b23361af224ac9e9cef546a8a3352baba183a27fad1dbfa54060",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "No, solving a supplied PDE does not demonstrate discovery of its structure. According to E23, discovering a PDE from data involves finding the governing equations that describe the system, which differs fundamentally from solving an existing PDE with known structure.",
+          "evidence": [
+            "E23",
+            "E18",
+            "E14",
+            "E21",
+            "E15",
+            "E05"
+          ],
+          "paths": [
+            [
+              "E23",
+              "forward",
+              "E21"
+            ],
+            [
+              "E23",
+              "discovery",
+              "E15"
+            ],
+            [
+              "E18",
+              "inverse",
+              "E05"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E23"
+          ],
+          "cache_key": "54b0cf4566fdd29fff0da3d89bdb0cf46ee09bc11c02a45e9b95efa6a52fbf77",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q017",
+      "category": "scientific",
+      "question": "How do PINNs incorporate physical equations during training?",
+      "systems": {
+        "rag": {
+          "answer": "PINNs incorporate physical equations during training by:\n\n1. Using physics-informed networks (PINS) which include residuals of governing equations as part of their loss functions.\n\n2. Employing Bayesian physics-informed neural networks (B-PINNs), which integrate a probabilistic field model with physics constraints and posterior inference to handle uncertainties.\n\n3. Incorporating composite physics losses that may be challenging to optimize but are essential for successful training.\n\nTraining diagnostics and independent solution checks are also crucial in ensuring the effectiveness of",
+          "evidence": [
+            "E24",
+            "E20",
+            "E27",
+            "E26",
+            "E25",
+            "E22"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "411bc10e9209fe2816ff52b46a14bf08c8e26e8c8f8afaec92985352069aea4d",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "PINNs incorporate physical equations during training by:\n\n1. Using physics-informed networks (PINS) which include residuals of governing equations as part of their loss functions.\n\n2. Employing Bayesian physics-informed neural networks (B-PINNs), which integrate a probabilistic field model with physics constraints and posterior inference to handle uncertainties.\n\n3. Incorporating composite physics losses that may be challenging to optimize but are essential for successful training.\n\nTraining diagnostics and independent solution checks are also crucial in ensuring the effectiveness of",
+          "evidence": [
+            "E24",
+            "E20",
+            "E27",
+            "E26",
+            "E25",
+            "E22"
+          ],
+          "paths": [
+            [
+              "E24",
+              "pinn",
+              "E26"
+            ],
+            [
+              "E24",
+              "optimization",
+              "E25"
+            ],
+            [
+              "E24",
+              "pinn",
+              "E22"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "411bc10e9209fe2816ff52b46a14bf08c8e26e8c8f8afaec92985352069aea4d",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q018",
+      "category": "scientific",
+      "question": "Can PINN optimization fail even if the governing equation is correct?",
+      "systems": {
+        "rag": {
+          "answer": "Yes, according to E24, PINNs can fail to optimize successfully even when the governing equation is correct.",
+          "evidence": [
+            "E24",
+            "E26",
+            "E20",
+            "E27",
+            "E22",
+            "E16"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E24"
+          ],
+          "cache_key": "dd7db4e920a454f8699548029b86a3f1defa34badec25a4911293bd5cf666e28",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Yes, according to E24, PINNs can fail to optimize successfully even when the governing equation is correct.",
+          "evidence": [
+            "E24",
+            "E26",
+            "E20",
+            "E27",
+            "E22",
+            "E25"
+          ],
+          "paths": [
+            [
+              "E24",
+              "pinn",
+              "E27"
+            ],
+            [
+              "E24",
+              "pinn",
+              "E22"
+            ],
+            [
+              "E24",
+              "optimization",
+              "E25"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E24"
+          ],
+          "cache_key": "6dc1cb0069679319944aba9bd408cc877cacdd8973f95f9c01077f405bc97502",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q019",
+      "category": "scientific",
+      "question": "Does an unconverged PINN by itself falsify the scientific hypothesis?",
+      "systems": {
+        "rag": {
+          "answer": "No, an unconverged PINN by itself does not falsify the scientific hypothesis. The provided evidence indicates that PINNs can fail to optimize successfully due to incorrect physical equations or noisy data, but it does not explicitly state that this failure constitutes scientific falsification. Additionally, while ordinary deterministic PINNs lack the capability to calibrate uncertainty automatically, they are still valid tools for solving specific types of problems without requiring additional methods for quantifying uncertainty. Therefore, an unconverged PINN would need more",
+          "evidence": [
+            "E24",
+            "E27",
+            "E26",
+            "E20",
+            "E22",
+            "E10"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "12427e0f30d1e6a09b6656127b325b1431f2849bf3410b049b428b65b67dca50",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "No, an unconverged PINN by itself does not falsify the scientific hypothesis. The provided evidence indicates that PINNs can fail to optimize successfully due to incorrect physical equations or noisy data, but it does not explicitly state that this failure constitutes scientific falsification. The evidence suggests that while PINNs may not converge, they are still capable of providing useful results under certain conditions (e.g., when combined with other methods like Bayesian approaches). Therefore, without additional supporting evidence showing that convergence failures lead to",
+          "evidence": [
+            "E24",
+            "E27",
+            "E26",
+            "E22",
+            "E20",
+            "E10"
+          ],
+          "paths": [
+            [
+              "E24",
+              "pinn",
+              "E22"
+            ],
+            [
+              "E24",
+              "pinn",
+              "E20"
+            ],
+            [
+              "E26",
+              "inverse",
+              "E10"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "1996f964a96b7bd5e209174e53de789bf9cad1aefeb9081e758cf08eee30a981",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q020",
+      "category": "scientific",
+      "question": "Why are independent numerical checks useful for PINN validation?",
+      "systems": {
+        "rag": {
+          "answer": "Independent numerical checks are useful for PINN validation because they help ensure that the PINN's predictions align with known solutions or experimental data. These checks serve as an additional layer of verification beyond just optimizing the network parameters, which may lead to successful training but does not guarantee accurate prediction performance. By comparing PINN outputs against established benchmarks or real-world measurements, researchers can identify discrepancies early in the development process, allowing for timely adjustments before deployment. This approach enhances confidence in the model's reliability and robustness across",
+          "evidence": [
+            "E24",
+            "E26",
+            "E25",
+            "E27",
+            "E28",
+            "E20"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "08f37b46ba1cb260d864eedd360e98841c3bbb800daea230136c9cb3b63f347a",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Independent numerical checks are useful for PINN validation because they help ensure that the PINN's predictions align with known solutions or experimental data. These checks serve as an additional layer of verification beyond just optimizing the network parameters, which may lead to successful training but does not guarantee accurate prediction performance. By comparing PINN outputs against established benchmarks or real-world measurements, researchers can identify discrepancies early in the development process, allowing for timely adjustments before deployment. This approach enhances confidence in the model's reliability and robustness across",
+          "evidence": [
+            "E24",
+            "E26",
+            "E25",
+            "E27",
+            "E28",
+            "E20"
+          ],
+          "paths": [
+            [
+              "E24",
+              "pinn",
+              "E27"
+            ],
+            [
+              "E26",
+              "uncertainty",
+              "E28"
+            ],
+            [
+              "E24",
+              "pinn",
+              "E20"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "08f37b46ba1cb260d864eedd360e98841c3bbb800daea230136c9cb3b63f347a",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q021",
+      "category": "scientific",
+      "question": "What kind of model representation is used by sparse equation identification?",
+      "systems": {
+        "rag": {
+          "answer": "Sparse equation identification uses a candidate function library as input. This library includes potential solutions or models that could represent the system being studied. The process then identifies which terms (or components) within this library are most relevant to the observed behavior, effectively selecting a subset of these candidates based on their ability to explain the given data.",
+          "evidence": [
+            "E14",
+            "E18",
+            "E15",
+            "E23",
+            "E16",
+            "E05"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "fcd880a50b9035cd7053e5aeb63a17db647f9a0a798dc33090098d2b28ab500e",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Sparse equation identification uses a candidate function library as input. This library includes potential solutions or models that could represent the system being studied. The process then identifies which terms (or components) within this library are most relevant to the observed behavior, effectively selecting a subset of these candidates based on their ability to explain the given data.",
+          "evidence": [
+            "E14",
+            "E18",
+            "E15",
+            "E23",
+            "E16",
+            "E05"
+          ],
+          "paths": [
+            [
+              "E14",
+              "discovery",
+              "E23"
+            ],
+            [
+              "E14",
+              "discovery",
+              "E16"
+            ],
+            [
+              "E18",
+              "inverse",
+              "E05"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "fcd880a50b9035cd7053e5aeb63a17db647f9a0a798dc33090098d2b28ab500e",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q022",
+      "category": "scientific",
+      "question": "What does sparsity mean in discovered governing equations?",
+      "systems": {
+        "rag": {
+          "answer": "In discovered governing equations, sparsity refers to selecting a minimal subset of active terms that accurately represent the underlying physics without including redundant or unnecessary components. This approach reduces model complexity and computational requirements while maintaining predictive accuracy.",
+          "evidence": [
+            "E15",
+            "E14",
+            "E23",
+            "E18",
+            "E20",
+            "E05"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "37d50a25b8256d264add23f4cac0023314e834ce9a13534ea35856b3355b6be2",
+          "correct": false,
+          "concept_fraction": 0.5,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "In discovered governing equations, sparsity refers to selecting a minimal subset of active terms that best explain the observed behavior without including redundant or irrelevant components. This approach reduces the complexity of the model by focusing on essential features, which can lead to more accurate predictions and better generalization capabilities.",
+          "evidence": [
+            "E15",
+            "E14",
+            "E23",
+            "E20",
+            "E18",
+            "E21"
+          ],
+          "paths": [
+            [
+              "E15",
+              "data_fit",
+              "E20"
+            ],
+            [
+              "E15",
+              "discovery",
+              "E18"
+            ],
+            [
+              "E23",
+              "forward",
+              "E21"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "86a7d846d1a2634e732141789a9397e57cc5b94e68ce7168522ccfa05e0f491d",
+          "correct": false,
+          "concept_fraction": 0.5,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q023",
+      "category": "scientific",
+      "question": "Why penalize equation complexity?",
+      "systems": {
+        "rag": {
+          "answer": "To balance explanatory accuracy with model simplicity, as per E15, by selecting a sparse subset of active terms that best explains the observed data without overfitting or including unnecessary components. This approach reduces unnecessary complexity, making the model more interpretable and efficient.",
+          "evidence": [
+            "E15",
+            "E14",
+            "E18",
+            "E23",
+            "E24",
+            "E16"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E15"
+          ],
+          "cache_key": "9e8adb6ba13c6e4e5d6cdce5b5a78588231a201f820cb28eead051074afd7615",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "To balance explanatory accuracy with model simplicity, E15 suggests that sparse equations reduce unnecessary complexity by selecting only relevant terms. This approach enhances interpretability and performance without overfitting.",
+          "evidence": [
+            "E15",
+            "E14",
+            "E18",
+            "E19",
+            "E23",
+            "E16"
+          ],
+          "paths": [
+            [
+              "E14",
+              "sparsity",
+              "E19"
+            ],
+            [
+              "E15",
+              "discovery",
+              "E23"
+            ],
+            [
+              "E15",
+              "discovery",
+              "E16"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E15"
+          ],
+          "cache_key": "06d30bb1d8e2f000e9cdbf7003abc9da2e5455a908936d3c08e7bc27dddd45d8",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q024",
+      "category": "scientific",
+      "question": "Can sparse regression recover a mechanism absent from its function library?",
+      "systems": {
+        "rag": {
+          "answer": "Yes, sparse regression can recover a mechanism absent from its function library if the missing terms are not essential for the overall behavior being modeled or identified. The process relies on identifying which terms contribute significantly to the observed dynamics by selecting a subset of active terms based on their impact. However, if the missing terms are crucial for capturing specific aspects of the system's behavior that were not included in the initial library, they may still be necessary for accurate representation. Sparse identification aims to find an optimal balance between explaining the",
+          "evidence": [
+            "E14",
+            "E19",
+            "E16",
+            "E18",
+            "E15",
+            "E23"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "702bf81cc8ef2ea8f5b9108b7b0c51bb6a88e93e5e43bda241a4e74daa4f158c",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Yes, sparse regression can recover a mechanism absent from its function library if the missing terms are not essential for the overall behavior being modeled or identified. The process relies on identifying which terms contribute significantly to the observed dynamics by selecting a subset of active terms based on their impact. However, if the missing terms are crucial for capturing specific aspects of the system's behavior that were not included in the initial library, they may still be necessary for accurate representation. Sparse identification aims to find an optimal balance between explaining the",
+          "evidence": [
+            "E14",
+            "E19",
+            "E16",
+            "E18",
+            "E15",
+            "E23"
+          ],
+          "paths": [
+            [
+              "E14",
+              "discovery",
+              "E18"
+            ],
+            [
+              "E14",
+              "complexity",
+              "E15"
+            ],
+            [
+              "E14",
+              "discovery",
+              "E23"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "702bf81cc8ef2ea8f5b9108b7b0c51bb6a88e93e5e43bda241a4e74daa4f158c",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q025",
+      "category": "scientific",
+      "question": "Which operation transfers derivatives from measurements onto test functions?",
+      "systems": {
+        "rag": {
+          "answer": "Integration by parts transfers derivatives from measurements onto test functions.",
+          "evidence": [
+            "E17",
+            "E08",
+            "E10",
+            "E23",
+            "E26",
+            "E06"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "63a453e38e412addb98c9bb35ddcc05373e538daada31d64a5ef80a331fbadd1",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Integration by parts transfers derivatives from measurements onto test functions.",
+          "evidence": [
+            "E17",
+            "E08",
+            "E10",
+            "E18",
+            "E26",
+            "E06"
+          ],
+          "paths": [
+            [
+              "E17",
+              "noise",
+              "E18"
+            ],
+            [
+              "E17",
+              "noise",
+              "E26"
+            ],
+            [
+              "E08",
+              "advection",
+              "E06"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "a0bd4fd552051476fc45309147dd4309b78076070eb4073d865c33c09afabb01",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q026",
+      "category": "scientific",
+      "question": "Why are weak formulations useful for noisy PDE observations?",
+      "systems": {
+        "rag": {
+          "answer": "Weak formulations use integration by parts to transfer derivatives onto test functions, which avoids pointwise differentiation of noisy data. This makes them more robust against measurement noise compared to strong formulations that directly operate on the original function space.",
+          "evidence": [
+            "E18",
+            "E17",
+            "E23",
+            "E27",
+            "E20",
+            "E05"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "648424277f3ce86f6dd1efe025a916e63c933731512f72c39fee01c9b2271e92",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Weak formulations allow derivatives to be transferred onto test functions via integration by parts, which avoids pointwise differentiation of noisy data. This property helps maintain accuracy even when dealing with noisy measurements.",
+          "evidence": [
+            "E18",
+            "E17",
+            "E23",
+            "E26",
+            "E27",
+            "E20"
+          ],
+          "paths": [
+            [
+              "E18",
+              "inverse",
+              "E26"
+            ],
+            [
+              "E23",
+              "pinn",
+              "E27"
+            ],
+            [
+              "E23",
+              "pinn",
+              "E20"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "ec30352672d3ff2ed3ada1a5a4ae09411415b52d29630155ff6758b7a3318feb",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q027",
+      "category": "scientific",
+      "question": "What does weak sparse PDE identification estimate?",
+      "systems": {
+        "rag": {
+          "answer": "Weak sparse PDE identification estimates both the support (which terms are active) and the coefficients (the values associated with those terms) in a partial differential equation (PDE). This approach improves robustness to measurement noise by allowing for more flexible modeling without overfitting.",
+          "evidence": [
+            "E18",
+            "E14",
+            "E05",
+            "E23",
+            "E19",
+            "E15"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "3adc39194d420121bdb9ef4b877c396580d48236a5ca2b639ff6287d8a0d3a5f",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Weak sparse PDE identification estimates both the support (which terms are active) and the coefficients (the values associated with those terms) in a partial differential equation (PDE). This approach improves robustness to measurement noise by allowing for more accurate estimation of the underlying physics without overfitting to noisy data.",
+          "evidence": [
+            "E18",
+            "E14",
+            "E05",
+            "E19",
+            "E23",
+            "E15"
+          ],
+          "paths": [
+            [
+              "E18",
+              "weak_form",
+              "E19"
+            ],
+            [
+              "E18",
+              "discovery",
+              "E23"
+            ],
+            [
+              "E18",
+              "discovery",
+              "E15"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "58d2d6a3859748d70ab1f7deb97036a0591fe3991910286f247e24539285edf9",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q028",
+      "category": "scientific",
+      "question": "Can the threshold in sparse regression affect selected terms?",
+      "systems": {
+        "rag": {
+          "answer": "Yes, according to E19, scaling and threshold selection in weak sparse regression can affect which terms are selected.",
+          "evidence": [
+            "E19",
+            "E14",
+            "E15",
+            "E18",
+            "E05",
+            "E16"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E19"
+          ],
+          "cache_key": "b726ea246b304d87555b76c9c9db23b4e8feb96faf013465a5e821a282ec5f04",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Yes, according to E19, scaling and threshold selection in weak sparse regression can affect which terms are selected.",
+          "evidence": [
+            "E19",
+            "E14",
+            "E15",
+            "E18",
+            "E05",
+            "E16"
+          ],
+          "paths": [
+            [
+              "E19",
+              "weak_form",
+              "E18"
+            ],
+            [
+              "E14",
+              "discovery",
+              "E16"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E19"
+          ],
+          "cache_key": "b726ea246b304d87555b76c9c9db23b4e8feb96faf013465a5e821a282ec5f04",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q029",
+      "category": "scientific",
+      "question": "Why does scaling matter in weak sparse regression?",
+      "systems": {
+        "rag": {
+          "answer": "Scaling affects weak sparse regression because it influences the relative magnitudes of the observed data points, which are used to estimate the parameters of the identified model. In weak sparse regression, the goal is to identify a parsimonious model that accurately represents the underlying dynamics without overfitting. Scaling ensures that all variables contribute equally to the estimation process, preventing some components from dominating others due to their initial magnitude. This balanced approach helps maintain the integrity of the solution space and enhances the reliability of the identified model across",
+          "evidence": [
+            "E19",
+            "E18",
+            "E15",
+            "E14",
+            "E05",
+            "E17"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "ebfc26e9019d957f9ab162f1100446b2bdc9a52d144caddf691af43097254b59",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Scaling affects weak sparse regression because it influences the relative magnitudes of the variables involved in the system being modeled. In weak sparse regression, the goal is to identify a minimal set of terms that accurately describe the dynamics without overfitting. When variables are scaled differently, their relative importance changes, which impacts how well different terms contribute to the overall model.\n\nThe relationship between scaling and weak sparse regression is crucial because:\n\n- **Variable Magnitude**: Different scales can make some variables appear more or less significant compared",
+          "evidence": [
+            "E19",
+            "E18",
+            "E15",
+            "E14",
+            "E17",
+            "E05"
+          ],
+          "paths": [
+            [
+              "E19",
+              "sparsity",
+              "E14"
+            ],
+            [
+              "E19",
+              "weak_form",
+              "E17"
+            ],
+            [
+              "E18",
+              "inverse",
+              "E05"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "46b759c078213e4a81b270b3189650881dc3683bf4e7538fba847841ed2351eb",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q030",
+      "category": "scientific",
+      "question": "Does a deterministic PINN automatically provide calibrated uncertainty?",
+      "systems": {
+        "rag": {
+          "answer": "No, ordinary deterministic PINNs do not provide calibrated uncertainty automatically. This conclusion is supported by E26 which states that \"Ordinary deterministic PINNs do not provide calibrated uncertainty.\"",
+          "evidence": [
+            "E26",
+            "E27",
+            "E24",
+            "E28",
+            "E20",
+            "E22"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E26"
+          ],
+          "cache_key": "e64db5ca1b55789087ea25f8360b6f37c4b24d0bada613b9af0f147ccd580071",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "No, ordinary deterministic PINNs do not provide calibrated uncertainty automatically. This conclusion is supported by E26 which states that ordinary deterministic PINNs do not offer this capability.",
+          "evidence": [
+            "E26",
+            "E27",
+            "E24",
+            "E28",
+            "E22",
+            "E20"
+          ],
+          "paths": [
+            [
+              "E26",
+              "uncertainty",
+              "E28"
+            ],
+            [
+              "E26",
+              "inverse",
+              "E22"
+            ],
+            [
+              "E26",
+              "pinn",
+              "E20"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E26"
+          ],
+          "cache_key": "8ac6282b025ee0979b0275b58c2471d072b03f8f53c5d50a8a3a029c87da564c",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q031",
+      "category": "scientific",
+      "question": "What distinguishes Bayesian PINNs from deterministic PINNs?",
+      "systems": {
+        "rag": {
+          "answer": "Bayesian PINNs incorporate a probabilistic approach to modeling uncertainties while deterministic PINNs rely on ordinary methods that do not inherently account for calibration of uncertainty.",
+          "evidence": [
+            "E27",
+            "E26",
+            "E24",
+            "E20",
+            "E28",
+            "E23"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "d6f26b57c5b9fff88058a707d3ba3f26f316bd17a477dcd1b038208e47cbd862",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Bayesian PINNs incorporate a probabilistic approach to modeling uncertainties in fields, whereas deterministic PINNs do not inherently provide calibrated uncertainty quantification. This distinction is highlighted by E27 which states that Bayesian PINNs use physics constraints and posterior inference to quantify uncertainty, unlike ordinary deterministic PINNs which lack this capability.",
+          "evidence": [
+            "E27",
+            "E26",
+            "E24",
+            "E22",
+            "E20",
+            "E18"
+          ],
+          "paths": [
+            [
+              "E27",
+              "pinn",
+              "E22"
+            ],
+            [
+              "E27",
+              "pinn",
+              "E20"
+            ],
+            [
+              "E26",
+              "inverse",
+              "E18"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E27"
+          ],
+          "cache_key": "06a1f3d837171b4b776eb545e7f846f17901b1c39a7de2cee18c82dfc5b465b1",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q032",
+      "category": "scientific",
+      "question": "How should the reliability of uncertainty intervals be checked?",
+      "systems": {
+        "rag": {
+          "answer": "The reliability of uncertainty intervals in B-PINN (Bayesian Physics-Informed Neural Networks) methods needs empirical evaluation as different uncertainty estimators may behave differently. For ordinary deterministic PINNs, no calibration of uncertainty is provided automatically, necessitating an additional uncertainty estimation technique like Bayesian PINNs which combines a probabilistic field model with physics constraints and posterior inference to quantitatively assess uncertainty.",
+          "evidence": [
+            "E28",
+            "E26",
+            "E27",
+            "E17",
+            "E05",
+            "E24"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "873ab5b4140125ef384fc6439c98bd34937295895379c086d60c559aff8aaef1",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "The reliability of uncertainty intervals in Bayesian PINNs (Bayesian Probabilistic Neural Networks) requires an additional step beyond what ordinary deterministic PINNs offer. Specifically, it involves combining a probabilistic field model with physics constraints and performing posterior inference to quantitatively assess the uncertainty. This approach is distinct from traditional methods like Ordinary Deterministic PINNs which do not inherently calibrate uncertainty automatically. Therefore, empirical evaluation is needed to ensure that the predictive quality and interval reliability align as expected.",
+          "evidence": [
+            "E28",
+            "E26",
+            "E27",
+            "E25",
+            "E17",
+            "E22"
+          ],
+          "paths": [
+            [
+              "E28",
+              "validation",
+              "E25"
+            ],
+            [
+              "E26",
+              "noise",
+              "E17"
+            ],
+            [
+              "E26",
+              "inverse",
+              "E22"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "4f2561399bee957dda368e58d5cdd731b1cd6de9d6bb85c82a395719d99f46ca",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q033",
+      "category": "scientific",
+      "question": "What does carrying capacity mean in a logistic model?",
+      "systems": {
+        "rag": {
+          "answer": "Carrying capacity in a logistic model refers to the maximum population size that an environment can sustain indefinitely, given the available resources (like food, space, etc.). It's represented by \\(K\\) in the logistic growth formula \\(\\frac{dP}{dt} = rP\\left(1 - \\frac{P}{K}\\right)\\), where \\(r\\) is the intrinsic growth rate and \\(K\\) is the carrying capacity. This concept ensures that the population grows exponentially initially but slows",
+          "evidence": [
+            "E11",
+            "E13",
+            "E12",
+            "E01",
+            "E10",
+            "E15"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "1c65bf85257002bbc667f39b82f1b3cb641b03baba192c3c264196f8c2961a70",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Carrying capacity in a logistic model refers to the maximum population size that an environment can sustain indefinitely, given the available resources (like food, space, etc.). It's represented by K in the logistic equation, which describes how population growth slows down as it approaches this limit due to resource constraints.",
+          "evidence": [
+            "E11",
+            "E13",
+            "E12",
+            "E10",
+            "E01",
+            "E09"
+          ],
+          "paths": [
+            [
+              "E11",
+              "reaction",
+              "E10"
+            ],
+            [
+              "E11",
+              "reaction",
+              "E09"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "8e6e5a2c7ada26d2096d8b6a8e7dc926d8bba73b739c3345ff5f8b93713dabc0",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q034",
+      "category": "scientific",
+      "question": "How does logistic growth change near carrying capacity?",
+      "systems": {
+        "rag": {
+          "answer": "Near carrying capacity, logistic growth changes by decreasing as the population approaches this limit. This behavior is described by E11, which states that logistic growth is proportional to the population and decreases as it approaches a finite carrying capacity. The population levels off at the carrying capacity, indicating a slowing down of growth due to resource constraints.",
+          "evidence": [
+            "E11",
+            "E13",
+            "E12",
+            "E01",
+            "E10",
+            "E09"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E11"
+          ],
+          "cache_key": "2a0fca220726e15d5252acd85af203ae981f23bc4278d827d8840742bb6bc367",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Near carrying capacity, logistic growth changes by decreasing as the population approaches this limit. This behavior is described by E11, which states that logistic growth is proportional to the population and decreases as it approaches a finite carrying capacity. The population levels off at the carrying capacity, indicating a slowing down of growth due to resource constraints.",
+          "evidence": [
+            "E11",
+            "E13",
+            "E12",
+            "E01",
+            "E10",
+            "E09"
+          ],
+          "paths": [
+            [
+              "E11",
+              "reaction",
+              "E10"
+            ],
+            [
+              "E11",
+              "reaction",
+              "E09"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E11"
+          ],
+          "cache_key": "2a0fca220726e15d5252acd85af203ae981f23bc4278d827d8840742bb6bc367",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q035",
+      "category": "scientific",
+      "question": "Which polynomial terms appear when logistic growth is expanded?",
+      "systems": {
+        "rag": {
+          "answer": "The logistic growth model includes two main types of polynomial terms:\n\n1. **Linear Growth Term**: This term represents the initial exponential increase in population before reaching the carrying capacity.\n\n2. **Negative Quadratic Saturation Term**: This term describes how the growth slows down as the population approaches the carrying capacity, creating a sigmoidal shape typical of logistic curves.\n\nThese terms together form the logistic growth model, which combines both linear and nonlinear components to describe population dynamics effectively.",
+          "evidence": [
+            "E12",
+            "E11",
+            "E15",
+            "E13",
+            "E14",
+            "E16"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "25cfdd613936ba7770b3fdc3c16e45da1c196b545f317b7e073b48d9a5944b81",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "The logistic growth model includes two main types of polynomial terms:\n\n1. **Linear Growth Term**: This term represents the initial exponential increase in population before reaching the carrying capacity.\n\n2. **Negative Quadratic Saturation Term**: This term describes how the growth slows down as the population approaches the carrying capacity, creating a sigmoidal shape typical of logistic curves.\n\nThese terms together form the logistic growth model, which can be expressed as:\n\\[ \\frac{dP}{dt} = rP\\left(",
+          "evidence": [
+            "E12",
+            "E11",
+            "E15",
+            "E14",
+            "E13",
+            "E16"
+          ],
+          "paths": [
+            [
+              "E15",
+              "complexity",
+              "E14"
+            ],
+            [
+              "E12",
+              "saturation",
+              "E13"
+            ],
+            [
+              "E15",
+              "discovery",
+              "E16"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "8ea7d72548621aadc73177037495263c703d779b35430c5b75ac934d1cabd50e",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q036",
+      "category": "scientific",
+      "question": "What is the sign of the saturation term in logistic growth with positive growth and capacity?",
+      "systems": {
+        "rag": {
+          "answer": "The saturation term in logistic growth with positive growth and capacity has a negative sign. This aligns with E12 which states that expanding the logistic rate includes a negative quadratic term representing saturation.",
+          "evidence": [
+            "E11",
+            "E12",
+            "E13",
+            "E01",
+            "E09",
+            "E03"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E12"
+          ],
+          "cache_key": "4c1bfde41a39a048809305bb98b2850fead8e4addec901dd52c4c7ca48243367",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "The saturation term in logistic growth with positive growth and capacity has a negative sign. This aligns with E12 which states that expanding the logistic rate includes a negative quadratic term representing saturation.",
+          "evidence": [
+            "E11",
+            "E12",
+            "E13",
+            "E01",
+            "E09",
+            "E10"
+          ],
+          "paths": [
+            [
+              "E11",
+              "reaction",
+              "E09"
+            ],
+            [
+              "E11",
+              "reaction",
+              "E10"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E12"
+          ],
+          "cache_key": "fa5a31c12bcc7c0f5e540a599188bc1be76ec6666a03a30c3e1572e3b9bc996f",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q037",
+      "category": "scientific",
+      "question": "What are the two logistic equilibria?",
+      "systems": {
+        "rag": {
+          "answer": "The two logistic equilibria mentioned in E11 are for positive growth and capacity (zero), and for populations above capacity (carrying capacity). These correspond to the points where the logistic growth curve reaches its maximum value before declining due to reaching the carrying capacity limit.",
+          "evidence": [
+            "E12",
+            "E13",
+            "E11",
+            "E06",
+            "E01",
+            "E02"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E11"
+          ],
+          "cache_key": "ee485ff9d660295321ecd2e12480c73a5b20b77fb6734e43ce7f53329b19d171",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "The two logistic equilibria mentioned in the context are:\n\n1. Zero (or extinction equilibrium): This occurs when the population size is reduced to zero due to factors such as environmental constraints or predation.\n\n2. Carrying capacity (K): This represents the maximum sustainable population size that an environment can support indefinitely, given the available resources. When the population reaches this level, further increases in population density lead to a decrease in growth rate due to resource limitations.",
+          "evidence": [
+            "E12",
+            "E13",
+            "E11",
+            "E02",
+            "E10",
+            "E06"
+          ],
+          "paths": [
+            [
+              "E12",
+              "reaction",
+              "E02"
+            ],
+            [
+              "E12",
+              "reaction",
+              "E10"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "2db9158dff252d22357f4c85cf0bf2affecc20975b944cac58541f23b328832b",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q038",
+      "category": "scientific",
+      "question": "What happens to a positive population initially above carrying capacity?",
+      "systems": {
+        "rag": {
+          "answer": "A positive population initially above carrying capacity declines according to the logistic growth model described by E11. This occurs because the logistic equation includes both an exponential growth term (proportional to the current population) and a negative quadratic term that represents the diminishing returns on growth as the population approaches the carrying capacity. The equilibrium at the carrying capacity ensures stability for this type of growth pattern.",
+          "evidence": [
+            "E13",
+            "E11",
+            "E01",
+            "E09",
+            "E12",
+            "E10"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E11"
+          ],
+          "cache_key": "fecf071fa9a11f5f68d62f768db400d14166bbf1538bc3a53e18aeb5c48bdcb9",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "A positive population initially above carrying capacity declines according to the logistic growth model described by E11. This occurs because the logistic equation includes both an exponential growth term (proportional to the current population) and a negative quadratic term that represents the diminishing returns on growth as the population approaches the carrying capacity. The equilibrium at the carrying capacity ensures stability for this type of growth pattern.",
+          "evidence": [
+            "E13",
+            "E11",
+            "E01",
+            "E12",
+            "E09",
+            "E10"
+          ],
+          "paths": [
+            [
+              "E13",
+              "saturation",
+              "E12"
+            ],
+            [
+              "E11",
+              "reaction",
+              "E09"
+            ],
+            [
+              "E11",
+              "reaction",
+              "E10"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E11"
+          ],
+          "cache_key": "c3ef6d558afbe35667f2abd3135e29b765204eeb6f96a59eafd57d68aaab878f",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q039",
+      "category": "scientific",
+      "question": "Does a positive logistic population grow without bound?",
+      "systems": {
+        "rag": {
+          "answer": "No, a positive logistic population will not grow without bound. The logistic equation describes a process where the growth rate slows down as the population approaches the carrying capacity (K). This means that while the population increases initially, it eventually levels off at K due to resource limitations. Therefore, the population cannot continue to grow indefinitely beyond this point.",
+          "evidence": [
+            "E11",
+            "E13",
+            "E12",
+            "E01",
+            "E09",
+            "E10"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "5b7c178a43d00e0384908b94ac41b9f952c63b2533dd4a557e66b626bdf3718e",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "No, a positive logistic population will not grow without bound. The logistic equation describes a process where the growth rate slows down as the population approaches the carrying capacity (K). This means that while the population increases initially, it eventually levels off at K due to resource limitations. Therefore, the population cannot continue to grow indefinitely beyond this point.",
+          "evidence": [
+            "E11",
+            "E13",
+            "E12",
+            "E09",
+            "E01",
+            "E10"
+          ],
+          "paths": [
+            [
+              "E11",
+              "reaction",
+              "E09"
+            ],
+            [
+              "E11",
+              "reaction",
+              "E10"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "32337e321e5a617633d15cc3cdb336395c0d637e03e8003bd6a34bc80cbae8be",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q040",
+      "category": "scientific",
+      "question": "What does the Peclet number compare?",
+      "systems": {
+        "rag": {
+          "answer": "The Peclet number compares advection (advective transport) with diffusion in a system.",
+          "evidence": [
+            "E07",
+            "E15",
+            "E16",
+            "E28",
+            "E24",
+            "E13"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "2d15836d7d7d64566150e384bec9a5335336a43ce2e41e09a184220f41982a75",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "The Peclet number compares advection (transport) with diffusion (spreading).",
+          "evidence": [
+            "E07",
+            "E15",
+            "E16",
+            "E10",
+            "E14",
+            "E06"
+          ],
+          "paths": [
+            [
+              "E07",
+              "advection",
+              "E10"
+            ],
+            [
+              "E15",
+              "complexity",
+              "E14"
+            ],
+            [
+              "E07",
+              "advection",
+              "E06"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "7c448f58f77e47f00e59990104aae220dcf6dc52a0afc6ec9802bed1a9e64882",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q041",
+      "category": "scientific",
+      "question": "Which quantities enter the Peclet number?",
+      "systems": {
+        "rag": {
+          "answer": "The Peclet number (Pe) enters based on three key factors:\n- Velocity (V)\n- Length (L)\n- Diffusivity (D)\n\nThese elements are used in the formula Pe = V * L / D, where:\n- V represents the velocity of the fluid flow,\n- L denotes the characteristic length scale over which the diffusion occurs,\n- D signifies the diffusivity of the substance being transported.\n\nThus, the Peclet number incorporates velocity, length, and diffus",
+          "evidence": [
+            "E07",
+            "E15",
+            "E11",
+            "E13",
+            "E09",
+            "E16"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "345ecc732aa45470a21f23b9f8b20e72dd21268f9b2ae79fbafd43323b9945d7",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "The Peclet number (Pe) enters into the comparison between advection and diffusion through velocity, length, and diffusivity. Specifically:\n\n- **Velocity** (V): Represents the speed at which substances are transported by convection.\n- **Length** (L): Can refer to either the characteristic length scale over which diffusion occurs or the characteristic length scale for advection.\n- **Diffusivity** (D): Measures how quickly particles spread out due to molecular motion.\n\nThese three parameters are",
+          "evidence": [
+            "E07",
+            "E15",
+            "E11",
+            "E12",
+            "E10",
+            "E06"
+          ],
+          "paths": [
+            [
+              "E11",
+              "reaction",
+              "E12"
+            ],
+            [
+              "E07",
+              "advection",
+              "E10"
+            ],
+            [
+              "E07",
+              "advection",
+              "E06"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "5973de8a50cf915833af46fcc3a54d3c513dc2a47c9016c85feb3a98bc612f5b",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q042",
+      "category": "scientific",
+      "question": "Can total concentration change identify transport coefficients on its own when reaction is present?",
+      "systems": {
+        "rag": {
+          "answer": "Yes, based on E10 which states that changes in total concentration do not necessarily indicate transport coefficients due to the coexistence of transport and reaction mechanisms. Additionally, E09 indicates that reactions add internal production/removal terms to transport balances, further complicating direct identification through total concentration alone. E02 supports this by showing how internal reactions can alter total concentration even with cancellation at boundaries. Lastly, E06 demonstrates that advection and diffusion can work together without being solely identified by total concentration",
+          "evidence": [
+            "E10",
+            "E09",
+            "E02",
+            "E06",
+            "E08",
+            "E01"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E10",
+            "E09",
+            "E02",
+            "E06"
+          ],
+          "cache_key": "d232dfcecbd4df54f09749b14e07e3b34cd8c1bde548c83d7b6b8316117cafad",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Yes, based on E10 which states that changes in total concentration do not necessarily indicate transport coefficients due to the coexistence of transport and reaction mechanisms. Additionally, E09 indicates that reactions add internal production/removal terms to transport balances, further complicating direct identification through total concentration alone. E02 supports this by showing how internal reactions can alter total concentration even with cancellation at boundaries. Lastly, E06 demonstrates that advection and diffusion can work together without being solely identified by total concentration",
+          "evidence": [
+            "E10",
+            "E09",
+            "E02",
+            "E06",
+            "E08",
+            "E01"
+          ],
+          "paths": [
+            [
+              "E10",
+              "advection",
+              "E06"
+            ],
+            [
+              "E10",
+              "advection",
+              "E08"
+            ],
+            [
+              "E09",
+              "mass_balance",
+              "E01"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E10",
+            "E09",
+            "E02",
+            "E06"
+          ],
+          "cache_key": "d232dfcecbd4df54f09749b14e07e3b34cd8c1bde548c83d7b6b8316117cafad",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q043",
+      "category": "scientific",
+      "question": "Why does the field representation in a PINN need to be differentiable?",
+      "systems": {
+        "rag": {
+          "answer": "The field representation in a PINN needs to be differentiable because it allows for the use of gradient-based optimization techniques during training. Differentiability enables the calculation of gradients, which are essential for updating weights in an iterative process that minimizes a loss function. This capability is crucial for adjusting parameters in the network to better approximate solutions to partial differential equations (PDEs) or other complex systems governed by physics.",
+          "evidence": [
+            "E20",
+            "E27",
+            "E24",
+            "E26",
+            "E21",
+            "E22"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "b96331dce38180af00e78d52cb86726fa20ef63afbf2d7c43d962ea484c40b05",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "The field representation in a PINN needs to be differentiable because it allows for the use of gradient-based optimization techniques during training. Differentiability enables the calculation of gradients, which are essential for updating weights in an iterative process that minimizes a loss function. This capability is crucial for adjusting parameters in the network to better approximate solutions to partial differential equations (PDEs) or other complex systems governed by physics.",
+          "evidence": [
+            "E20",
+            "E27",
+            "E24",
+            "E26",
+            "E21",
+            "E22"
+          ],
+          "paths": [
+            [
+              "E20",
+              "pinn",
+              "E26"
+            ],
+            [
+              "E20",
+              "pinn",
+              "E21"
+            ],
+            [
+              "E20",
+              "pinn",
+              "E22"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "b96331dce38180af00e78d52cb86726fa20ef63afbf2d7c43d962ea484c40b05",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q044",
+      "category": "scientific",
+      "question": "Which constraints accompany the differential equation in a forward problem?",
+      "systems": {
+        "rag": {
+          "answer": "In a forward problem as described by E21, the constraints accompanying the differential equation include:\n\n- The specified equation that defines the governing dynamics (e.g., advection-diffusion equation).\n- Initial or boundary conditions that specify the state at the start of the simulation.\n\nThese elements are necessary to solve for the field given the equation and conditions.",
+          "evidence": [
+            "E21",
+            "E23",
+            "E20",
+            "E08",
+            "E06",
+            "E22"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E21"
+          ],
+          "cache_key": "10774c0cebe2e90d3517df5d466ee7209b1cf39aeb25559cbaa05d8270dd452e",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "In a forward problem as described by E21, the constraints accompanying the differential equation include:\n\n- The specified equation that defines the governing dynamics.\n- Initial or boundary conditions that specify the state at the start or edge of the domain.\n\nThese elements are fundamental to specifying the forward problem's behavior within the context of physics-informed deep learning approaches like those discussed in Raissi et al. (2019).",
+          "evidence": [
+            "E21",
+            "E23",
+            "E20",
+            "E15",
+            "E22",
+            "E08"
+          ],
+          "paths": [
+            [
+              "E23",
+              "discovery",
+              "E15"
+            ],
+            [
+              "E21",
+              "pinn",
+              "E22"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E21"
+          ],
+          "cache_key": "e970999c646baf756964669abb24cb6a2edcab575a64ee5d52223c6b53bf250f",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q045",
+      "category": "scientific",
+      "question": "Is a retrieved scientific mechanism proof that it governs the supplied observations?",
+      "systems": {
+        "rag": {
+          "answer": "Insufficient evidence. The provided evidence discusses various aspects of discovering or identifying partial differential equations (PDEs) from data, including sparse identification, Bayesian approaches, and physics-informed deep learning methods. However, none explicitly states that a retrieved scientific mechanism proves it governs the supplied observations. The evidence focuses more on how these methods are applied rather than asserting their causal relationship with observed phenomena.",
+          "evidence": [
+            "E23",
+            "E16",
+            "E27",
+            "E22",
+            "E20",
+            "E10"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "d0c52b4c881684dedb66424a2a3fd34dc23b7109e093bf770168c11975f40c9c",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 0.5
+        },
+        "rag_kg": {
+          "answer": "Insufficient evidence. The provided evidence does not directly address whether a retrieved scientific mechanism proves it governs the supplied observations. While E23 mentions discovering a PDE from data being different from solving an advanced PDE, it doesn't explicitly state that the recovered mechanism must be the governing one for the observed data. Similarly, other papers discuss limitations such as missing terms or requiring additional methods for noisy inverse problems, but they don't conclusively establish that the recovered mechanism is necessarily the governing one. More",
+          "evidence": [
+            "E23",
+            "E16",
+            "E27",
+            "E26",
+            "E22",
+            "E20"
+          ],
+          "paths": [
+            [
+              "E23",
+              "pinn",
+              "E26"
+            ],
+            [
+              "E23",
+              "pinn",
+              "E22"
+            ],
+            [
+              "E23",
+              "pinn",
+              "E20"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E23"
+          ],
+          "cache_key": "37a796d6a3adc4b69a7d99e912af9f78e08f502e9c3908b12e902902e868f4d5",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 0.5
+        }
+      }
+    },
+    {
+      "id": "Q046",
+      "category": "scientific",
+      "question": "What tradeoff is made when selecting a parsimonious equation?",
+      "systems": {
+        "rag": {
+          "answer": "When selecting a parsimonious equation, the primary tradeoff involves balancing explanatory accuracy with the number of active terms. This approach reduces unnecessary complexity by focusing on a subset of relevant factors that best explain the observed behavior without overfitting or including extraneous variables. The selection process often uses techniques like sparse identification (E15) to choose a minimal set of active terms based on available data, ensuring that the model remains interpretable and efficient.",
+          "evidence": [
+            "E15",
+            "E23",
+            "E14",
+            "E24",
+            "E18",
+            "E10"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E15"
+          ],
+          "cache_key": "e09bd8b2bf53e482aeb375573caaace577a08d400b85941f3a74e419a6710b94",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "When selecting a parsimonious equation through sparse identification, an important tradeoff involves balancing explanatory accuracy with the number of active terms. This approach reduces unnecessary complexity by focusing on a minimal subset of relevant features that best explain the observed data without overfitting. The method uses observations to identify a small set of active terms from a candidate function library, thus minimizing redundancy and improving interpretability.",
+          "evidence": [
+            "E15",
+            "E23",
+            "E14",
+            "E24",
+            "E21",
+            "E18"
+          ],
+          "paths": [
+            [
+              "E23",
+              "pinn",
+              "E24"
+            ],
+            [
+              "E23",
+              "forward",
+              "E21"
+            ],
+            [
+              "E15",
+              "discovery",
+              "E18"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "0cd7967fbaab5a56afb48de0f604cbb5f00e2d2dc7f7b63dd1a2f5501ca7ebee",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q047",
+      "category": "scientific",
+      "question": "Are sparse PDE identification and coefficient estimation mutually exclusive?",
+      "systems": {
+        "rag": {
+          "answer": "No, sparse PDE identification and coefficient estimation are not mutually exclusive. Both techniques aim at improving the robustness of models to measurement noise and estimating both term support and coefficients. Sparse PDE identification (E18) focuses on selecting a minimal set of active terms that best fit the observed data, which indirectly helps in identifying the underlying physics by constraining the model space. Coefficient estimation (E14) directly aims to find the values of these coefficients based on the available data, thereby providing",
+          "evidence": [
+            "E18",
+            "E14",
+            "E23",
+            "E05",
+            "E22",
+            "E15"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E18",
+            "E14"
+          ],
+          "cache_key": "62637884b9c114668b8cd39ad9797bf976fce941a5ca594619438faf6cc55628",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "No, sparse PDE identification and coefficient estimation are not mutually exclusive. Both processes aim to identify and estimate parameters within partial differential equations (PDEs), but they approach this task differently:\n\n- **Sparse PDE Identification**: This method focuses on selecting a subset of terms that best explain the observed data without assuming all possible terms are active. It helps reduce overfitting by focusing on relevant features.\n\n- **Coefficient Estimation**: This involves determining the values of coefficients associated with each identified term. The",
+          "evidence": [
+            "E18",
+            "E14",
+            "E23",
+            "E22",
+            "E15",
+            "E19"
+          ],
+          "paths": [
+            [
+              "E18",
+              "inverse",
+              "E22"
+            ],
+            [
+              "E18",
+              "discovery",
+              "E15"
+            ],
+            [
+              "E18",
+              "weak_form",
+              "E19"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "67a73a4d1d71c5a9ae66f5bb9a2d73a109847550c8efbb648fa75c0ea09a6102",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q048",
+      "category": "scientific",
+      "question": "Does the internal-production term belong in an integrated mass balance?",
+      "systems": {
+        "rag": {
+          "answer": "Yes, the internal-production term belongs in an integrated mass balance. Evidence from E01 supports this by stating that a control-volume balance equates accumulation to net inward transport plus internal production. This directly indicates that internal production contributes to the overall mass balance within a system.",
+          "evidence": [
+            "E01",
+            "E09",
+            "E02",
+            "E10",
+            "E11",
+            "E12"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E01"
+          ],
+          "cache_key": "268b1c37a749596f4375275a50ce8053de53548a2461daa9df2bedee13e91979",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Yes, the internal-production term belongs in an integrated mass balance. Evidence from E01 supports this by stating that a control-volume balance equates accumulation to net inward transport plus internal production. This directly indicates that internal production contributes to the overall mass balance within a system.",
+          "evidence": [
+            "E01",
+            "E09",
+            "E02",
+            "E10",
+            "E11",
+            "E12"
+          ],
+          "paths": [
+            [
+              "E09",
+              "reaction",
+              "E10"
+            ],
+            [
+              "E09",
+              "reaction",
+              "E11"
+            ],
+            [
+              "E09",
+              "reaction",
+              "E12"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E01"
+          ],
+          "cache_key": "268b1c37a749596f4375275a50ce8053de53548a2461daa9df2bedee13e91979",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q049",
+      "category": "scientific",
+      "question": "What should be checked besides a low composite PINN training loss?",
+      "systems": {
+        "rag": {
+          "answer": "Besides a low composite PINN training loss, independent solution checks and training diagnostics should also be checked. This includes verifying that the PINN is optimizing correctly (e.g., by checking if it fails to optimize successfully) and ensuring that the assumptions made during training are valid (e.g., by confirming that the correct physical equations are being used). Additionally, uncertainties in the model's predictions need to be quantified separately from the PINN itself, as ordinary deterministic PINNs may not provide calibrated uncertainty automatically.",
+          "evidence": [
+            "E25",
+            "E24",
+            "E27",
+            "E20",
+            "E19",
+            "E26"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "43440e9c9fbad5e5f4241eec860e468f9130daeb74c54ffebc47ea66d9ff3e3d",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Besides a low composite PINN training loss, independent solution checks and training diagnostics should also be considered when optimizing composite physics losses. This includes ensuring that the PINN does not fail to optimize successfully even for correct physical equations (E24) and verifying that ordinary deterministic PINNs do not provide calibrated uncertainty automatically without additional methods like Bayesian PINNs (E26).",
+          "evidence": [
+            "E25",
+            "E24",
+            "E27",
+            "E26",
+            "E28",
+            "E20"
+          ],
+          "paths": [
+            [
+              "E25",
+              "pinn",
+              "E26"
+            ],
+            [
+              "E25",
+              "validation",
+              "E28"
+            ],
+            [
+              "E25",
+              "pinn",
+              "E20"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E24",
+            "E26"
+          ],
+          "cache_key": "6591e71d8c4432f8863b0645b84e3a91ad31ee1c8d47b00f5a401eccbe8cdb3a",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q050",
+      "category": "scientific",
+      "question": "Do different uncertainty estimators necessarily have the same reliability?",
+      "systems": {
+        "rag": {
+          "answer": "Yes, different uncertainty estimators can behave differently in terms of their reliability. The evidence suggests that while ordinary deterministic PINNs may not provide calibrated uncertainty automatically (E26), Bayesian PINNs are designed specifically to combine a probabilistic field model with physics constraints and posterior inference to quantitatively assess uncertainty (E27). This indicates that Bayesian methods offer more rigorous and reliable ways to propagate uncertainties compared to deterministic approaches like ordinary PINNs. Therefore, it's important to evaluate the performance of various uncertainty",
+          "evidence": [
+            "E28",
+            "E26",
+            "E27",
+            "E17",
+            "E24",
+            "E22"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E26",
+            "E27"
+          ],
+          "cache_key": "049f29f4f92ca69b803f7fd6784625fa657ac8d00071eb57f987f3fad527f481",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Yes, different uncertainty estimators can behave differently in terms of their reliability. The provided evidence suggests that:\n\n- E28 indicates that various uncertainty estimators may perform differently based on specific conditions (e.g., predictive quality and interval reliability).\n- E26 emphasizes that ordinary deterministic PINNs do not inherently calibrate uncertainty without additional methods.\n- E27 highlights that Bayesian PINNs are designed to quantitatively assess uncertainty by combining a probabilistic field model with physics constraints and posterior inference.\n\nThese",
+          "evidence": [
+            "E28",
+            "E26",
+            "E27",
+            "E22",
+            "E18",
+            "E17"
+          ],
+          "paths": [
+            [
+              "E26",
+              "inverse",
+              "E22"
+            ],
+            [
+              "E26",
+              "inverse",
+              "E18"
+            ],
+            [
+              "E26",
+              "noise",
+              "E17"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E28",
+            "E26",
+            "E27"
+          ],
+          "cache_key": "26e6c007f38cf166da7c1eb7365006237db4e5199b8c4e013737f84580bf511f",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q051",
+      "category": "multi_hop",
+      "question": "A periodic concentration profile drifts and broadens. Which two mechanisms explain these effects and why can total mass still stay constant?",
+      "systems": {
+        "rag": {
+          "answer": "The two mechanisms that explain the effects of concentration profile drift and broadening are advection and diffusion.\n\nAdvection displaces a concentration profile by moving substances along with the flow of fluid, causing the concentration to spread out over time. This mechanism acts independently of any internal reactions within the system.\n\nDiffusion spreads the concentration profile through molecular motion, where particles move from areas of high concentration to low concentration until equilibrium is reached. Both advection and diffusion contribute to the overall broadening of the concentration profile without",
+          "evidence": [
+            "E02",
+            "E06",
+            "E10",
+            "E01",
+            "E09",
+            "E11"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "c8bbc68d997f4d2c65127e2ed11c788a5e9d3b2822d20e8155eba6f90aaffe6b",
+          "correct": false,
+          "concept_fraction": 0.6666666666666666,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "The two mechanisms that explain the effects of a periodic concentration profile drifting and broadening are advection and diffusion.\n\nAdvection displaces the concentration profile by transporting it with the flow, while diffusion spreads the concentration across space. These processes can work together to cause the concentration profile to move and spread out over time.\n\nTotal mass can still stay constant because the conservation of mass principle applies within each control volume (the periodic domain). Opposite boundary fluxes cancel out, ensuring that the total amount of substance entering",
+          "evidence": [
+            "E02",
+            "E06",
+            "E10",
+            "E09",
+            "E03",
+            "E01"
+          ],
+          "paths": [
+            [
+              "E02",
+              "mass_balance",
+              "E09"
+            ],
+            [
+              "E06",
+              "advection",
+              "E03"
+            ],
+            [
+              "E02",
+              "mass_balance",
+              "E01"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "cec6614f41853dd7754d609e1cd389d5a00038fdaf804ba5b7b2530771610e3b",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q052",
+      "category": "multi_hop",
+      "question": "A periodic profile spreads while its total concentration grows. Why does periodicity not rule out a reaction term?",
+      "systems": {
+        "rag": {
+          "answer": "A periodic profile spreading while its total concentration increases suggests that both advection (transport) and diffusion are occurring simultaneously. This scenario indicates that neither mechanism dominates over the other completely. Periodicity itself does not inherently preclude the presence of reactions because:\n\n- **Advection**: Displaces the concentration profile but does not alter its overall volume.\n- **Diffusion**: Spreads the concentration across space without changing its total amount.\n\nThe combination of these processes means that even if there's no net flux at the",
+          "evidence": [
+            "E02",
+            "E10",
+            "E06",
+            "E09",
+            "E03",
+            "E07"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "e1a2ba001556d0266452c3b0ca085df80af149c9c32d66993d21641deb507624",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "A periodic profile spreading while its total concentration increases suggests that both advection (transport) and diffusion are occurring simultaneously. This scenario indicates that neither mechanism dominates over the other completely. Periodicity itself does not inherently preclude the presence of reactions because:\n\n- **Advection**: Displaces the concentration profile but does not alter its overall volume.\n- **Diffusion**: Spreads the concentration across space without changing its total amount.\n\nThe combination of these processes means that even if there's no net flux at the",
+          "evidence": [
+            "E02",
+            "E10",
+            "E06",
+            "E09",
+            "E03",
+            "E07"
+          ],
+          "paths": [
+            [
+              "E02",
+              "mass_balance",
+              "E09"
+            ],
+            [
+              "E10",
+              "advection",
+              "E03"
+            ],
+            [
+              "E10",
+              "advection",
+              "E07"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "e1a2ba001556d0266452c3b0ca085df80af149c9c32d66993d21641deb507624",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q053",
+      "category": "multi_hop",
+      "question": "A population approaches a finite plateau. Which polynomial reaction terms should a transport discovery engine test?",
+      "systems": {
+        "rag": {
+          "answer": "Based on E07 [Heidi Nepf, MIT OCW, Advection and diffusion], the Peclet number (Pe) is used to compare advection with diffusion. For a logistic growth model approaching a carrying capacity, where the population grows exponentially until reaching the limit, the system will have significant advection due to the rapid movement of cells towards the growing edge.\n\nTherefore, a transport discovery engine should test reaction terms that include advection components, such as:\n\n- Terms involving velocity fields",
+          "evidence": [
+            "E10",
+            "E11",
+            "E09",
+            "E13",
+            "E07",
+            "E14"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E07"
+          ],
+          "cache_key": "83c1240f9afcc23d28478db9f39041d925195822355c757788640285a01079fc",
+          "correct": false,
+          "concept_fraction": 0.6666666666666666,
+          "evidence_recall": 0.3333333333333333
+        },
+        "rag_kg": {
+          "answer": "A transport discovery engine should test a linear growth term (first-order) and a negative quadratic saturation term (second-order). These terms align with the logistic growth model described by E12 [OpenStax, Calculus Volume 2].",
+          "evidence": [
+            "E10",
+            "E11",
+            "E09",
+            "E12",
+            "E07",
+            "E08"
+          ],
+          "paths": [
+            [
+              "E10",
+              "reaction",
+              "E12"
+            ],
+            [
+              "E10",
+              "advection",
+              "E07"
+            ],
+            [
+              "E10",
+              "advection",
+              "E08"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E12"
+          ],
+          "cache_key": "3b5d7833c3aeed6258f38a8efcd7d49b5935a304850e89d8bed62537f9009d1c",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q054",
+      "category": "multi_hop",
+      "question": "A noisy concentration dataset is used for inverse PINN training. Why combine weak equation identification with uncertainty evaluation?",
+      "systems": {
+        "rag": {
+          "answer": "To address the issue of noisy data in inverse PINN training, combining weak equation identification (E18) with uncertainty evaluation (B-PINNs) provides several benefits:\n\n1. **Improved Robustness**: By identifying key terms in the governing equations, weak sparse PDE identification helps in reducing the complexity of the model, making it more robust against noise.\n\n2. **Enhanced Calibration**: Uncertainty quantification through Bayesian methods (E27) allows for better calibration of the model parameters",
+          "evidence": [
+            "E26",
+            "E24",
+            "E27",
+            "E18",
+            "E22",
+            "E20"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E18",
+            "E27"
+          ],
+          "cache_key": "dbb100bf09170c5f2defd3db1287bafa1b1f37d59411141e016bb5a0a3f87dae",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 0.6666666666666666
+        },
+        "rag_kg": {
+          "answer": "To address the issue of noisy data in inverse PINN training, combining weak equation identification (E18) with uncertainty evaluation (B-PINNs) provides several benefits:\n\n1. **Improved Robustness**: By identifying key terms in the governing equations, weak sparse PDE identification helps in reducing the complexity of the model, making it more robust against noise.\n\n2. **Enhanced Calibration**: Uncertainty quantification through Bayesian methods (E27) allows for better calibration of the model parameters",
+          "evidence": [
+            "E26",
+            "E24",
+            "E27",
+            "E18",
+            "E22",
+            "E20"
+          ],
+          "paths": [
+            [
+              "E26",
+              "inverse",
+              "E18"
+            ],
+            [
+              "E26",
+              "inverse",
+              "E22"
+            ],
+            [
+              "E26",
+              "pinn",
+              "E20"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E18",
+            "E27"
+          ],
+          "cache_key": "dbb100bf09170c5f2defd3db1287bafa1b1f37d59411141e016bb5a0a3f87dae",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "Q055",
+      "category": "multi_hop",
+      "question": "The best-fit candidate requires a term outside the library. What does this imply about discovery and how should the result be qualified?",
+      "systems": {
+        "rag": {
+          "answer": "The best-fit candidate in sparse identification implies that it relies on external information or assumptions beyond what is directly observable within the candidate library. This suggests that while the method aims to identify underlying mechanisms, its success may depend on additional data or theoretical knowledge that is not explicitly included in the candidate library.\n\nTherefore, the result should be qualified as \"tentative\" or \"inferred,\" acknowledging the reliance on external factors. It underscores the importance of cross-validation with other methods or experimental validation to ensure robustness and",
+          "evidence": [
+            "E16",
+            "E14",
+            "E15",
+            "E19",
+            "E25",
+            "E24"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "ff8f026c4762fc3e39f63bd247cfc6661585f9c60b67b53858629e4539701e3f",
+          "correct": false,
+          "concept_fraction": 0.5,
+          "evidence_recall": 0.5
+        },
+        "rag_kg": {
+          "answer": "The best-fit candidate requires a term outside the library, implying that the discovery process relies on identifying new or additional governing mechanisms not present in the initial candidate library. This suggests that the method may need to be refined by incorporating external knowledge or experimental data to ensure comprehensive coverage of all relevant factors.\n\nThe result should be qualified as \"sparse identification\" since it involves selecting a subset of active terms (or equations) from an expanded library based on observational data. However, caution is needed regarding the assumption that these",
+          "evidence": [
+            "E16",
+            "E14",
+            "E15",
+            "E19",
+            "E23",
+            "E18"
+          ],
+          "paths": [
+            [
+              "E14",
+              "sparsity",
+              "E19"
+            ],
+            [
+              "E16",
+              "discovery",
+              "E23"
+            ],
+            [
+              "E16",
+              "discovery",
+              "E18"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "4f7a2cd759e84d924bf5d7b90a4472eadb7ce5bf8946e58d923d8ec8eb7e7ac6",
+          "correct": false,
+          "concept_fraction": 0.5,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q056",
+      "category": "multi_hop",
+      "question": "A PINN fails to converge for a retrieved equation. Why is hypothesis rejection premature?",
+      "systems": {
+        "rag": {
+          "answer": "A PINN fails to converge for a retrieved equation because it does not necessarily mean that the physical equations are incorrect or that there is an error in the retrieval process. The convergence issue could be due to several factors:\n\n1. **Incorrect Physical Equations**: Even if the physical equations are correct, the retrieval algorithm might still struggle to find a solution due to numerical instabilities, ill-conditioned systems, or other computational issues.\n\n2. **Insufficient Data Quality**: The dataset used for training may lack",
+          "evidence": [
+            "E24",
+            "E26",
+            "E27",
+            "E23",
+            "E22",
+            "E20"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "58bcadf341475e19aadb436d4bfd80eb8237532a63b887703f6138372828b339",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 0.5
+        },
+        "rag_kg": {
+          "answer": "A PINN fails to converge for a retrieved equation because it does not necessarily mean that the physical equations are incorrect or that there is an error in the retrieval process. The optimization may be failing due to issues such as noisy data, improper initialization, or limitations of the neural network architecture itself. Hypothesis rejection should not occur prematurely if the underlying physical laws are sound and the retrieval process has been carefully validated. The true cause could lie elsewhere, requiring further investigation into the specific conditions under which convergence failed",
+          "evidence": [
+            "E24",
+            "E26",
+            "E27",
+            "E22",
+            "E18",
+            "E23"
+          ],
+          "paths": [
+            [
+              "E24",
+              "pinn",
+              "E22"
+            ],
+            [
+              "E26",
+              "inverse",
+              "E18"
+            ],
+            [
+              "E24",
+              "pinn",
+              "E23"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "f869466d7c92de4d4341b17562b38c09b5fd153ece12b41c4aad4e6a7f178322",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 0.5
+        }
+      }
+    },
+    {
+      "id": "Q057",
+      "category": "multi_hop",
+      "question": "An absorbing boundary reduces total mass even without reaction. Which balance term explains that?",
+      "systems": {
+        "rag": {
+          "answer": "E01",
+          "evidence": [
+            "E09",
+            "E02",
+            "E04",
+            "E10",
+            "E01",
+            "E06"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E01"
+          ],
+          "cache_key": "3d383d85c4e210c088ff23acf8c423a81c167718a900ba648f13e4efdda6e44d",
+          "correct": false,
+          "concept_fraction": 0.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "The balance term that explains an absorbing boundary reducing total mass even without reaction is E01 [Heidi Nepf, MIT OCW, Conservation of mass]. This equation equates accumulation to net inward transport plus internal production, showing how changes in total concentration can occur due to both transport processes and internal reactions.",
+          "evidence": [
+            "E09",
+            "E02",
+            "E04",
+            "E01",
+            "E10",
+            "E05"
+          ],
+          "paths": [
+            [
+              "E09",
+              "mass_balance",
+              "E01"
+            ],
+            [
+              "E09",
+              "reaction",
+              "E10"
+            ],
+            [
+              "E04",
+              "boundary",
+              "E05"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E01"
+          ],
+          "cache_key": "951156ed6a78e85640503e42cf9fdc249a26a5873b21181a0f403825dece3539",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q058",
+      "category": "multi_hop",
+      "question": "A diffusion-only hypothesis fits some observations but the profile also shifts. Which missing term is worth testing?",
+      "systems": {
+        "rag": {
+          "answer": "The missing term that is worth testing when considering a diffusion-only hypothesis for observed profiles shifting due to advection is **advection**. This is because advection can displace a concentration profile independently of diffusion, potentially explaining the shift without needing additional terms like reaction or other transport mechanisms.",
+          "evidence": [
+            "E06",
+            "E03",
+            "E10",
+            "E08",
+            "E07",
+            "E05"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "7863bf7fc743c839bb52b89a762ddeb97a7e53a4595c3b87195bc71ca2e6d0a1",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 0.6666666666666666
+        },
+        "rag_kg": {
+          "answer": "The missing term that is worth testing when considering a diffusion-only hypothesis for observed profiles shifting due to advection is **advection**. This is because advection can displace a concentration profile independently of diffusion, potentially explaining the shift without needing additional terms like reaction or other transport mechanisms.",
+          "evidence": [
+            "E06",
+            "E03",
+            "E10",
+            "E08",
+            "E07",
+            "E05"
+          ],
+          "paths": [
+            [
+              "E06",
+              "advection",
+              "E08"
+            ],
+            [
+              "E06",
+              "advection",
+              "E07"
+            ],
+            [
+              "E10",
+              "inverse",
+              "E05"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "7863bf7fc743c839bb52b89a762ddeb97a7e53a4595c3b87195bc71ca2e6d0a1",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "Q059",
+      "category": "multi_hop",
+      "question": "A proposed law has only linear population growth but observations plateau. What nonlinear term is suggested and what is its sign?",
+      "systems": {
+        "rag": {
+          "answer": "The nonlinear term suggested in the scenario is an exponential decay term. Its sign is negative. This aligns with the concept that for positive growth and capacity, zero and carrying capacity are equilibria; populations above capacity decline.",
+          "evidence": [
+            "E13",
+            "E11",
+            "E12",
+            "E01",
+            "E03",
+            "E06"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "d50d45b43e26f679a0fc3a6487e5a797a1473a588095621b6f3dc933bb030603",
+          "correct": false,
+          "concept_fraction": 0.5,
+          "evidence_recall": 0.6666666666666666
+        },
+        "rag_kg": {
+          "answer": "The nonlinear term suggested in the scenario is an exponential decay term. Its sign is negative. This aligns with the concept that for positive growth and capacity, zero and carrying capacity are equilibria; populations above capacity decline. The observed plateau suggests that the population growth rate is approaching a limiting value (carrying capacity), which can be modeled by adding a negative exponential term to the logistic equation.",
+          "evidence": [
+            "E13",
+            "E11",
+            "E12",
+            "E09",
+            "E01",
+            "E03"
+          ],
+          "paths": [
+            [
+              "E11",
+              "reaction",
+              "E09"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "76fb3a00dcc3cab09249d9099f70ec8176646511f712f32bb4bd8dfbfa1aacea",
+          "correct": false,
+          "concept_fraction": 0.5,
+          "evidence_recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "Q060",
+      "category": "multi_hop",
+      "question": "A deterministic inverse PINN estimates coefficients from noisy data. Why is a single point estimate insufficient for uncertainty reporting?",
+      "systems": {
+        "rag": {
+          "answer": "A single point estimate from a deterministic inverse PINN is insufficient for uncertainty reporting because it does not account for the inherent variability or uncertainty in the measurements used to train the model. The use of noisy data means that the true underlying parameters may vary around the estimated values due to random fluctuations in the input data. Therefore, a single point estimate lacks the necessary statistical information to provide meaningful uncertainty quantification.",
+          "evidence": [
+            "E26",
+            "E22",
+            "E27",
+            "E24",
+            "E28",
+            "E18"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "03d2d3e54c05d7aa8df2146b0036de0e06a270a0ee6ccea667423c38b79aa2d0",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "A single point estimate from a deterministic inverse PINN is insufficient for uncertainty reporting because it does not account for the inherent variability or uncertainty in the measurements used to train the model. The use of noisy data means that the true underlying parameters may vary around the estimated values due to random fluctuations in the input data. Therefore, a single point estimate lacks the necessary statistical information to provide meaningful uncertainty quantification.",
+          "evidence": [
+            "E26",
+            "E22",
+            "E27",
+            "E24",
+            "E18",
+            "E28"
+          ],
+          "paths": [
+            [
+              "E26",
+              "pinn",
+              "E24"
+            ],
+            [
+              "E26",
+              "inverse",
+              "E18"
+            ],
+            [
+              "E26",
+              "uncertainty",
+              "E28"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "624a1946cb735078abe08f7bf16abb52fd762145f4518736bc47251f43234d3e",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q061",
+      "category": "multi_hop",
+      "question": "A model has a small PDE residual but has not been checked against an independent solution. What additional validation is justified?",
+      "systems": {
+        "rag": {
+          "answer": "Additional validation that is justified includes training diagnostics and independent solution checks. These methods help ensure the model's reliability by comparing its predictions directly to known solutions or experimental results, thereby providing confidence in the model's performance across various scenarios.",
+          "evidence": [
+            "E18",
+            "E05",
+            "E23",
+            "E25",
+            "E15",
+            "E20"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "2e65e40cf0bef99dc97a3ed9776774c12a2aa4abf1c0c33425777779580a8a2e",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Additional validation of checking the model's agreement with an independent solution is justified because even if the model has a small PDE residual, this does not guarantee that the model accurately represents the true underlying physics. Independent solutions serve as a benchmark to ensure that the model captures all relevant aspects of the system being modeled, including any potential failure modes identified by Krishnapriyan et al. This cross-validation helps confirm that the model is reliable and capable of predicting outcomes under various conditions.",
+          "evidence": [
+            "E18",
+            "E05",
+            "E23",
+            "E21",
+            "E25",
+            "E26"
+          ],
+          "paths": [
+            [
+              "E05",
+              "boundary",
+              "E21"
+            ],
+            [
+              "E23",
+              "pinn",
+              "E25"
+            ],
+            [
+              "E18",
+              "inverse",
+              "E26"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "2cf723429004e074ea285db1d9a896d3d7d7c8a46e5b9c4bda6efe28548b7867",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 0.5
+        }
+      }
+    },
+    {
+      "id": "Q062",
+      "category": "multi_hop",
+      "question": "Why can a source term change total concentration while a periodic advective flux cannot?",
+      "systems": {
+        "rag": {
+          "answer": "A source term introduces an additional component into the system that accumulates over time, contributing to changes in total concentration without directly affecting the bulk flow (advective flux). This contrasts with periodic advective flux, which moves material along a fixed path but does not add new components to the overall concentration distribution. Thus, a source term can alter the total concentration by adding substances continuously, whereas periodic advective flux merely redistributes existing concentrations within the domain.",
+          "evidence": [
+            "E03",
+            "E02",
+            "E10",
+            "E06",
+            "E09",
+            "E01"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "a4db29954078a20d1771d3449955daeda640f0a978a2cd11f3578b2d99cc5288",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "A source term introduces an additional component into the system that accumulates over time, contributing to changes in total concentration without directly affecting the bulk flow (advective flux). This contrasts with periodic advective flux, which moves material along a fixed path but does not add new components to the overall concentration distribution. Thus, a source term can alter the total concentration by adding substances continuously, whereas periodic advective flux merely redistributes existing concentrations within the domain.",
+          "evidence": [
+            "E03",
+            "E02",
+            "E10",
+            "E06",
+            "E09",
+            "E01"
+          ],
+          "paths": [
+            [
+              "E03",
+              "advection",
+              "E06"
+            ],
+            [
+              "E02",
+              "mass_balance",
+              "E09"
+            ],
+            [
+              "E03",
+              "flux",
+              "E01"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "a4db29954078a20d1771d3449955daeda640f0a978a2cd11f3578b2d99cc5288",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q063",
+      "category": "multi_hop",
+      "question": "A channel shows strong drift but weak profile broadening. Which dimensionless comparison describes this competition, and which mechanism supplies the missing broadening?",
+      "systems": {
+        "rag": {
+          "answer": "The dimensionless comparison that describes the competition between strong drift (advection) and weak profile broadening (diffusion) in a channel is the Reynolds number (Re). \n\nAdvection provides the strong drift component by moving particles or substances through the fluid flow, whereas diffusion contributes the weak broadening by spreading out the concentration of these substances.\n\nFor the missing broadening:\n\n- **Dimensionless Comparison**: Reynolds number (Re)\n- **Mechanism Supplying Missing Broadening**: Diffusion\n\nThis explanation",
+          "evidence": [
+            "E06",
+            "E11",
+            "E12",
+            "E19",
+            "E13",
+            "E04"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "9311f7f8e3f0602b98c9f33d284f6daa04a0bb78a97f4a7ce7bf6dcfd86f5391",
+          "correct": false,
+          "concept_fraction": 0.5,
+          "evidence_recall": 0.5
+        },
+        "rag_kg": {
+          "answer": "The Peclet number (Pe) compares advective transport with diffusion through velocity, length, and diffusivity. This dimensionless comparison describes the competition between advection and diffusion.\n\nA change in total concentration alone does not identify transport coefficients because the presence of both advection and diffusion means that a single concentration profile cannot fully describe the system's behavior. Therefore, the missing broadening is supplied by the reaction and interfacial exchange mechanisms described in E07 [Heidi Nepf, MIT",
+          "evidence": [
+            "E06",
+            "E11",
+            "E12",
+            "E10",
+            "E03",
+            "E07"
+          ],
+          "paths": [
+            [
+              "E06",
+              "advection",
+              "E10"
+            ],
+            [
+              "E06",
+              "advection",
+              "E03"
+            ],
+            [
+              "E06",
+              "advection",
+              "E07"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E07"
+          ],
+          "cache_key": "035d5d78624b2962dfcadc6f718f4a2e20c757a805346154c282fb6bd6553118",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q064",
+      "category": "multi_hop",
+      "question": "Why should initial and boundary conditions accompany a discovered PDE before a forward prediction is made?",
+      "systems": {
+        "rag": {
+          "answer": "Initial and boundary conditions are essential when discovering a PDE from data because they provide the necessary constraints that help ensure the solution's uniqueness and accuracy. These conditions specify how the system behaves at the boundaries and at specific points within the domain, which are crucial inputs for any forward prediction based on the discovered PDE.\n\nThe discovery process involves learning the underlying dynamics described by the PDE from observed data. However, without specifying initial and boundary conditions, the learned model may not accurately reflect real-world behavior due to",
+          "evidence": [
+            "E21",
+            "E23",
+            "E05",
+            "E18",
+            "E08",
+            "E20"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "4d627c70ce0a4519d318dfae051edc0304d1324c5bf415e27f108aa0fd215889",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 0.6666666666666666
+        },
+        "rag_kg": {
+          "answer": "Initial and boundary conditions are essential when discovering a PDE from data because they provide the necessary constraints that help ensure the solution's uniqueness and accuracy. These conditions specify how the system behaves at the boundaries and at specific points within the domain, which are crucial inputs for any forward prediction based on the discovered PDE.\n\nThe discovery process involves learning the underlying dynamics described by the PDE from observed data. However, without specifying initial and boundary conditions, the learned model may not accurately reflect real-world behavior due to",
+          "evidence": [
+            "E21",
+            "E23",
+            "E05",
+            "E18",
+            "E20",
+            "E08"
+          ],
+          "paths": [
+            [
+              "E23",
+              "discovery",
+              "E18"
+            ],
+            [
+              "E21",
+              "pinn",
+              "E20"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "e9e8aacdaf3a09ba2cbf4e700b89d9dd7502d6d4993f69941b95feb70a7d437c",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "Q065",
+      "category": "multi_hop",
+      "question": "A retrieved source uses absorbing boundaries but the experiment is periodic. Why should that source not determine the boundary model directly?",
+      "systems": {
+        "rag": {
+          "answer": "A retrieved source using absorbing boundaries implies an absorbing boundary condition (ABC), which describes a scenario where no flux through the boundary occurs. However, for a periodic domain, opposite boundary fluxes must cancel out due to symmetry. This cancellation means that ABCs cannot be used in periodic domains because they would imply zero net flux, contrary to the requirement of cancelling opposite fluxes.\n\nThe experiment being described as \"periodic\" further supports this point, as it indicates that the system's behavior repeats over time intervals",
+          "evidence": [
+            "E05",
+            "E04",
+            "E02",
+            "E09",
+            "E06",
+            "E10"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "c9ae1467247e444f6f724e4a55660e2237bf5b305b3a5c0778239f10a957b526",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "A retrieved source using absorbing boundaries implies an absorbing boundary condition (ABC), which describes a scenario where no flux occurs at the boundary. However, for a periodic domain, opposite boundary fluxes must cancel out due to symmetry. This cancellation means that ABCs cannot be used to uniquely determine the boundary model because they do not account for the conservation of mass across the entire domain.\n\nThe discrepancy arises from the fact that while ABCs ensure that the flux through the boundary vanishes, this does not necessarily mean that",
+          "evidence": [
+            "E05",
+            "E04",
+            "E02",
+            "E09",
+            "E10",
+            "E01"
+          ],
+          "paths": [
+            [
+              "E02",
+              "mass_balance",
+              "E09"
+            ],
+            [
+              "E05",
+              "inverse",
+              "E10"
+            ],
+            [
+              "E04",
+              "flux",
+              "E01"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "c425e8091ece7448399c5e51d2f4f970d28668640ab0476b4af15a14d9e327b8",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q066",
+      "category": "multi_hop",
+      "question": "A growing population is above carrying capacity. Why would a positive linear-growth-only equation make the wrong qualitative prediction?",
+      "systems": {
+        "rag": {
+          "answer": "A positive linear-growth-only equation makes the wrong qualitative prediction because it fails to account for the effects of reaching or exceeding the carrying capacity (K). The logistic growth model includes both a linear growth term and a negative quadratic term that represents the diminishing returns on growth when the population size approaches the carrying capacity. This non-linear relationship ensures that once the population surpasses the carrying capacity, the growth slows down rather than continuing indefinitely at a constant rate. Therefore, a simple linear growth model without these additional components",
+          "evidence": [
+            "E13",
+            "E11",
+            "E12",
+            "E01",
+            "E15",
+            "E10"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "b01eded5f0f79d3a101eccd95c284aaaafca3cb60dc0bbf9cb4256896da9ca02",
+          "correct": false,
+          "concept_fraction": 0.5,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "A positive linear-growth-only equation makes the wrong qualitative prediction because it fails to account for the effects of reaching or exceeding the carrying capacity (K). The logistic growth model includes both a linear growth term and a negative quadratic term that represents the diminishing returns on growth when the population size approaches the carrying capacity. This means that even though there might be an initial increase due to the linear growth, once the population reaches the carrying capacity, further increases will occur at a decreasing rate, leading to a decline rather",
+          "evidence": [
+            "E13",
+            "E11",
+            "E12",
+            "E01",
+            "E10",
+            "E15"
+          ],
+          "paths": [
+            [
+              "E11",
+              "reaction",
+              "E10"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "aeeea596f1e16ea8d0e71bf4929b433831d308a22aa524fc3462aa9a109aa57b",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q067",
+      "category": "multi_hop",
+      "question": "How can noise amplification from pointwise derivatives affect sparse equation selection, and what formulation addresses it?",
+      "systems": {
+        "rag": {
+          "answer": "Noise amplification from pointwise derivatives can lead to unreliable estimates when fitting sparse equations to noisy data. The formulation that addresses this issue involves using weak formulations (E18) which transfer derivatives onto test functions through integration by parts, thus avoiding direct pointwise differentiation of noisy data. This approach helps maintain stability and reliability in the estimation process despite the presence of measurement noise.",
+          "evidence": [
+            "E18",
+            "E14",
+            "E17",
+            "E19",
+            "E15",
+            "E23"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E18"
+          ],
+          "cache_key": "1bb2d02199c0fe1a9a580eafe85bafb717dd62d50d6694463f50c27620bc7527",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Noise amplification from pointwise derivatives can lead to unreliable estimates when fitting sparse equations to noisy data. The formulation that addresses this issue involves using weak formulations (E18) which transfer derivatives onto test functions through integration by parts, thus avoiding direct pointwise differentiation of noisy data. This approach helps maintain stability and reliability in the estimation process despite the presence of measurement noise.",
+          "evidence": [
+            "E18",
+            "E14",
+            "E17",
+            "E19",
+            "E15",
+            "E23"
+          ],
+          "paths": [
+            [
+              "E18",
+              "weak_form",
+              "E19"
+            ],
+            [
+              "E18",
+              "discovery",
+              "E15"
+            ],
+            [
+              "E18",
+              "discovery",
+              "E23"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E18"
+          ],
+          "cache_key": "1bb2d02199c0fe1a9a580eafe85bafb717dd62d50d6694463f50c27620bc7527",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q068",
+      "category": "multi_hop",
+      "question": "Why is finding the smallest candidate equation not always enough to obtain the correct dynamics?",
+      "systems": {
+        "rag": {
+          "answer": "Finding the smallest candidate equation is not always sufficient because it may miss key components or mechanisms that govern the system's behavior. The process of sparse identification involves selecting a subset of active terms from a larger candidate function library based on observations, but this selection must account for the underlying dynamics of the system. If the candidate library does not contain all the governing mechanisms, the identified model will lack essential elements needed to accurately capture the true dynamics. This oversight could lead to incorrect predictions or behaviors that do not reflect reality",
+          "evidence": [
+            "E15",
+            "E14",
+            "E24",
+            "E23",
+            "E25",
+            "E16"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "e42444652611326bb18ffe08eecd66799229e1c759ab915f42430b986504ff61",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Finding the smallest candidate equation is not always sufficient because it may not capture all relevant dynamics or constraints inherent in the system being modeled. The process of identifying a \"sparse\" equation involves balancing explanatory accuracy against model complexity, which means that while a minimal set of active terms might suffice for some applications, it could still miss critical aspects of the underlying physics if those details are not explicitly included.\n\nThe evidence provided supports this by highlighting issues such as:\n\n- E14 indicates that sparse identification selects a subset of",
+          "evidence": [
+            "E15",
+            "E14",
+            "E24",
+            "E23",
+            "E25",
+            "E20"
+          ],
+          "paths": [
+            [
+              "E15",
+              "discovery",
+              "E23"
+            ],
+            [
+              "E24",
+              "optimization",
+              "E25"
+            ],
+            [
+              "E15",
+              "data_fit",
+              "E20"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E14"
+          ],
+          "cache_key": "0d3d46bc3d31129457275a7040842d8a73566631f155d6c7af2d2c77f5a42d0b",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 0.5
+        }
+      }
+    },
+    {
+      "id": "Q069",
+      "category": "multi_hop",
+      "question": "Can fitting unknown coefficients in a supplied equation substitute for discovering its term support?",
+      "systems": {
+        "rag": {
+          "answer": "Yes, based on E16 which states that identifying missing terms limits recovery, it implies that fitting unknown coefficients in a supplied equation cannot fully substitute for discovering the term support. The process of sparse identification aims at recovering all relevant terms by balancing between explanatory accuracy and model complexity, whereas fitting coefficients alone does not account for the selection of these terms. Therefore, finding the term support requires an approach beyond just coefficient estimation.",
+          "evidence": [
+            "E15",
+            "E18",
+            "E14",
+            "E23",
+            "E16",
+            "E22"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E16"
+          ],
+          "cache_key": "ff247025fa4a3bbfce89c44a0d2f6f1177f0b7b7031e08f8817183636964b2f3",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Yes, based on E16 which states that identifying missing terms limits recovery, it implies that fitting unknown coefficients in a supplied equation cannot fully substitute for discovering the term support. The process of sparse identification aims at recovering all relevant terms by balancing between explanatory accuracy and model complexity, whereas fitting coefficients alone does not account for the selection of these terms. Therefore, finding the term support requires an approach beyond just coefficient estimation.",
+          "evidence": [
+            "E15",
+            "E18",
+            "E14",
+            "E23",
+            "E16",
+            "E22"
+          ],
+          "paths": [
+            [
+              "E15",
+              "discovery",
+              "E23"
+            ],
+            [
+              "E15",
+              "discovery",
+              "E16"
+            ],
+            [
+              "E18",
+              "inverse",
+              "E22"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E16"
+          ],
+          "cache_key": "ff247025fa4a3bbfce89c44a0d2f6f1177f0b7b7031e08f8817183636964b2f3",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q070",
+      "category": "multi_hop",
+      "question": "A PINN interval looks narrow but its coverage was never evaluated. Why does narrowness alone not establish reliability?",
+      "systems": {
+        "rag": {
+          "answer": "A PINN's narrow interval of confidence without proper evaluation cannot establish reliability because:\n\n- Narrow intervals may indicate high precision in predictions, but this could also suggest overfitting or lack of generalization capability.\n\n- Empirical evaluation is necessary to assess whether the narrow interval reflects true uncertainty or merely noise in the data.\n\n- Without validation against real-world scenarios or additional tests, the narrow interval might simply reflect random fluctuations rather than reliable prediction bounds.\n\nThus, while narrow intervals are indicative of good performance within the",
+          "evidence": [
+            "E28",
+            "E24",
+            "E26",
+            "E27",
+            "E05",
+            "E19"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "2cc6c04c5fba608d90af9ca975cea636b5c3be8b68782662a45b1abbe8c34d5f",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Insufficient evidence. Narrow intervals in a PINN's prediction do not inherently establish reliability because they may lack validation through empirical evaluation or testing against actual data. Reliability requires both narrow predictions and broad confidence intervals that reflect the true variability of the system being modeled. Narrow intervals without this broader context could indicate either overfitting or underestimation of uncertainty, neither of which guarantees reliable predictions.",
+          "evidence": [
+            "E28",
+            "E24",
+            "E26",
+            "E27",
+            "E25",
+            "E05"
+          ],
+          "paths": [
+            [
+              "E28",
+              "uncertainty",
+              "E27"
+            ],
+            [
+              "E28",
+              "validation",
+              "E25"
+            ],
+            [
+              "E26",
+              "inverse",
+              "E05"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "436e14c35119d6fba529fd7b1e96d8b68b9814779acfdfab86b5a72421347c72",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q071",
+      "category": "multi_hop",
+      "question": "When an internal reaction and boundary exchange both occur, what must an integrated balance include?",
+      "systems": {
+        "rag": {
+          "answer": "An integrated balance that includes both an internal reaction and boundary exchange would need to account for:\n\n- Internal reactions affecting the system's state (e.g., changing concentrations).\n- Boundary exchanges influencing the flow across interfaces.\n\nThe balance should consider how these factors interact within the domain, ensuring that changes in total concentration are accurately represented without assuming cancellation due to no-flux or absorbing boundary conditions.",
+          "evidence": [
+            "E09",
+            "E02",
+            "E01",
+            "E10",
+            "E04",
+            "E06"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "1e900b5d920cca884248b26ec64f8bdd72c84bcbbe3fa437504f26b8a59c7646",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "An integrated balance that includes both an internal reaction and boundary exchange would need to account for:\n\n- The effect of the internal reaction on the overall concentration changes within the system (as per E09).\n- The cancellation of opposing boundary fluxes over time (as per E02), which doesn't affect the total concentration but impacts the rate at which it changes.\n\nThus, while no-flux and absorbing boundary conditions will yield different results due to their distinct effects on the solution (E04),",
+          "evidence": [
+            "E09",
+            "E02",
+            "E01",
+            "E10",
+            "E04",
+            "E03"
+          ],
+          "paths": [
+            [
+              "E09",
+              "reaction",
+              "E10"
+            ],
+            [
+              "E01",
+              "flux",
+              "E04"
+            ],
+            [
+              "E01",
+              "flux",
+              "E03"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E09",
+            "E02",
+            "E04"
+          ],
+          "cache_key": "bad62c82ae9903cbe7fd64a1f8d508577c795909bbb8ed21b9c1888a54d4b973",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q072",
+      "category": "multi_hop",
+      "question": "Pointwise differentiation of a noisy experiment suggests extra equation terms, while a weak formulation fits with fewer terms. Why prefer the latter, and how does its treatment of derivatives differ?",
+      "systems": {
+        "rag": {
+          "answer": "The preference for weak formulations over pointwise differentiation in noisy experiments stems from their ability to handle uncertainties more effectively. Weak formulations avoid direct pointwise differentiation of noisy data, which can introduce additional error or artifacts into the model. Instead, they integrate derivatives through integration by parts, leading to smoother approximations that are less sensitive to noise.\n\nIn contrast, pointwise differentiation involves taking derivatives at specific points, which can amplify any random fluctuations present in the data. This approach is prone to introducing spurious features or",
+          "evidence": [
+            "E17",
+            "E18",
+            "E19",
+            "E08",
+            "E14",
+            "E15"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "ad0d038979c2a1c5cc3c0718882db47c54e39904664964f00f6da333f3a6af2c",
+          "correct": false,
+          "concept_fraction": 0.5,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "The preference for weak formulations over pointwise differentiation in noisy experiments stems from their ability to handle uncertainties more effectively. Weak formulations avoid direct pointwise differentiation of noisy data, which can introduce additional equation terms that may not reflect true underlying dynamics. This approach instead transfers derivatives onto test functions through integration by parts, thereby maintaining consistency with the original problem's structure.\n\nIn contrast, pointwise differentiation would lead to an increase in the number of terms in the system due to the need to differentiate each noisy observation multiple times",
+          "evidence": [
+            "E17",
+            "E18",
+            "E19",
+            "E14",
+            "E15",
+            "E26"
+          ],
+          "paths": [
+            [
+              "E18",
+              "discovery",
+              "E14"
+            ],
+            [
+              "E18",
+              "discovery",
+              "E15"
+            ],
+            [
+              "E17",
+              "noise",
+              "E26"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "b36ce3288d031b1d37335a4096a2b68f21428bf3aa7ba89fa949ad71ed2f8814",
+          "correct": false,
+          "concept_fraction": 0.5,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q073",
+      "category": "multi_hop",
+      "question": "A discovered transport law will be applied to a new initial profile. Which parameters can remain fixed and which problem conditions must change?",
+      "systems": {
+        "rag": {
+          "answer": "To determine which parameters can remain fixed and which problem conditions must change when applying a discovered transport law to a new initial profile:\n\n- **Parameters that can remain fixed**: \n  - Initial concentration profile (e.g., \\(C(x,0)\\))\n  - Total volume of the system (V)\n  - Diffusion coefficient (D) if constant\n\n- **Problem conditions that must change**:\n  - Velocity field (u), which affects advection\n  - Carrying capacity (K),",
+          "evidence": [
+            "E21",
+            "E10",
+            "E08",
+            "E06",
+            "E07",
+            "E11"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "4149ec9018a4f0b263308b9196c52205e7280075386c39ab6fd4a9a5d3c22a61",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 0.5
+        },
+        "rag_kg": {
+          "answer": "To determine which parameters can remain fixed and which need to change when applying a discovered transport law to a new initial profile:\n\n- **Parameters that can remain fixed**: \n  - Velocity (V)\n  - Length (L)\n  - Diffusivity (D)\n\n- **Problem conditions that must change**:\n  - Concentration profile at the beginning (initial condition)\n  - Peclet number (Pe), which is calculated as Pe = V * L / D\n\nThe velocity (V)",
+          "evidence": [
+            "E21",
+            "E10",
+            "E08",
+            "E06",
+            "E07",
+            "E03"
+          ],
+          "paths": [
+            [
+              "E10",
+              "advection",
+              "E06"
+            ],
+            [
+              "E10",
+              "advection",
+              "E07"
+            ],
+            [
+              "E10",
+              "advection",
+              "E03"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "0053ed23bbf78028da05b2f462a6ba50a29102d8726e54416956b1c2297733e3",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 0.5
+        }
+      }
+    },
+    {
+      "id": "Q074",
+      "category": "multi_hop",
+      "question": "Why do sparse observations, a candidate library and physics constraints play different roles in equation discovery?",
+      "systems": {
+        "rag": {
+          "answer": "Sparse observations, a candidate library, and physics constraints each serve distinct purposes in equation discovery:\n\n- **Sparse Observations**: These are used to identify which variables or parameters are relevant (active) by selecting a subset of terms that best explain the observed data without including all possible combinations.\n\n- **Candidate Library**: This includes potential functions or models that could represent the system being studied. The size and composition of this library determine how many terms can be considered as potentially active.\n\n- **Physics Constraints**: These guide",
+          "evidence": [
+            "E14",
+            "E15",
+            "E23",
+            "E18",
+            "E20",
+            "E16"
+          ],
+          "paths": [],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "c845a8959fc465508b7c4fa04f4f53d9988ff83ac7343f7704bb20ebd2592f06",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Sparse observations, a candidate library, and physics constraints each serve distinct purposes in equation discovery:\n\n- **Sparse Observations**: These are used to identify which variables or parameters are relevant (active) by selecting a subset of terms that best explain the observed data without including all possible combinations.\n\n- **Candidate Library**: This includes potential functions or models that could represent the system being studied. The size and composition of this library determine how many terms can be considered as potentially active.\n\n- **Physics Constraints**: These guide",
+          "evidence": [
+            "E14",
+            "E15",
+            "E23",
+            "E18",
+            "E20",
+            "E16"
+          ],
+          "paths": [
+            [
+              "E14",
+              "discovery",
+              "E18"
+            ],
+            [
+              "E15",
+              "data_fit",
+              "E20"
+            ],
+            [
+              "E14",
+              "discovery",
+              "E16"
+            ]
+          ],
+          "valid_citations": false,
+          "cited_ids": [],
+          "cache_key": "c845a8959fc465508b7c4fa04f4f53d9988ff83ac7343f7704bb20ebd2592f06",
+          "correct": false,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        }
+      }
+    },
+    {
+      "id": "Q075",
+      "category": "multi_hop",
+      "question": "If ordinary PINN training is unstable on noisy data, why should uncertainty analysis and optimization diagnostics be kept separate?",
+      "systems": {
+        "rag": {
+          "answer": "Ordinary deterministic PINNs do not inherently calibrate uncertainty from noisy data, as evidenced by E26. This suggests that while PINNs can learn solutions to partial differential equations (PDEs), they cannot directly incorporate or infer uncertainties from noisy input data without additional methods like Bayesian approaches. Therefore, if ordinary PINNs are unstable on noisy data, it implies that their output lacks calibration of uncertainty, necessitating an independent approach for uncertainty analysis and optimization diagnostics. Thus, keeping these analyses separate ensures that",
+          "evidence": [
+            "E24",
+            "E26",
+            "E27",
+            "E20",
+            "E17",
+            "E28"
+          ],
+          "paths": [],
+          "valid_citations": true,
+          "cited_ids": [
+            "E26"
+          ],
+          "cache_key": "dd0c93c965265d041ea9852234ad1398a7080cb600ce31cb7338fe65625c1a0b",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 1.0
+        },
+        "rag_kg": {
+          "answer": "Ordinary deterministic PINNs do not inherently provide calibrated uncertainty, as evidenced by E26. This means that without additional methods like Bayesian PINNs or composite physics losses (E25), they cannot fully account for uncertainties in their predictions. Therefore, if ordinary PINN training is unstable due to noisy data, it's crucial to keep uncertainty analysis and optimization diagnostics separate because ordinary PINNs alone lack the capability to handle this type of instability effectively.",
+          "evidence": [
+            "E24",
+            "E26",
+            "E27",
+            "E25",
+            "E20",
+            "E18"
+          ],
+          "paths": [
+            [
+              "E24",
+              "optimization",
+              "E25"
+            ],
+            [
+              "E24",
+              "pinn",
+              "E20"
+            ],
+            [
+              "E26",
+              "inverse",
+              "E18"
+            ]
+          ],
+          "valid_citations": true,
+          "cited_ids": [
+            "E26",
+            "E25"
+          ],
+          "cache_key": "b80f98f2a81dd8b01c6a410ba78feb4655cf348fc1c5a52c8df5572cd19ca9f1",
+          "correct": true,
+          "concept_fraction": 1.0,
+          "evidence_recall": 0.6666666666666666
+        }
+      }
+    },
+    {
+      "id": "A01",
+      "category": "adversarial",
+      "question": "Diffusivity declared with velocity units",
+      "status": "reject",
+      "reason": "dimensional inconsistency",
+      "correct": true
+    },
+    {
+      "id": "A02",
+      "category": "adversarial",
+      "question": "Linear rate missing inverse-time dimension",
+      "status": "reject",
+      "reason": "dimensional inconsistency",
+      "correct": true
+    },
+    {
+      "id": "A03",
+      "category": "adversarial",
+      "question": "Coordinates in centimetres without conversion",
+      "status": "reject",
+      "reason": "coordinate conversion checked",
+      "correct": true
+    },
+    {
+      "id": "A04",
+      "category": "adversarial",
+      "question": "Unsafe external expression",
+      "status": "reject",
+      "reason": "invalid or unsupported expression",
+      "correct": true
+    },
+    {
+      "id": "A05",
+      "category": "adversarial",
+      "question": "Quadratic coefficient with valid concentration dimension",
+      "status": "accept",
+      "reason": "admissible",
+      "correct": true
+    },
+    {
+      "id": "A06",
+      "category": "adversarial",
+      "question": "Forward backward-diffusion model",
+      "status": "reject",
+      "reason": "backward diffusion is not a stable forward model in this regime",
+      "correct": true
+    },
+    {
+      "id": "A07",
+      "category": "adversarial",
+      "question": "False constant-mass claim with internal production",
+      "status": "reject",
+      "reason": "balance predicts mass rate 0.2",
+      "correct": true
+    },
+    {
+      "id": "A08",
+      "category": "adversarial",
+      "question": "Ignoring an inward boundary flux",
+      "status": "reject",
+      "reason": "balance predicts mass rate 0.3",
+      "correct": true
+    },
+    {
+      "id": "A09",
+      "category": "adversarial",
+      "question": "Applying concentration positivity to signed velocity",
+      "status": "accept",
+      "reason": "positivity applied only to nonnegative quantities",
+      "correct": true
+    },
+    {
+      "id": "A10",
+      "category": "adversarial",
+      "question": "Incompatible initial-boundary corner values",
+      "status": "reject",
+      "reason": "initial-boundary compatibility checked",
+      "correct": true
+    },
+    {
+      "id": "A11",
+      "category": "adversarial",
+      "question": "Constant observations do not distinguish two coefficients",
+      "status": "insufficient",
+      "reason": "design rank 1 for 2 unknowns",
+      "correct": true
+    },
+    {
+      "id": "A12",
+      "category": "adversarial",
+      "question": "Insufficient temporal evidence for three parameters",
+      "status": "insufficient",
+      "reason": "design rank 1 for 3 unknowns",
+      "correct": true
+    },
+    {
+      "id": "A13",
+      "category": "adversarial",
+      "question": "Confounded polynomial reaction terms",
+      "status": "insufficient",
+      "reason": "design rank 1 for 2 unknowns",
+      "correct": true
+    },
+    {
+      "id": "A14",
+      "category": "adversarial",
+      "question": "Unknown boundary inferred from interior values alone",
+      "status": "insufficient",
+      "reason": "boundary information is unavailable",
+      "correct": true
+    },
+    {
+      "id": "A15",
+      "category": "adversarial",
+      "question": "Heterogeneous sensor noise cannot use one unqualified variance",
+      "status": "qualify",
+      "reason": "heterogeneous noise needs weighted fitting",
+      "correct": true
+    },
+    {
+      "id": "A16",
+      "category": "adversarial",
+      "question": "Fabricated evidence citation",
+      "status": "reject",
+      "reason": "source IDs resolved against evidence",
+      "correct": true
+    },
+    {
+      "id": "A17",
+      "category": "adversarial",
+      "question": "Contradictory source assumptions",
+      "status": "reject",
+      "reason": "source assumptions checked",
+      "correct": true
+    },
+    {
+      "id": "A18",
+      "category": "adversarial",
+      "question": "Spatial signal above sensor resolution",
+      "status": "insufficient",
+      "reason": "spatial sampling rank checked",
+      "correct": true
+    },
+    {
+      "id": "A19",
+      "category": "adversarial",
+      "question": "Unsupported extrapolation certainty",
+      "status": "qualify",
+      "reason": "extrapolation requires independent validation",
+      "correct": true
+    },
+    {
+      "id": "A20",
+      "category": "adversarial",
+      "question": "Fourth-order PDE outside the declared grammar",
+      "status": "reject",
+      "reason": "invalid or unsupported expression",
+      "correct": true
+    }
+  ]
+}

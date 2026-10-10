@@ -1,0 +1,932 @@
+{
+  "nodes": [
+    {
+      "id": "advection",
+      "type": "concept"
+    },
+    {
+      "id": "bayesian",
+      "type": "concept"
+    },
+    {
+      "id": "boundary",
+      "type": "concept"
+    },
+    {
+      "id": "complexity",
+      "type": "concept"
+    },
+    {
+      "id": "data_fit",
+      "type": "concept"
+    },
+    {
+      "id": "derivatives",
+      "type": "concept"
+    },
+    {
+      "id": "diffusion",
+      "type": "concept"
+    },
+    {
+      "id": "dirichlet",
+      "type": "concept"
+    },
+    {
+      "id": "discovery",
+      "type": "concept"
+    },
+    {
+      "id": "equilibrium",
+      "type": "concept"
+    },
+    {
+      "id": "flux",
+      "type": "concept"
+    },
+    {
+      "id": "forward",
+      "type": "concept"
+    },
+    {
+      "id": "identifiability",
+      "type": "concept"
+    },
+    {
+      "id": "inverse",
+      "type": "concept"
+    },
+    {
+      "id": "library",
+      "type": "concept"
+    },
+    {
+      "id": "mass_balance",
+      "type": "concept"
+    },
+    {
+      "id": "noise",
+      "type": "concept"
+    },
+    {
+      "id": "optimization",
+      "type": "concept"
+    },
+    {
+      "id": "parameter",
+      "type": "concept"
+    },
+    {
+      "id": "periodic",
+      "type": "concept"
+    },
+    {
+      "id": "pinn",
+      "type": "concept"
+    },
+    {
+      "id": "positivity",
+      "type": "concept"
+    },
+    {
+      "id": "prediction",
+      "type": "concept"
+    },
+    {
+      "id": "profile",
+      "type": "concept"
+    },
+    {
+      "id": "reaction",
+      "type": "concept"
+    },
+    {
+      "id": "rejection",
+      "type": "concept"
+    },
+    {
+      "id": "residual",
+      "type": "concept"
+    },
+    {
+      "id": "saturation",
+      "type": "concept"
+    },
+    {
+      "id": "scaling",
+      "type": "concept"
+    },
+    {
+      "id": "scope",
+      "type": "concept"
+    },
+    {
+      "id": "source",
+      "type": "concept"
+    },
+    {
+      "id": "sparsity",
+      "type": "concept"
+    },
+    {
+      "id": "u",
+      "type": "concept"
+    },
+    {
+      "id": "u2",
+      "type": "concept"
+    },
+    {
+      "id": "u_x",
+      "type": "concept"
+    },
+    {
+      "id": "u_xx",
+      "type": "concept"
+    },
+    {
+      "id": "uncertainty",
+      "type": "concept"
+    },
+    {
+      "id": "validation",
+      "type": "concept"
+    },
+    {
+      "id": "weak_form",
+      "type": "concept"
+    },
+    {
+      "id": "E01",
+      "type": "evidence",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_02/"
+    },
+    {
+      "id": "E02",
+      "type": "evidence",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_02/"
+    },
+    {
+      "id": "E03",
+      "type": "evidence",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_02/"
+    },
+    {
+      "id": "E04",
+      "type": "evidence",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_04/"
+    },
+    {
+      "id": "E05",
+      "type": "evidence",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_04/"
+    },
+    {
+      "id": "E06",
+      "type": "evidence",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_05/"
+    },
+    {
+      "id": "E07",
+      "type": "evidence",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_05/"
+    },
+    {
+      "id": "E08",
+      "type": "evidence",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_05/"
+    },
+    {
+      "id": "E09",
+      "type": "evidence",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_09/"
+    },
+    {
+      "id": "E10",
+      "type": "evidence",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_09/"
+    },
+    {
+      "id": "E11",
+      "type": "evidence",
+      "source": "https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation"
+    },
+    {
+      "id": "E12",
+      "type": "evidence",
+      "source": "https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation"
+    },
+    {
+      "id": "E13",
+      "type": "evidence",
+      "source": "https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation"
+    },
+    {
+      "id": "E14",
+      "type": "evidence",
+      "source": "https://arxiv.org/abs/1509.03580"
+    },
+    {
+      "id": "E15",
+      "type": "evidence",
+      "source": "https://arxiv.org/abs/1509.03580"
+    },
+    {
+      "id": "E16",
+      "type": "evidence",
+      "source": "https://arxiv.org/abs/1509.03580"
+    },
+    {
+      "id": "E17",
+      "type": "evidence",
+      "source": "https://arxiv.org/abs/2007.02848"
+    },
+    {
+      "id": "E18",
+      "type": "evidence",
+      "source": "https://arxiv.org/abs/2007.02848"
+    },
+    {
+      "id": "E19",
+      "type": "evidence",
+      "source": "https://arxiv.org/abs/2007.02848"
+    },
+    {
+      "id": "E20",
+      "type": "evidence",
+      "source": "https://arxiv.org/abs/1711.10561"
+    },
+    {
+      "id": "E21",
+      "type": "evidence",
+      "source": "https://arxiv.org/abs/1711.10561"
+    },
+    {
+      "id": "E22",
+      "type": "evidence",
+      "source": "https://arxiv.org/abs/1711.10566"
+    },
+    {
+      "id": "E23",
+      "type": "evidence",
+      "source": "https://arxiv.org/abs/1711.10566"
+    },
+    {
+      "id": "E24",
+      "type": "evidence",
+      "source": "https://arxiv.org/abs/2109.01050"
+    },
+    {
+      "id": "E25",
+      "type": "evidence",
+      "source": "https://arxiv.org/abs/2109.01050"
+    },
+    {
+      "id": "E26",
+      "type": "evidence",
+      "source": "https://arxiv.org/abs/2003.06097"
+    },
+    {
+      "id": "E27",
+      "type": "evidence",
+      "source": "https://arxiv.org/abs/2003.06097"
+    },
+    {
+      "id": "E28",
+      "type": "evidence",
+      "source": "https://arxiv.org/abs/2003.06097"
+    }
+  ],
+  "edges": [
+    {
+      "from": "E01",
+      "to": "mass_balance",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_02/",
+      "location": "Lecture 2"
+    },
+    {
+      "from": "E01",
+      "to": "flux",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_02/",
+      "location": "Lecture 2"
+    },
+    {
+      "from": "E01",
+      "to": "source",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_02/",
+      "location": "Lecture 2"
+    },
+    {
+      "from": "E02",
+      "to": "periodic",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_02/",
+      "location": "Lecture 2"
+    },
+    {
+      "from": "E02",
+      "to": "mass_balance",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_02/",
+      "location": "Lecture 2"
+    },
+    {
+      "from": "E02",
+      "to": "reaction",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_02/",
+      "location": "Lecture 2"
+    },
+    {
+      "from": "E03",
+      "to": "flux",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_02/",
+      "location": "Lecture 2"
+    },
+    {
+      "from": "E03",
+      "to": "advection",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_02/",
+      "location": "Lecture 2"
+    },
+    {
+      "from": "E03",
+      "to": "diffusion",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_02/",
+      "location": "Lecture 2"
+    },
+    {
+      "from": "E04",
+      "to": "boundary",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_04/",
+      "location": "Lecture 4"
+    },
+    {
+      "from": "E04",
+      "to": "flux",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_04/",
+      "location": "Lecture 4"
+    },
+    {
+      "from": "E04",
+      "to": "dirichlet",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_04/",
+      "location": "Lecture 4"
+    },
+    {
+      "from": "E05",
+      "to": "boundary",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_04/",
+      "location": "Lecture 4"
+    },
+    {
+      "from": "E05",
+      "to": "inverse",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_04/",
+      "location": "Lecture 4"
+    },
+    {
+      "from": "E05",
+      "to": "identifiability",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_04/",
+      "location": "Lecture 4"
+    },
+    {
+      "from": "E06",
+      "to": "advection",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_05/",
+      "location": "Lecture 5"
+    },
+    {
+      "from": "E06",
+      "to": "diffusion",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_05/",
+      "location": "Lecture 5"
+    },
+    {
+      "from": "E06",
+      "to": "profile",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_05/",
+      "location": "Lecture 5"
+    },
+    {
+      "from": "E07",
+      "to": "advection",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_05/",
+      "location": "Lecture 5"
+    },
+    {
+      "from": "E07",
+      "to": "diffusion",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_05/",
+      "location": "Lecture 5"
+    },
+    {
+      "from": "E07",
+      "to": "scaling",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_05/",
+      "location": "Lecture 5"
+    },
+    {
+      "from": "E08",
+      "to": "advection",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_05/",
+      "location": "Lecture 5"
+    },
+    {
+      "from": "E08",
+      "to": "diffusion",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_05/",
+      "location": "Lecture 5"
+    },
+    {
+      "from": "E08",
+      "to": "u_x",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_05/",
+      "location": "Lecture 5"
+    },
+    {
+      "from": "E08",
+      "to": "u_xx",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_05/",
+      "location": "Lecture 5"
+    },
+    {
+      "from": "E09",
+      "to": "reaction",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_09/",
+      "location": "Lecture 9"
+    },
+    {
+      "from": "E09",
+      "to": "mass_balance",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_09/",
+      "location": "Lecture 9"
+    },
+    {
+      "from": "E09",
+      "to": "source",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_09/",
+      "location": "Lecture 9"
+    },
+    {
+      "from": "E10",
+      "to": "reaction",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_09/",
+      "location": "Lecture 9"
+    },
+    {
+      "from": "E10",
+      "to": "advection",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_09/",
+      "location": "Lecture 9"
+    },
+    {
+      "from": "E10",
+      "to": "diffusion",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_09/",
+      "location": "Lecture 9"
+    },
+    {
+      "from": "E10",
+      "to": "inverse",
+      "relation": "supports",
+      "source": "https://ocw.mit.edu/courses/1-061-transport-processes-in-the-environment-fall-2008/resources/lec_09/",
+      "location": "Lecture 9"
+    },
+    {
+      "from": "E11",
+      "to": "reaction",
+      "relation": "supports",
+      "source": "https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation",
+      "location": "Section 4.4"
+    },
+    {
+      "from": "E11",
+      "to": "saturation",
+      "relation": "supports",
+      "source": "https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation",
+      "location": "Section 4.4"
+    },
+    {
+      "from": "E11",
+      "to": "u",
+      "relation": "supports",
+      "source": "https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation",
+      "location": "Section 4.4"
+    },
+    {
+      "from": "E11",
+      "to": "u2",
+      "relation": "supports",
+      "source": "https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation",
+      "location": "Section 4.4"
+    },
+    {
+      "from": "E12",
+      "to": "reaction",
+      "relation": "supports",
+      "source": "https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation",
+      "location": "Section 4.4"
+    },
+    {
+      "from": "E12",
+      "to": "saturation",
+      "relation": "supports",
+      "source": "https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation",
+      "location": "Section 4.4"
+    },
+    {
+      "from": "E12",
+      "to": "u",
+      "relation": "supports",
+      "source": "https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation",
+      "location": "Section 4.4"
+    },
+    {
+      "from": "E12",
+      "to": "u2",
+      "relation": "supports",
+      "source": "https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation",
+      "location": "Section 4.4"
+    },
+    {
+      "from": "E13",
+      "to": "saturation",
+      "relation": "supports",
+      "source": "https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation",
+      "location": "Section 4.4"
+    },
+    {
+      "from": "E13",
+      "to": "equilibrium",
+      "relation": "supports",
+      "source": "https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation",
+      "location": "Section 4.4"
+    },
+    {
+      "from": "E13",
+      "to": "positivity",
+      "relation": "supports",
+      "source": "https://openstax.org/books/calculus-volume-2/pages/4-4-the-logistic-equation",
+      "location": "Section 4.4"
+    },
+    {
+      "from": "E14",
+      "to": "discovery",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1509.03580",
+      "location": "Abstract and sparse-regression formulation"
+    },
+    {
+      "from": "E14",
+      "to": "sparsity",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1509.03580",
+      "location": "Abstract and sparse-regression formulation"
+    },
+    {
+      "from": "E14",
+      "to": "complexity",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1509.03580",
+      "location": "Abstract and sparse-regression formulation"
+    },
+    {
+      "from": "E15",
+      "to": "discovery",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1509.03580",
+      "location": "Abstract and sparse-regression formulation"
+    },
+    {
+      "from": "E15",
+      "to": "complexity",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1509.03580",
+      "location": "Abstract and sparse-regression formulation"
+    },
+    {
+      "from": "E15",
+      "to": "data_fit",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1509.03580",
+      "location": "Abstract and sparse-regression formulation"
+    },
+    {
+      "from": "E16",
+      "to": "discovery",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1509.03580",
+      "location": "Abstract and sparse-regression formulation"
+    },
+    {
+      "from": "E16",
+      "to": "library",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1509.03580",
+      "location": "Abstract and sparse-regression formulation"
+    },
+    {
+      "from": "E16",
+      "to": "scope",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1509.03580",
+      "location": "Abstract and sparse-regression formulation"
+    },
+    {
+      "from": "E17",
+      "to": "weak_form",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2007.02848",
+      "location": "Abstract and weak formulation"
+    },
+    {
+      "from": "E17",
+      "to": "noise",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2007.02848",
+      "location": "Abstract and weak formulation"
+    },
+    {
+      "from": "E17",
+      "to": "derivatives",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2007.02848",
+      "location": "Abstract and weak formulation"
+    },
+    {
+      "from": "E18",
+      "to": "weak_form",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2007.02848",
+      "location": "Abstract and weak formulation"
+    },
+    {
+      "from": "E18",
+      "to": "noise",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2007.02848",
+      "location": "Abstract and weak formulation"
+    },
+    {
+      "from": "E18",
+      "to": "discovery",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2007.02848",
+      "location": "Abstract and weak formulation"
+    },
+    {
+      "from": "E18",
+      "to": "inverse",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2007.02848",
+      "location": "Abstract and weak formulation"
+    },
+    {
+      "from": "E19",
+      "to": "weak_form",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2007.02848",
+      "location": "Abstract and weak formulation"
+    },
+    {
+      "from": "E19",
+      "to": "scaling",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2007.02848",
+      "location": "Abstract and weak formulation"
+    },
+    {
+      "from": "E19",
+      "to": "sparsity",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2007.02848",
+      "location": "Abstract and weak formulation"
+    },
+    {
+      "from": "E20",
+      "to": "pinn",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1711.10561",
+      "location": "Abstract and continuous-time formulation"
+    },
+    {
+      "from": "E20",
+      "to": "residual",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1711.10561",
+      "location": "Abstract and continuous-time formulation"
+    },
+    {
+      "from": "E20",
+      "to": "data_fit",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1711.10561",
+      "location": "Abstract and continuous-time formulation"
+    },
+    {
+      "from": "E21",
+      "to": "pinn",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1711.10561",
+      "location": "Abstract and continuous-time formulation"
+    },
+    {
+      "from": "E21",
+      "to": "forward",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1711.10561",
+      "location": "Abstract and continuous-time formulation"
+    },
+    {
+      "from": "E21",
+      "to": "boundary",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1711.10561",
+      "location": "Abstract and continuous-time formulation"
+    },
+    {
+      "from": "E22",
+      "to": "pinn",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1711.10566",
+      "location": "Abstract and data-driven discovery"
+    },
+    {
+      "from": "E22",
+      "to": "inverse",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1711.10566",
+      "location": "Abstract and data-driven discovery"
+    },
+    {
+      "from": "E22",
+      "to": "parameter",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1711.10566",
+      "location": "Abstract and data-driven discovery"
+    },
+    {
+      "from": "E23",
+      "to": "pinn",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1711.10566",
+      "location": "Abstract and data-driven discovery"
+    },
+    {
+      "from": "E23",
+      "to": "discovery",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1711.10566",
+      "location": "Abstract and data-driven discovery"
+    },
+    {
+      "from": "E23",
+      "to": "forward",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/1711.10566",
+      "location": "Abstract and data-driven discovery"
+    },
+    {
+      "from": "E24",
+      "to": "pinn",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2109.01050",
+      "location": "Abstract"
+    },
+    {
+      "from": "E24",
+      "to": "optimization",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2109.01050",
+      "location": "Abstract"
+    },
+    {
+      "from": "E24",
+      "to": "rejection",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2109.01050",
+      "location": "Abstract"
+    },
+    {
+      "from": "E25",
+      "to": "pinn",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2109.01050",
+      "location": "Abstract"
+    },
+    {
+      "from": "E25",
+      "to": "optimization",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2109.01050",
+      "location": "Abstract"
+    },
+    {
+      "from": "E25",
+      "to": "validation",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2109.01050",
+      "location": "Abstract"
+    },
+    {
+      "from": "E26",
+      "to": "pinn",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2003.06097",
+      "location": "Abstract"
+    },
+    {
+      "from": "E26",
+      "to": "uncertainty",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2003.06097",
+      "location": "Abstract"
+    },
+    {
+      "from": "E26",
+      "to": "noise",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2003.06097",
+      "location": "Abstract"
+    },
+    {
+      "from": "E26",
+      "to": "inverse",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2003.06097",
+      "location": "Abstract"
+    },
+    {
+      "from": "E27",
+      "to": "pinn",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2003.06097",
+      "location": "Abstract"
+    },
+    {
+      "from": "E27",
+      "to": "uncertainty",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2003.06097",
+      "location": "Abstract"
+    },
+    {
+      "from": "E27",
+      "to": "bayesian",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2003.06097",
+      "location": "Abstract"
+    },
+    {
+      "from": "E28",
+      "to": "uncertainty",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2003.06097",
+      "location": "Abstract"
+    },
+    {
+      "from": "E28",
+      "to": "validation",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2003.06097",
+      "location": "Abstract"
+    },
+    {
+      "from": "E28",
+      "to": "prediction",
+      "relation": "supports",
+      "source": "https://arxiv.org/abs/2003.06097",
+      "location": "Abstract"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "steps": 1600,
+  "lbfgs": 600,
+  "study_steps": 1100,
+  "study_lbfgs": 400
+}

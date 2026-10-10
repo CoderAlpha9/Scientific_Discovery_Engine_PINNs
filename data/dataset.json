@@ -1,0 +1,22 @@
+{
+  "origin": "software-generated controlled observations",
+  "reference_solver": "Fourier pseudospectral spatial derivatives with BDF time integration",
+  "validation_solver": "independent second-order central finite differences with BDF integration",
+  "units": {
+    "u": "concentration U",
+    "x": "length L",
+    "t": "time T"
+  },
+  "boundary": "periodic values and first derivatives",
+  "length": 1,
+  "observation_end": 0.8,
+  "prediction_end": 1.2,
+  "noise_rms_fraction": 0.01,
+  "noise_distribution": "independent Gaussian",
+  "seed": 11,
+  "training_points": 300,
+  "selection_points": 76,
+  "calibration_points": 24,
+  "split": "Every fourth sensor withheld. Its early times select models; late times calibrate intervals.",
+  "isolation": "Discovery receives observations.npz only. Dense references and true coefficients reside under data/evaluation."
+}

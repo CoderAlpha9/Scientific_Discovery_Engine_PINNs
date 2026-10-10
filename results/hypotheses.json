@@ -1,0 +1,116 @@
+{
+  "question": "What local evolution law explains sparse noisy scalar concentration observations in a one-dimensional periodic channel with possible drift, spreading, and concentration-dependent internal production?",
+  "hypotheses": [
+    {
+      "id": "H1",
+      "terms": [
+        "u_xx",
+        "u_x"
+      ],
+      "evidence": [
+        "E03",
+        "E08"
+      ],
+      "reason": "Test the combined contributions of diffusive spreading, advective displacement.",
+      "prediction": "The fitted trajectory must exhibit the rate contributions implied by these terms; omitted mechanisms must not be needed to explain held-out observations.",
+      "language_evidence": [
+        "E06",
+        "E08"
+      ],
+      "language_reason": "Advection and diffusion are fundamental processes that can explain the observed behavior.",
+      "explanation_origin": "term semantics and verified evidence graph; language prose is untrusted"
+    },
+    {
+      "id": "H2",
+      "terms": [
+        "u_x",
+        "u"
+      ],
+      "evidence": [
+        "E03",
+        "E08",
+        "E09",
+        "E12"
+      ],
+      "reason": "Test the combined contributions of advective displacement, concentration-proportional reaction.",
+      "prediction": "The fitted trajectory must exhibit the rate contributions implied by these terms; omitted mechanisms must not be needed to explain held-out observations.",
+      "language_evidence": [
+        "E06",
+        "E08"
+      ],
+      "language_reason": "Diffusion alone cannot fully capture the dynamics described by the given equations.",
+      "explanation_origin": "term semantics and verified evidence graph; language prose is untrusted"
+    },
+    {
+      "id": "H3",
+      "terms": [
+        "u_x",
+        "u2"
+      ],
+      "evidence": [
+        "E03",
+        "E08",
+        "E09",
+        "E12"
+      ],
+      "reason": "Test the combined contributions of advective displacement, quadratic concentration-dependent reaction.",
+      "prediction": "The fitted trajectory must exhibit the rate contributions implied by these terms; omitted mechanisms must not be needed to explain held-out observations.",
+      "language_evidence": [
+        "E06",
+        "E08"
+      ],
+      "language_reason": "Higher-order derivatives like u2 can help capture more complex behaviors.",
+      "explanation_origin": "term semantics and verified evidence graph; language prose is untrusted"
+    }
+  ],
+  "evidence": [
+    "E06",
+    "E03",
+    "E08",
+    "E18",
+    "E01",
+    "E10",
+    "E05",
+    "E07",
+    "E26",
+    "E17"
+  ],
+  "paths": [
+    [
+      "E06",
+      "advection",
+      "E10"
+    ],
+    [
+      "E18",
+      "inverse",
+      "E05"
+    ],
+    [
+      "E06",
+      "advection",
+      "E07"
+    ],
+    [
+      "E18",
+      "inverse",
+      "E26"
+    ],
+    [
+      "E18",
+      "noise",
+      "E17"
+    ]
+  ],
+  "raw_response": "```json\n{\n  \"hypotheses\": [\n    {\n      \"terms\": [\"u_xx\", \"u_x\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Advection and diffusion are fundamental processes that can explain the observed behavior.\",\n      \"prediction\": \"The local evolution law should include advection (u_xx) and diffusion (u_x).\"\n    },\n    {\n      \"terms\": [\"u_x\", \"u\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Diffusion alone cannot fully capture the dynamics described by the given equations.\",\n      \"prediction\": \"The local evolution law should also incorporate diffusion (u_x) along with the concentration gradient (u).\"\n    },\n    {\n      \"terms\": [\"u_x\", \"u2\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Higher-order derivatives like u2 can help capture more complex behaviors.\",\n      \"prediction\": \"The local evolution law should consider higher-order derivatives (u_x * u2) to better describe the system's dynamics.\"\n    }\n  ]\n}\n```",
+  "cache_key": "b2587cfbc780a8519d3b63147612235e21d0332f2ff3d78d085a125d05b69af0",
+  "provenance_policy": "The model proposes structure. The evidence graph resolves support and term semantics independently; model citations and prose are not accepted as proof.",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "attempts": [
+    {
+      "cache_key": "b2587cfbc780a8519d3b63147612235e21d0332f2ff3d78d085a125d05b69af0",
+      "response": "```json\n{\n  \"hypotheses\": [\n    {\n      \"terms\": [\"u_xx\", \"u_x\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Advection and diffusion are fundamental processes that can explain the observed behavior.\",\n      \"prediction\": \"The local evolution law should include advection (u_xx) and diffusion (u_x).\"\n    },\n    {\n      \"terms\": [\"u_x\", \"u\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Diffusion alone cannot fully capture the dynamics described by the given equations.\",\n      \"prediction\": \"The local evolution law should also incorporate diffusion (u_x) along with the concentration gradient (u).\"\n    },\n    {\n      \"terms\": [\"u_x\", \"u2\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Higher-order derivatives like u2 can help capture more complex behaviors.\",\n      \"prediction\": \"The local evolution law should consider higher-order derivatives (u_x * u2) to better describe the system's dynamics.\"\n    }\n  ]\n}\n```"
+    }
+  ]
+}
