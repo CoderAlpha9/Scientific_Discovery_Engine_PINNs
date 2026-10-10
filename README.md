@@ -10,4 +10,4 @@ Install the backend dependencies first, following `discovery_submission/README.m
 python demo_ui/server.py
 ```
 
-Open **http://127.0.0.1:8765** to access the workspace.
+Open **http://127.0.0.1:8765** to access the workspace on local browser after running the script locally.
