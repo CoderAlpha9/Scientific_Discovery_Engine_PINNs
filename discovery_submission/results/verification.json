@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "benchmark_counts": {
+    "scientific": 50,
+    "multi_hop": 25,
+    "adversarial": 20
+  },
+  "generated_hypotheses": 3,
+  "rejected_candidates": 1,
+  "model_reload_max_error": 5.551115123125783e-16,
+  "prediction_hash_verified": true,
+  "metrics_recomputed": {
+    "prediction_relative_error": 0.0017263451910947772,
+    "ood_relative_error": 0.010862410231284115,
+    "parameter_relative_error": 0.0008423174865506689
+  },
+  "future_measurements": 5,
+  "generalization": {
+    "transport": {
+      "model_reload_max_error": 4.996003610813204e-16,
+      "prediction_hash_verified": true,
+      "metrics_recomputed": {
+        "prediction_relative_error": 0.0011758761751085368,
+        "ood_relative_error": 0.007384639801690154,
+        "parameter_relative_error": 0.0035920442963868317
+      },
+      "future_measurements": 5
+    },
+    "burgers": {
+      "model_reload_max_error": 4.440892098500626e-16,
+      "prediction_hash_verified": true,
+      "metrics_recomputed": {
+        "prediction_relative_error": 0.0012555743769080174,
+        "ood_relative_error": 0.03248976701230612,
+        "parameter_relative_error": 0.0024425953249488045
+      },
+      "future_measurements": 5
+    }
+  },
+  "prediction_hashes_verified": true,
+  "ground_truth_absent_from_discovery_file": true,
+  "research_targets": {
+    "inverse_and_future_field_error_below": 0.05,
+    "parameter_error_below": 0.1,
+    "forward_field_error_below": 0.05
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "sha256": "4993a6b1f04caddd488c93019593ea50de54d3db14e40cc01d1f3b8a50aaa3db",
+  "initial_profile_variant": 1,
+  "interior_labels_used": false,
+  "coefficients_frozen": true,
+  "prediction_end": 1.2,
+  "physics_collocation_end": 1.2
+}

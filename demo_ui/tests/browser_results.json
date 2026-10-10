@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "browser": "153.0.8010.0",
+  "checked_at": "2026-10-05T14:46:25.778Z",
+  "live_training": true,
+  "checks": [
+    "Field controls and future prediction",
+    "Candidate diagnostics and independent rejection",
+    "Graph paths and source filtering",
+    "All benchmark arms and adversarial verdicts",
+    "Artifact verification through the UI",
+    "Alternate domain and artifact download",
+    "Mobile layout without page overflow",
+    "Full live discovery launched from the UI",
+    "Live job cancellation"
+  ],
+  "errors": []
+}

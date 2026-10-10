@@ -1,0 +1,1172 @@
+{
+  "summary": [
+    {
+      "sensors": 8,
+      "noise_fraction": 0.0,
+      "support_recovery_fraction": 0.0,
+      "mean_parameter_error": 0.9906939698091425
+    },
+    {
+      "sensors": 8,
+      "noise_fraction": 0.01,
+      "support_recovery_fraction": 0.3333333333333333,
+      "mean_parameter_error": 0.6303469676894037
+    },
+    {
+      "sensors": 8,
+      "noise_fraction": 0.05,
+      "support_recovery_fraction": 0.0,
+      "mean_parameter_error": 1.703800538349518
+    },
+    {
+      "sensors": 16,
+      "noise_fraction": 0.0,
+      "support_recovery_fraction": 1.0,
+      "mean_parameter_error": 0.0006236864296193098
+    },
+    {
+      "sensors": 16,
+      "noise_fraction": 0.01,
+      "support_recovery_fraction": 1.0,
+      "mean_parameter_error": 0.09089416289759107
+    },
+    {
+      "sensors": 16,
+      "noise_fraction": 0.05,
+      "support_recovery_fraction": 0.0,
+      "mean_parameter_error": 1.046551801501306
+    }
+  ],
+  "experiments": [
+    {
+      "sensors": 8,
+      "noise_fraction": 0.0,
+      "seed": 11,
+      "observations": 150,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u2",
+          "1"
+        ],
+        "coefficients": [
+          0.012073565635760227,
+          -0.15002622399247514,
+          -0.028855068753907878,
+          0.21508804125577938
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u2": [
+            -1,
+            0,
+            -1
+          ],
+          "1": [
+            1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.012073566)*u_xx + (-0.15002622)*u_x + (-0.028855069)*u2 + (0.21508804)*1"
+      },
+      "weak_support_exact": false,
+      "weak_parameter_error": 0.9906939698091425,
+      "pinn_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u2",
+          "1"
+        ],
+        "coefficients": [
+          0.011654829332829826,
+          -0.1654339352052674,
+          -0.1641139359112902,
+          0.25535239620043076
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u2": [
+            -1,
+            0,
+            -1
+          ],
+          "1": [
+            1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.011654829)*u_xx + (-0.16543394)*u_x + (-0.16411394)*u2 + (0.2553524)*1"
+      },
+      "pinn_metrics": {
+        "data_loss": 2.9859157587385385e-07,
+        "validation_data_loss": 0.00017083774052493149,
+        "pde_residual_mse": 9.04210461538979e-05,
+        "balance_rms": 0.003415688124255117,
+        "parameter_relative_error": 0.9278279073080328,
+        "boundary_loss": 5.080697141095694e-32,
+        "dimensional_consistency": true,
+        "support_exact": false,
+        "coefficient_errors": {
+          "u_xx": 0.02876422226418115,
+          "u_x": 0.03396209503292117,
+          "u": 1.0,
+          "u2": 0.8176511823207887
+        },
+        "prediction_relative_error": 0.00911334581406088,
+        "ood_relative_error": 0.013569430582373799,
+        "initial_loss": 0.0002211020738704617,
+        "minimum_prediction": 0.14094648245922922
+      },
+      "training_seconds": 4.98974545100009
+    },
+    {
+      "sensors": 8,
+      "noise_fraction": 0.0,
+      "seed": 23,
+      "observations": 150,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u2",
+          "1"
+        ],
+        "coefficients": [
+          0.012073565635760227,
+          -0.15002622399247514,
+          -0.028855068753907878,
+          0.21508804125577938
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u2": [
+            -1,
+            0,
+            -1
+          ],
+          "1": [
+            1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.012073566)*u_xx + (-0.15002622)*u_x + (-0.028855069)*u2 + (0.21508804)*1"
+      },
+      "weak_support_exact": false,
+      "weak_parameter_error": 0.9906939698091425
+    },
+    {
+      "sensors": 8,
+      "noise_fraction": 0.0,
+      "seed": 37,
+      "observations": 150,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u2",
+          "1"
+        ],
+        "coefficients": [
+          0.012073565635760227,
+          -0.15002622399247514,
+          -0.028855068753907878,
+          0.21508804125577938
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u2": [
+            -1,
+            0,
+            -1
+          ],
+          "1": [
+            1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.012073566)*u_xx + (-0.15002622)*u_x + (-0.028855069)*u2 + (0.21508804)*1"
+      },
+      "weak_support_exact": false,
+      "weak_parameter_error": 0.9906939698091425
+    },
+    {
+      "sensors": 8,
+      "noise_fraction": 0.01,
+      "seed": 11,
+      "observations": 150,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u",
+          "u2"
+        ],
+        "coefficients": [
+          0.011877148954604637,
+          -0.1529983395328827,
+          0.9061028598095751,
+          -0.9133302801943096
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u": [
+            0,
+            0,
+            -1
+          ],
+          "u2": [
+            -1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.011877149)*u_xx + (-0.15299834)*u_x + (0.90610286)*u + (-0.91333028)*u2"
+      },
+      "weak_support_exact": true,
+      "weak_parameter_error": 0.012664966661018944,
+      "pinn_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u",
+          "u2"
+        ],
+        "coefficients": [
+          0.011568268718445731,
+          -0.15623389479650107,
+          0.9265638073636748,
+          -0.9495286043574125
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u": [
+            0,
+            0,
+            -1
+          ],
+          "u2": [
+            -1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.011568269)*u_xx + (-0.15623389)*u_x + (0.92656381)*u + (-0.9495286)*u2"
+      },
+      "pinn_metrics": {
+        "data_loss": 2.8995585036545846e-05,
+        "validation_data_loss": 3.600085221495752e-05,
+        "pde_residual_mse": 5.769828136923392e-05,
+        "balance_rms": 0.0027759260662584637,
+        "parameter_relative_error": 0.04390964733294834,
+        "boundary_loss": 2.9762663725945185e-32,
+        "dimensional_consistency": true,
+        "support_exact": true,
+        "coefficient_errors": {
+          "u_xx": 0.035977606796189075,
+          "u_x": 0.023538157521868323,
+          "u": 0.029515341515194228,
+          "u2": 0.05503178261934718
+        },
+        "prediction_relative_error": 0.003347776518499333,
+        "ood_relative_error": 0.013543329826869734,
+        "initial_loss": 2.106339920067092e-05,
+        "minimum_prediction": 0.1678012220382883
+      },
+      "training_seconds": 4.800232568999945
+    },
+    {
+      "sensors": 8,
+      "noise_fraction": 0.01,
+      "seed": 23,
+      "observations": 150,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u3",
+          "1"
+        ],
+        "coefficients": [
+          0.01215917741334279,
+          -0.14751866733469482,
+          -0.031540378693175254,
+          0.21002881813458946
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u3": [
+            -2,
+            0,
+            -1
+          ],
+          "1": [
+            1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.012159177)*u_xx + (-0.14751867)*u_x + (-0.031540379)*u3 + (0.21002882)*1"
+      },
+      "weak_support_exact": false,
+      "weak_parameter_error": 1.005912576952149
+    },
+    {
+      "sensors": 8,
+      "noise_fraction": 0.01,
+      "seed": 37,
+      "observations": 150,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u",
+          "u3"
+        ],
+        "coefficients": [
+          0.014121578041699414,
+          -0.1550562170630482,
+          0.5899585148941492,
+          -0.5887045255216781
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u": [
+            0,
+            0,
+            -1
+          ],
+          "u3": [
+            -2,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.014121578)*u_xx + (-0.15505622)*u_x + (0.58995851)*u + (-0.58870453)*u3"
+      },
+      "weak_support_exact": false,
+      "weak_parameter_error": 0.8724633594550428
+    },
+    {
+      "sensors": 8,
+      "noise_fraction": 0.05,
+      "seed": 11,
+      "observations": 150,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u3",
+          "u*u_x",
+          "1"
+        ],
+        "coefficients": [
+          0.00893417851250707,
+          -0.48640454567610486,
+          -0.28364223016036294,
+          0.27996067676628716
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u3": [
+            -2,
+            0,
+            -1
+          ],
+          "u*u_x": [
+            -1,
+            1,
+            -1
+          ],
+          "1": [
+            1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.0089341785)*u_xx + (-0.48640455)*u3 + (-0.28364223)*u*u_x + (0.27996068)*1"
+      },
+      "weak_support_exact": false,
+      "weak_parameter_error": 1.1136366609487045,
+      "pinn_equation": {
+        "terms": [
+          "u_xx",
+          "u3",
+          "u*u_x",
+          "1"
+        ],
+        "coefficients": [
+          0.014350231038663385,
+          -0.1498172365184193,
+          -0.2718195620802462,
+          0.21993457584325196
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u3": [
+            -2,
+            0,
+            -1
+          ],
+          "u*u_x": [
+            -1,
+            1,
+            -1
+          ],
+          "1": [
+            1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.014350231)*u_xx + (-0.14981724)*u3 + (-0.27181956)*u*u_x + (0.21993458)*1"
+      },
+      "pinn_metrics": {
+        "data_loss": 0.0007305197846464444,
+        "validation_data_loss": 0.0012869589444319102,
+        "pde_residual_mse": 0.0013258820693090613,
+        "balance_rms": 0.012842350474142084,
+        "parameter_relative_error": 1.042996171083264,
+        "boundary_loss": 5.802216261724667e-32,
+        "dimensional_consistency": true,
+        "support_exact": false,
+        "coefficient_errors": {
+          "u_xx": 0.19585258655528204,
+          "u_x": 1.0,
+          "u": 1.0,
+          "u2": 1.0
+        },
+        "prediction_relative_error": 0.02277899735175037,
+        "ood_relative_error": 0.04251061037735102,
+        "initial_loss": 0.000754456950432629,
+        "minimum_prediction": 0.11032370860819436
+      },
+      "training_seconds": 5.348057373000302
+    },
+    {
+      "sensors": 8,
+      "noise_fraction": 0.05,
+      "seed": 23,
+      "observations": 150,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u2",
+          "u3",
+          "u*u_x"
+        ],
+        "coefficients": [
+          0.018189443516390926,
+          1.7046532193018686,
+          -1.800938259892681,
+          -0.24317696446190204
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u2": [
+            -1,
+            0,
+            -1
+          ],
+          "u3": [
+            -2,
+            0,
+            -1
+          ],
+          "u*u_x": [
+            -1,
+            1,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.018189444)*u_xx + (1.7046532)*u2 + (-1.8009383)*u3 + (-0.24317696)*u*u_x"
+      },
+      "weak_support_exact": false,
+      "weak_parameter_error": 2.5761865530224553
+    },
+    {
+      "sensors": 8,
+      "noise_fraction": 0.05,
+      "seed": 37,
+      "observations": 150,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u2"
+        ],
+        "coefficients": [
+          0.025728434423290265,
+          -0.13877001312484002,
+          0.6859446486941246
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u2": [
+            -1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.025728434)*u_xx + (-0.13877001)*u_x + (0.68594465)*u2"
+      },
+      "weak_support_exact": false,
+      "weak_parameter_error": 1.4215784010773949
+    },
+    {
+      "sensors": 16,
+      "noise_fraction": 0.0,
+      "seed": 11,
+      "observations": 300,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u",
+          "u2"
+        ],
+        "coefficients": [
+          0.012000168875873992,
+          -0.16000566117269177,
+          0.9004515546868911,
+          -0.9006604813595499
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u": [
+            0,
+            0,
+            -1
+          ],
+          "u2": [
+            -1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.012000169)*u_xx + (-0.16000566)*u_x + (0.90045155)*u + (-0.90066048)*u2"
+      },
+      "weak_support_exact": true,
+      "weak_parameter_error": 0.0006236864296193098,
+      "pinn_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u",
+          "u2"
+        ],
+        "coefficients": [
+          0.012096392504614547,
+          -0.15988999565337036,
+          0.8920450057681603,
+          -0.8874213786498164
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u": [
+            0,
+            0,
+            -1
+          ],
+          "u2": [
+            -1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.012096393)*u_xx + (-0.15989)*u_x + (0.89204501)*u + (-0.88742138)*u2"
+      },
+      "pinn_metrics": {
+        "data_loss": 1.7258297691516593e-08,
+        "validation_data_loss": 3.633056351549855e-08,
+        "pde_residual_mse": 6.091265046139672e-06,
+        "balance_rms": 0.0010068315365309925,
+        "parameter_relative_error": 0.011601930842355475,
+        "boundary_loss": 3.427215822987627e-32,
+        "dimensional_consistency": true,
+        "support_exact": true,
+        "coefficient_errors": {
+          "u_xx": 0.008032708717878919,
+          "u_x": 0.0006875271664352409,
+          "u": 0.008838882479821958,
+          "u2": 0.013976245944648462
+        },
+        "prediction_relative_error": 0.00024425994947563113,
+        "ood_relative_error": 0.009382554201780753,
+        "initial_loss": 1.347115910122465e-08,
+        "minimum_prediction": 0.1707875005484903
+      },
+      "training_seconds": 6.060769962999984
+    },
+    {
+      "sensors": 16,
+      "noise_fraction": 0.0,
+      "seed": 23,
+      "observations": 300,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u",
+          "u2"
+        ],
+        "coefficients": [
+          0.012000168875873992,
+          -0.16000566117269177,
+          0.9004515546868911,
+          -0.9006604813595499
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u": [
+            0,
+            0,
+            -1
+          ],
+          "u2": [
+            -1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.012000169)*u_xx + (-0.16000566)*u_x + (0.90045155)*u + (-0.90066048)*u2"
+      },
+      "weak_support_exact": true,
+      "weak_parameter_error": 0.0006236864296193098
+    },
+    {
+      "sensors": 16,
+      "noise_fraction": 0.0,
+      "seed": 37,
+      "observations": 300,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u",
+          "u2"
+        ],
+        "coefficients": [
+          0.012000168875873992,
+          -0.16000566117269177,
+          0.9004515546868911,
+          -0.9006604813595499
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u": [
+            0,
+            0,
+            -1
+          ],
+          "u2": [
+            -1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.012000169)*u_xx + (-0.16000566)*u_x + (0.90045155)*u + (-0.90066048)*u2"
+      },
+      "weak_support_exact": true,
+      "weak_parameter_error": 0.0006236864296193098
+    },
+    {
+      "sensors": 16,
+      "noise_fraction": 0.01,
+      "seed": 11,
+      "observations": 300,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u",
+          "u2"
+        ],
+        "coefficients": [
+          0.012774662972230977,
+          -0.15549143325119835,
+          0.8086949458731786,
+          -0.736639873490476
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u": [
+            0,
+            0,
+            -1
+          ],
+          "u2": [
+            -1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.012774663)*u_xx + (-0.15549143)*u_x + (0.80869495)*u + (-0.73663987)*u2"
+      },
+      "weak_support_exact": true,
+      "weak_parameter_error": 0.14592380191865476,
+      "pinn_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u",
+          "u2"
+        ],
+        "coefficients": [
+          0.01244443474400506,
+          -0.1599076997364996,
+          0.885166985258244,
+          -0.8759069045568447
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u": [
+            0,
+            0,
+            -1
+          ],
+          "u2": [
+            -1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.012444435)*u_xx + (-0.1599077)*u_x + (0.88516699)*u + (-0.8759069)*u2"
+      },
+      "pinn_metrics": {
+        "data_loss": 2.95932280931501e-05,
+        "validation_data_loss": 4.135541309905728e-05,
+        "pde_residual_mse": 5.975981595292034e-05,
+        "balance_rms": 0.002736325697685584,
+        "parameter_relative_error": 0.022057394580902882,
+        "boundary_loss": 3.36708922960188e-32,
+        "dimensional_consistency": true,
+        "support_exact": true,
+        "coefficient_errors": {
+          "u_xx": 0.037036228667088285,
+          "u_x": 0.0005768766468775346,
+          "u": 0.016481127490840027,
+          "u2": 0.026770106047950333
+        },
+        "prediction_relative_error": 0.0017564656215599893,
+        "ood_relative_error": 0.01140397201223596,
+        "initial_loss": 6.25562776435909e-06,
+        "minimum_prediction": 0.17366704065867938
+      },
+      "training_seconds": 6.891788326000096
+    },
+    {
+      "sensors": 16,
+      "noise_fraction": 0.01,
+      "seed": 23,
+      "observations": 300,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u",
+          "u2"
+        ],
+        "coefficients": [
+          0.011428450831265364,
+          -0.16546432248713142,
+          0.9682197939692768,
+          -1.0245425806173971
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u": [
+            0,
+            0,
+            -1
+          ],
+          "u2": [
+            -1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.011428451)*u_xx + (-0.16546432)*u_x + (0.96821979)*u + (-1.0245426)*u2"
+      },
+      "weak_support_exact": true,
+      "weak_parameter_error": 0.1107746981404531
+    },
+    {
+      "sensors": 16,
+      "noise_fraction": 0.01,
+      "seed": 37,
+      "observations": 300,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u",
+          "u2"
+        ],
+        "coefficients": [
+          0.012162866884064307,
+          -0.15987581551426314,
+          0.9105538851526062,
+          -0.9175795684578428
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u": [
+            0,
+            0,
+            -1
+          ],
+          "u2": [
+            -1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.012162867)*u_xx + (-0.15987582)*u_x + (0.91055389)*u + (-0.91757957)*u2"
+      },
+      "weak_support_exact": true,
+      "weak_parameter_error": 0.015983988633665333
+    },
+    {
+      "sensors": 16,
+      "noise_fraction": 0.05,
+      "seed": 11,
+      "observations": 300,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "1"
+        ],
+        "coefficients": [
+          0.010628505303345722,
+          -0.14858846075044002,
+          0.20929993062260882
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "1": [
+            1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.010628505)*u_xx + (-0.14858846)*u_x + (0.20929993)*1"
+      },
+      "weak_support_exact": false,
+      "weak_parameter_error": 1.00551256867271,
+      "pinn_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "1"
+        ],
+        "coefficients": [
+          0.014714440575601694,
+          -0.1608314374880674,
+          0.19603956502359296
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "1": [
+            1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.014714441)*u_xx + (-0.16083144)*u_x + (0.19603957)*1"
+      },
+      "pinn_metrics": {
+        "data_loss": 0.0007481925513614762,
+        "validation_data_loss": 0.0010058226506308946,
+        "pde_residual_mse": 0.001461828873273788,
+        "balance_rms": 0.01235288285513395,
+        "parameter_relative_error": 1.0038496815196722,
+        "boundary_loss": 4.2990514270809713e-32,
+        "dimensional_consistency": true,
+        "support_exact": false,
+        "coefficient_errors": {
+          "u_xx": 0.22620338130014112,
+          "u_x": 0.005196484300421314,
+          "u": 1.0,
+          "u2": 1.0
+        },
+        "prediction_relative_error": 0.008045180114139613,
+        "ood_relative_error": 0.03047978770384572,
+        "initial_loss": 0.00014627533165236125,
+        "minimum_prediction": 0.17951549746474652
+      },
+      "training_seconds": 4.978574076999848
+    },
+    {
+      "sensors": 16,
+      "noise_fraction": 0.05,
+      "seed": 23,
+      "observations": 300,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "u",
+          "u3"
+        ],
+        "coefficients": [
+          0.011036315362389169,
+          -0.18343923877436116,
+          0.7614208733299482,
+          -1.1250156522452923
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "u": [
+            0,
+            0,
+            -1
+          ],
+          "u3": [
+            -2,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.011036315)*u_xx + (-0.18343924)*u_x + (0.76142087)*u + (-1.1250157)*u3"
+      },
+      "weak_support_exact": false,
+      "weak_parameter_error": 1.1283760377381273
+    },
+    {
+      "sensors": 16,
+      "noise_fraction": 0.05,
+      "seed": 37,
+      "observations": 300,
+      "weak_equation": {
+        "terms": [
+          "u_xx",
+          "u_x",
+          "1"
+        ],
+        "coefficients": [
+          0.013904825716496094,
+          -0.14948356325605908,
+          0.2113429765003773
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ],
+          "1": [
+            1,
+            0,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.013904826)*u_xx + (-0.14948356)*u_x + (0.21134298)*1"
+      },
+      "weak_support_exact": false,
+      "weak_parameter_error": 1.005766798093081
+    }
+  ]
+}

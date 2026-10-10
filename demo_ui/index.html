@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Discovery / Research workbench</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <a class="brand" href="/" aria-label="Discovery home"
+          ><span class="brand-mark">d<span>∂</span></span
+          ><span>DISCOVERY<small>RESEARCH WORKBENCH</small></span></a
+        >
+        <div class="nav-label">WORKSPACE</div>
+        <nav aria-label="Main navigation">
+          <button class="nav-item active" data-view="experiment">
+            <span>01</span>Experiment
+          </button>
+          <button class="nav-item" data-view="models">
+            <span>02</span>Candidate laws
+          </button>
+          <button class="nav-item" data-view="evidence">
+            <span>03</span>Evidence
+          </button>
+          <button class="nav-item" data-view="evaluation">
+            <span>04</span>Evaluation
+          </button>
+        </nav>
+        <div class="sidebar-note">
+          <span class="status-dot"></span> Local CPU workspace
+          <p>Evidence. Equations. Independent checks.</p>
+          <span class="mono">SCALAR DYNAMICS / 1D</span>
+        </div>
+      </aside>
+      <main>
+        <header class="topbar">
+          <span
+            >Research <span class="slash">/</span>
+            <span id="breadcrumb">Experiment</span></span
+          ><a href="/api/studies/reference/download/report"
+            >Technical report <span aria-hidden="true">↗</span></a
+          >
+        </header>
+        <div class="page">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">FROM OBSERVATIONS TO GOVERNING LAWS</div>
+              <h1 id="page-title">Explore the experiment.</h1>
+              <p id="page-subtitle">
+                A measured field, competing explanations, and a prediction to
+                test.
+              </p>
+            </div>
+            <button id="open-run" class="primary">
+              Run experiment <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <div class="study-bar">
+            <label for="study-select">EXPERIMENT</label
+            ><select id="study-select" aria-label="Select experiment"></select
+            ><span id="study-description"></span
+            ><a id="export-equation" href="#">Export equation ↓</a>
+          </div>
+          <div id="notice" role="status" aria-live="polite" hidden></div>
+          <div id="content" aria-live="polite">
+            <div class="loading">Reading research artifacts…</div>
+          </div>
+          <footer class="page-footer">
+            <span>Controlled scientific identification</span
+            ><span>Measured results. Recorded provenance.</span>
+          </footer>
+        </div>
+      </main>
+    </div>
+    <dialog id="run-dialog" aria-labelledby="run-title">
+      <div class="dialog-heading">
+        <div>
+          <div class="eyebrow">LIVE COMPUTATION</div>
+          <h2 id="run-title">Run a new experiment.</h2>
+        </div>
+        <button
+          class="icon-button"
+          id="close-run"
+          aria-label="Close experiment dialog"
+        >
+          ×
+        </button>
+      </div>
+      <p>
+        Generate sparse measurements, then discover and validate a governing
+        equation using the backend.
+      </p>
+      <form id="run-form">
+        <label for="example">Experimental system</label
+        ><select id="example" name="example">
+          <option value="transport_reaction">Transport and reaction</option>
+          <option value="transport">Longer spatial domain</option>
+          <option value="burgers">Nonlinear transport</option>
+        </select>
+        <div class="form-grid">
+          <div>
+            <label for="sensors">Spatial sensors</label
+            ><select id="sensors" name="sensors">
+              <option>8</option>
+              <option selected>16</option>
+              <option>24</option>
+              <option>32</option>
+            </select>
+          </div>
+          <div>
+            <label for="noise">Noise / signal RMS</label
+            ><select id="noise" name="noise">
+              <option value="0.005">0.5%</option>
+              <option value="0.01" selected>1%</option>
+              <option value="0.05">5%</option>
+            </select>
+          </div>
+        </div>
+        <label for="seed">Random seed</label
+        ><input
+          id="seed"
+          name="seed"
+          type="number"
+          min="0"
+          max="4294967295"
+          step="1"
+          value="11"
+          required
+        />
+        <p class="form-note">
+          The equation and reference trajectory are withheld from inference. A
+          run uses the full configured training budget and can take a few
+          minutes on CPU. Sparse cases may remain inconclusive.
+        </p>
+        <button class="primary full" id="start-run" type="submit">
+          Start discovery
+        </button>
+      </form>
+      <section id="job-panel" hidden aria-live="polite">
+        <div class="job-heading">
+          <strong id="job-state">Starting</strong
+          ><span class="mono" id="job-time"></span>
+        </div>
+        <progress id="job-progress" max="1"></progress>
+        <p id="job-stage"></p>
+        <details>
+          <summary>Execution log</summary>
+          <pre id="job-log"></pre>
+        </details>
+        <button id="cancel-run" class="secondary">Cancel run</button>
+      </section>
+    </dialog>
+  </body>
+</html>

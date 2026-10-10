@@ -1,0 +1,96 @@
+{
+  "experiments": [
+    {
+      "example": "transport",
+      "state": "completed",
+      "metrics": {
+        "data_loss": 6.7547991565991e-06,
+        "validation_data_loss": 6.795683565573614e-06,
+        "pde_residual_mse": 9.357483216432558e-06,
+        "balance_rms": 0.0019315690452717403,
+        "parameter_relative_error": 0.0035920442963868317,
+        "boundary_loss": 4.419304613852467e-32,
+        "dimensional_consistency": true,
+        "support_exact": true,
+        "coefficient_errors": {
+          "u_xx": 0.005848768473797177,
+          "u_x": 0.003447981876376652
+        },
+        "prediction_relative_error": 0.0011758761751085327,
+        "ood_relative_error": 0.007384639801690147,
+        "initial_loss": 1.0278952510680783e-06,
+        "minimum_prediction": 0.1725864033550525
+      },
+      "equation": {
+        "terms": [
+          "u_xx",
+          "u_x"
+        ],
+        "coefficients": [
+          0.047719259113257737,
+          -0.22075855601280286
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u_x": [
+            0,
+            1,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.047719259)*u_xx + (-0.22075856)*u_x"
+      },
+      "seconds": 54.530323426999985
+    },
+    {
+      "example": "burgers",
+      "state": "completed",
+      "metrics": {
+        "data_loss": 6.7940725145799574e-06,
+        "validation_data_loss": 6.697347162261026e-06,
+        "pde_residual_mse": 4.7716628732816016e-05,
+        "balance_rms": 0.0016278982263278389,
+        "parameter_relative_error": 0.002442595324948805,
+        "boundary_loss": 3.570016482278779e-32,
+        "dimensional_consistency": true,
+        "support_exact": true,
+        "coefficient_errors": {
+          "u_xx": 0.009943980079281179,
+          "u*u_x": 0.0022923525501404585
+        },
+        "prediction_relative_error": 0.0012555743769080054,
+        "ood_relative_error": 0.03248976701230613,
+        "initial_loss": 2.245089891567825e-06,
+        "minimum_prediction": 0.17479001429693197
+      },
+      "equation": {
+        "terms": [
+          "u_xx",
+          "u*u_x"
+        ],
+        "coefficients": [
+          0.03465196069722516,
+          -0.39908305897994384
+        ],
+        "coefficient_dimensions_U_L_T": {
+          "u_xx": [
+            0,
+            2,
+            -1
+          ],
+          "u*u_x": [
+            -1,
+            1,
+            -1
+          ]
+        },
+        "expression": "u_t = (0.034651961)*u_xx + (-0.39908306)*u*u_x"
+      },
+      "seconds": 53.30429648399968
+    }
+  ]
+}

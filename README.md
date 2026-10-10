@@ -1,129 +1,13 @@
-# Generative Scientific Discovery Engine
+# Scientific Discovery Engine
 
-An executable research prototype for discovering scalar transport and reaction laws from sparse noisy observations. The system retrieves scientific evidence, follows an evidence graph, generates competing equation structures, searches a constrained grammar, estimates coefficients with inverse PINNs, rejects failed models, and predicts unseen dynamics.
+`discovery_submission/` is the independent research codebase. It includes the complete source, generated datasets, trained models, benchmark outputs, scientific figures and technical report. Its README covers installation, scientific methods and reproduction.
 
-The included demonstration identifies a withheld one-dimensional periodic transport-reaction equation and a time-only reaction equation. These are controlled identification experiments, not claims that an established physical law has been discovered for the first time.
+`demo_ui/` is an optional local interface. The backend has no dependency on this folder. You can submit or run `discovery_submission/` on its own.
 
-## Included results
-
-All numerical experiments and benchmark outputs are supplied. The main discovered relationship is:
-
-```text
-u_t = 0.012222598*u_xx - 0.15946891*u_x + 0.89533904*u - 0.89206325*u2
-```
-
-`u2` means `u**2`. On the controlled main experiment, the inverse model has 0.172% relative field error over the observation interval, 1.357% error on the unseen future interval, and 0.719% joint relative coefficient error. The forward solve under a new initial profile has 0.112% field error. Individual coefficient errors and independent residual measurements are in `results/metrics.json`.
-
-The benchmark contains 50 scientific questions, 25 multi-hop questions, and 20 adversarial cases. `results/benchmark.json` contains every response and verdict, together with measured RAG and RAG+KG scores. The technical report discusses both successful recovery and failed sparse/noisy cases.
-
-## Setup and commands
-
-Use Python 3.12. The recorded environment and exact scientific-library versions are in `results/metrics.json`. From this folder:
+Install the backend dependencies first, following `discovery_submission/README.md`. With that Python environment active, start the interface from this folder:
 
 ```bash
-python -m venv .venv
+python demo_ui/server.py
 ```
 
-Activate the environment with `.venv\Scripts\activate` on Windows or `source .venv/bin/activate` on Linux/macOS. Then install the CPU build of PyTorch and the remaining dependencies:
-
-```bash
-python -m pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
-python -m pip install -r requirements.txt
-```
-
-Inspect and verify the supplied results without retraining:
-
-```bash
-python -m discovery verify
-python -m pytest -q
-```
-
-Reproduce the complete research run, including data generation, equation search, training, benchmark scoring, plots, report, and verification:
-
-```bash
-python -m discovery run
-```
-
-Run individual stages when needed:
-
-```bash
-python -m discovery physics
-python -m discovery benchmark
-python -m discovery report
-```
-
-The default run replays exact matching pretrained-model requests from the included cache, then executes the numerical computation and evaluation. Cached text is an actual recorded model response, not a replacement written by the evaluator. Its input, model revision, decoding settings, precision, and request hash are retained. Replaying the shipped benchmark requires no pretrained weight downloads or API keys.
-
-To independently regenerate embeddings and language-model responses:
-
-```bash
-python -m discovery benchmark --live --cache-dir /path/to/model-cache
-```
-
-On Windows, a cache directory can be placed on another drive:
-
-```powershell
-python -m discovery benchmark --live --cache-dir D:\models\scientific-discovery
-```
-
-Live inference downloads the pinned Qwen2.5-1.5B-Instruct and all-MiniLM-L6-v2 snapshots if absent. The code uses CPU inference and a small batch size. Downloads require network access; bfloat16 inference can be substantially slower on CPUs without accelerated support. Numerical experiments run on CPU with float64 arithmetic and two PyTorch threads. `config.json` records the actual training budgets. Runtime depends on the machine; the shipped results can be checked immediately after installation.
-
-## Scientific workflow
-
-Scientific evidence is stored as original paraphrases with source links, locations, assumptions, and stable IDs. Dense MiniLM retrieval is combined with lexical matching. Graph traversal joins evidence through shared physical concepts and retains the paths used.
-
-The language model proposes structures. Its prose and citations are untrusted. The graph independently resolves scientific support, and the symbolic term definitions supply the explanations. The raw responses remain available for auditing, including mistakes made by the small language model.
-
-Candidate structures are generated by two rounds of term addition and removal around the hypotheses. The grammar permits `u_xx`, `u_x`, `u`, `u2`, `u3`, `u*u_x`, and `1`, with at most four active terms. Unknown coefficients carry dimensions derived from their terms. The forward regime requires nonnegative diffusivity. Arbitrary expressions and executable strings are unsupported.
-
-A regularized Fourier-Chebyshev fit reconstructs the observation field using training measurements only. Compact test functions form weak equations through integration by parts. Support selection uses blocked weak-form validation and independent finite-difference rollouts on withheld sensor measurements. The shortlisted models are then trained as inverse PINNs. Final ranking uses held-out fit, an independently sampled residual, integrated balance, a noise-scaled complexity penalty, and bootstrap regression sensitivity. Boundary compatibility and dimensional admissibility are hard constraints. Structural bootstrap stability and coefficient/prediction uncertainty are reported separately.
-
-The PINN is a fully trainable two-layer temporal network that produces Fourier amplitudes. Combining those amplitudes with spatial Fourier features enforces periodicity exactly. Time derivatives use automatic differentiation; spatial derivatives are exact derivatives of the Fourier features. The conventional neural baseline uses the same field architecture and observations with its physical loss removed.
-
-The inverse model receives neither the true coefficients nor the exact initial profile. Its field at `t=0` estimates the initial condition. The periodic boundary type is known experimental metadata. The forward experiment freezes the discovered coefficients and solves for a different supplied initial profile using physics and initial constraints, with no interior labels.
-
-Temporal OOD evaluation uses the frozen inverse model beyond both its observation interval and its training-collocation interval. The new-initial-condition experiment is a separate forward solve on a changed condition, not a claim that the same field network transfers unchanged. Prediction files are hashed before their corresponding reference solutions are loaded for scoring. This establishes pipeline ordering, not a cryptographic blind challenge against the code author.
-
-## Data contract and isolation
-
-`data/observations.npz` contains flat arrays `x_train`, `t_train`, `u_train`, `x_valid`, `t_valid`, `u_valid`, `x_cal`, `t_cal`, `u_cal`, and scalar metadata `sigma`, `length`, `time_end`. Training sensors are disjoint from withheld sensors. Earlier withheld times select equations; later withheld times calibrate uncertainty intervals. No test-reference values enter equation selection or parameter fitting.
-
-Coordinates use the physical length and time units specified by the experiment. The default concentration unit is denoted `U`; the coefficient dimension vector is ordered `(U, L, T)`. Space spans `[0, length)` and time spans `[0, time_end]`. The main reconstruction is capped by observable spatial sampling rank. Constant observations below the noise excitation threshold are rejected as insufficient.
-
-`data/evaluation/` contains dense reference trajectories and true coefficients used only by the experiment evaluator. PDE references use Fourier pseudospectral derivatives with BDF integration. Validation rollouts use an independent finite-difference spatial operator. Grid-convergence tests and an analytical heat-equation check quantify numerical error. The ODE reference has an analytical solution.
-
-`data/sparse_study/` contains 18 observation datasets across two sensor densities, three noise levels, and three seeds. All 18 run equation identification; one seed in each regime also runs inverse PINN refinement. All outcomes, including incorrect support recovery, are retained.
-
-Apply the engine to another compatible observation file:
-
-```bash
-python -m discovery discover --observations data/observations.npz --output new_run
-```
-
-An optional `--question "..."` changes the evidence query. An unseen request can require live weights even without `--live`, because only exact matching requests can be replayed. Supported custom problems remain scalar, periodic, one-dimensional, with the declared grammar. The file must contain the same observation contract and selection measurements.
-
-For evidence-only inspection:
-
-```bash
-python -m discovery ask --graph --question "Why can reaction change total concentration in a periodic domain?"
-```
-
-## Code and output map
-
-`evidence.py` implements pretrained inference, request caching, retrieval, graph traversal, and hypothesis support. `equations.py` defines the safe grammar, units, and physical admissibility. `search.py` implements reconstruction, weak integration, structure mutation, support fitting, and rollout screening. `pinn.py` contains the neural field, trainable coefficients, training loop, and checkpoint loading.
-
-`engine.py` executes observation-only discovery and final candidate selection. `simulation.py` supplies numerical solvers and controlled observation sampling. `experiments.py` separates generation, inference, prediction commitment, and evaluation, and runs the comparison and uncertainty studies. `validation.py` measures physical errors and executes adversarial checks. `benchmark.py` runs the two retrieval baselines and computes deterministic scores. `verify.py` checks research outputs and model reloads. `report.py` regenerates the scientific figures and PDF. `common.py` handles small shared I/O and numeric helpers. `__main__.py` exposes the commands.
-
-`results/hypotheses.json`, `knowledge_graph.json`, `search.json`, `weak_system.npz`, `candidates.json`, and `equation.json` preserve the discovery trace. `metrics.json`, `sparse_study.json`, `ablation_chain.json`, and `benchmark.json` preserve the executed experiments. `results/models/` contains the selected inverse model, alternative hypotheses, forward and ODE models, bootstrap members, and comparison models. `frozen_prediction.npz`, `forward_prediction.npz`, and their commitment files preserve the independent predictions. `uncertainty.npz` and `comparison.npz` supply the arrays behind the figures. `verification.json` and `tests.json` record final checks. `technical_report.pdf` is the research report.
-
-## Interpretation and reproducibility
-
-A low PINN residual does not prove a law: the candidate must also explain withheld observations and satisfy applicable balances. The engine correctly rejects the diffusion-only challenger in the main demonstration. Several richer structures remain competitive, and observation bootstrap shows structural ambiguity. The selected law is validated on the controlled experiment; it is not asserted to be uniquely identifiable under every sampling regime.
-
-The ensemble has three fitted members. Its intervals are approximate, calibrated using reserved noisy sensors, and evaluated empirically against clean reference fields. Clean-field coverage is not a formal noisy-observation coverage guarantee, and ID calibration gives no OOD guarantee. Structural bootstrap frequencies are empirical stability measures rather than posterior probabilities.
-
-The four required comparison stages are evaluated on the same equation task in `results/ablation_chain.json`: evidence-only RAG, graph-augmented RAG, a PINN whose support is fixed to the best graph proposal, and the full generative discovery engine. A common evaluator fits coefficients and evaluates numerical rollouts for the retrieval-only structures. The separate oracle PINN is explicitly labelled as an upper-reference baseline. Text-answer metrics apply to the retrieval arms; field and coefficient metrics apply to the physics arms. They are not combined into one incomparable score. Removing PINN refinement and removing evidence seeding provide controlled additional numerical ablations. 
-
-The answer evaluator checks synonym-group coverage and resolved citations. It is reproducible but heuristic; it is not an expert assessment of every scientific sentence. Some pretrained responses fail this evaluation, and these results are preserved.
-
-Seeds, model revisions, data splits, training budgets, checkpoint metadata, and raw responses are recorded. Small numerical differences across library versions or CPU kernels are expected. The verifier checks declared accuracy tolerances and agreement between reloaded checkpoints and committed predictions. Tests cover independent derivatives, weak-form signs, dimensional constraints, an analytical solver solution, split isolation, response provenance, and the saved end-to-end run.
+Open **http://127.0.0.1:8765** to access the workspace.

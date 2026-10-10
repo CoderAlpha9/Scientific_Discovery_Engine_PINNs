@@ -1,0 +1,15 @@
+{
+  "example": "burgers",
+  "title": "Nonlinear transport",
+  "seed": 23,
+  "sensors": 24,
+  "noise_rms_fraction": 0.005,
+  "length": 1.0,
+  "observation_end": 0.8,
+  "prediction_end": 1.2,
+  "boundary": "periodic",
+  "training_points": 450,
+  "selection_points": 114,
+  "calibration_points": 36,
+  "origin": "software-generated controlled observations"
+}

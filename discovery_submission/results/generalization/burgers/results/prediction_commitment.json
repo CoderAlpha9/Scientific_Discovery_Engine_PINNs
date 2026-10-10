@@ -1,0 +1,30 @@
+{
+  "prediction_sha256": "e9e8ac485b0a5858d751c1438417219082795bef775a26c1a9d74daf34d040e6",
+  "equation": {
+    "terms": [
+      "u_xx",
+      "u*u_x"
+    ],
+    "coefficients": [
+      0.03465196069722516,
+      -0.39908305897994384
+    ],
+    "coefficient_dimensions_U_L_T": {
+      "u_xx": [
+        0,
+        2,
+        -1
+      ],
+      "u*u_x": [
+        -1,
+        1,
+        -1
+      ]
+    },
+    "expression": "u_t = (0.034651961)*u_xx + (-0.39908306)*u*u_x"
+  },
+  "observed_time_end": 0.8,
+  "prediction_time_end": 1.2000000000000002,
+  "labels_used_for_extrapolation": false,
+  "collocation_after_observation_window": false
+}

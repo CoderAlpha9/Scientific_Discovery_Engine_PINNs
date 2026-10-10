@@ -1,0 +1,732 @@
+{
+  "llm_rag": {
+    "hypotheses": {
+      "question": "What local evolution law explains sparse noisy scalar concentration observations in a one-dimensional periodic channel with possible drift, spreading, and concentration-dependent internal production?",
+      "hypotheses": [
+        {
+          "id": "H1",
+          "terms": [
+            "u_xx",
+            "u_x"
+          ],
+          "evidence": [
+            "E06",
+            "E08"
+          ],
+          "support_paths": [],
+          "reason": "Advection and diffusion are fundamental processes that can explain the observed behavior.",
+          "prediction": "The fitted trajectory must exhibit the rate contributions implied by these terms; omitted mechanisms must not be needed to explain held-out observations.",
+          "language_evidence": [
+            "E06",
+            "E08"
+          ],
+          "language_reason": "Advection and diffusion are fundamental processes that can explain the observed behavior.",
+          "explanation_origin": "raw language proposal without graph grounding"
+        },
+        {
+          "id": "H2",
+          "terms": [
+            "u_x",
+            "u"
+          ],
+          "evidence": [
+            "E06",
+            "E08"
+          ],
+          "support_paths": [],
+          "reason": "Diffusion alone cannot fully explain the observed behavior without considering advection.",
+          "prediction": "The fitted trajectory must exhibit the rate contributions implied by these terms; omitted mechanisms must not be needed to explain held-out observations.",
+          "language_evidence": [
+            "E06",
+            "E08"
+          ],
+          "language_reason": "Diffusion alone cannot fully explain the observed behavior without considering advection.",
+          "explanation_origin": "raw language proposal without graph grounding"
+        },
+        {
+          "id": "H3",
+          "terms": [
+            "u_x",
+            "u2"
+          ],
+          "evidence": [
+            "E06",
+            "E08"
+          ],
+          "support_paths": [],
+          "reason": "Combining advection and diffusion provides a more comprehensive explanation.",
+          "prediction": "The fitted trajectory must exhibit the rate contributions implied by these terms; omitted mechanisms must not be needed to explain held-out observations.",
+          "language_evidence": [
+            "E06",
+            "E08"
+          ],
+          "language_reason": "Combining advection and diffusion provides a more comprehensive explanation.",
+          "explanation_origin": "raw language proposal without graph grounding"
+        }
+      ],
+      "evidence": [
+        "E06",
+        "E03",
+        "E08",
+        "E18",
+        "E01",
+        "E05",
+        "E10",
+        "E20",
+        "E27",
+        "E02"
+      ],
+      "paths": [],
+      "raw_response": "```json\n{\n  \"hypotheses\": [\n    {\n      \"terms\": [\"u_xx\", \"u_x\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Advection and diffusion are fundamental processes that can explain the observed behavior.\",\n      \"prediction\": \"The solution will show advection and diffusion effects, with potential drift and spreading.\"\n    },\n    {\n      \"terms\": [\"u_x\", \"u\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Diffusion alone cannot fully explain the observed behavior without considering advection.\",\n      \"prediction\": \"The solution will exhibit diffusion but also some form of advection or dispersion.\"\n    },\n    {\n      \"terms\": [\"u_x\", \"u2\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Combining advection and diffusion provides a more comprehensive explanation.\",\n      \"prediction\": \"The solution will show both advection and diffusion effects, potentially including some degree of dispersion.\"\n    }\n  ]\n}\n```",
+      "cache_key": "a36daf36eab31d474bdcc02c1b6dbc3465c26124daa20883c88f12ec19d5f78a",
+      "provenance_policy": "Uncorrected RAG-only structural proposals for the ablation.",
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "attempts": [
+        {
+          "cache_key": "a36daf36eab31d474bdcc02c1b6dbc3465c26124daa20883c88f12ec19d5f78a",
+          "response": "```json\n{\n  \"hypotheses\": [\n    {\n      \"terms\": [\"u_xx\", \"u_x\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Advection and diffusion are fundamental processes that can explain the observed behavior.\",\n      \"prediction\": \"The solution will show advection and diffusion effects, with potential drift and spreading.\"\n    },\n    {\n      \"terms\": [\"u_x\", \"u\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Diffusion alone cannot fully explain the observed behavior without considering advection.\",\n      \"prediction\": \"The solution will exhibit diffusion but also some form of advection or dispersion.\"\n    },\n    {\n      \"terms\": [\"u_x\", \"u2\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Combining advection and diffusion provides a more comprehensive explanation.\",\n      \"prediction\": \"The solution will show both advection and diffusion effects, potentially including some degree of dispersion.\"\n    }\n  ]\n}\n```"
+        }
+      ]
+    },
+    "evaluated_proposals": [
+      {
+        "equation": {
+          "terms": [
+            "u_xx",
+            "u_x"
+          ],
+          "coefficients": [
+            0.021303556426032294,
+            -0.19835311140767004
+          ],
+          "coefficient_dimensions_U_L_T": {
+            "u_xx": [
+              0,
+              2,
+              -1
+            ],
+            "u_x": [
+              0,
+              1,
+              -1
+            ]
+          },
+          "expression": "u_t = (0.021303556)*u_xx + (-0.19835311)*u_x"
+        },
+        "validation_data_loss": 0.005464781527792315
+      },
+      {
+        "equation": {
+          "terms": [
+            "u_x",
+            "u"
+          ],
+          "coefficients": [
+            -0.13595427363726803,
+            0.4293242656594752
+          ],
+          "coefficient_dimensions_U_L_T": {
+            "u_x": [
+              0,
+              1,
+              -1
+            ],
+            "u": [
+              0,
+              0,
+              -1
+            ]
+          },
+          "expression": "u_t = (-0.13595427)*u_x + (0.42932427)*u"
+        },
+        "validation_data_loss": 0.009894710938345472
+      },
+      {
+        "equation": {
+          "terms": [
+            "u_x",
+            "u2"
+          ],
+          "coefficients": [
+            -0.13113682109147523,
+            0.6543791657449597
+          ],
+          "coefficient_dimensions_U_L_T": {
+            "u_x": [
+              0,
+              1,
+              -1
+            ],
+            "u2": [
+              -1,
+              0,
+              -1
+            ]
+          },
+          "expression": "u_t = (-0.13113682)*u_x + (0.65437917)*u2"
+        },
+        "validation_data_loss": 0.01726666611007286
+      }
+    ],
+    "equation": {
+      "terms": [
+        "u_xx",
+        "u_x"
+      ],
+      "coefficients": [
+        0.021303556426032294,
+        -0.19835311140767004
+      ],
+      "coefficient_dimensions_U_L_T": {
+        "u_xx": [
+          0,
+          2,
+          -1
+        ],
+        "u_x": [
+          0,
+          1,
+          -1
+        ]
+      },
+      "expression": "u_t = (0.021303556)*u_xx + (-0.19835311)*u_x"
+    },
+    "validation_data_loss": 0.005464781527792315,
+    "parameter_relative_error": 0.9926246107605868,
+    "prediction_relative_error": 0.15610949674912467,
+    "ood_relative_error": 0.2811754387865615,
+    "support_exact": false,
+    "evaluation_note": "Weak coefficient fitting and numerical rollout are evaluator tools; the retrieval arm supplies structure only."
+  },
+  "rag_kg": {
+    "hypotheses": {
+      "question": "What local evolution law explains sparse noisy scalar concentration observations in a one-dimensional periodic channel with possible drift, spreading, and concentration-dependent internal production?",
+      "hypotheses": [
+        {
+          "id": "H1",
+          "terms": [
+            "u_xx",
+            "u_x"
+          ],
+          "evidence": [
+            "E03",
+            "E08"
+          ],
+          "support_paths": [
+            {
+              "term": "u_xx",
+              "path": [
+                "E08",
+                "diffusion",
+                "E03"
+              ]
+            },
+            {
+              "term": "u_x",
+              "path": [
+                "E08",
+                "advection",
+                "E03"
+              ]
+            }
+          ],
+          "reason": "Test the combined contributions of diffusive spreading, advective displacement.",
+          "prediction": "The fitted trajectory must exhibit the rate contributions implied by these terms; omitted mechanisms must not be needed to explain held-out observations.",
+          "language_evidence": [
+            "E06",
+            "E08"
+          ],
+          "language_reason": "Advection and diffusion are fundamental processes that can explain the observed behavior.",
+          "explanation_origin": "term semantics and verified evidence graph; language prose is untrusted"
+        },
+        {
+          "id": "H2",
+          "terms": [
+            "u_x",
+            "u"
+          ],
+          "evidence": [
+            "E03",
+            "E08",
+            "E09",
+            "E12"
+          ],
+          "support_paths": [
+            {
+              "term": "u_x",
+              "path": [
+                "E08",
+                "advection",
+                "E03"
+              ]
+            },
+            {
+              "term": "u",
+              "path": [
+                "E12",
+                "reaction",
+                "E09"
+              ]
+            }
+          ],
+          "reason": "Test the combined contributions of advective displacement, concentration-proportional reaction.",
+          "prediction": "The fitted trajectory must exhibit the rate contributions implied by these terms; omitted mechanisms must not be needed to explain held-out observations.",
+          "language_evidence": [
+            "E06",
+            "E08"
+          ],
+          "language_reason": "Diffusion alone cannot fully capture the dynamics described by the given equations.",
+          "explanation_origin": "term semantics and verified evidence graph; language prose is untrusted"
+        },
+        {
+          "id": "H3",
+          "terms": [
+            "u_x",
+            "u2"
+          ],
+          "evidence": [
+            "E03",
+            "E08",
+            "E09",
+            "E12"
+          ],
+          "support_paths": [
+            {
+              "term": "u_x",
+              "path": [
+                "E08",
+                "advection",
+                "E03"
+              ]
+            },
+            {
+              "term": "u2",
+              "path": [
+                "E12",
+                "reaction",
+                "E09"
+              ]
+            }
+          ],
+          "reason": "Test the combined contributions of advective displacement, quadratic concentration-dependent reaction.",
+          "prediction": "The fitted trajectory must exhibit the rate contributions implied by these terms; omitted mechanisms must not be needed to explain held-out observations.",
+          "language_evidence": [
+            "E06",
+            "E08"
+          ],
+          "language_reason": "Higher-order derivatives like u2 can help capture more complex behaviors.",
+          "explanation_origin": "term semantics and verified evidence graph; language prose is untrusted"
+        }
+      ],
+      "evidence": [
+        "E06",
+        "E03",
+        "E08",
+        "E18",
+        "E01",
+        "E10",
+        "E05",
+        "E07",
+        "E26",
+        "E17"
+      ],
+      "paths": [
+        [
+          "E06",
+          "advection",
+          "E10"
+        ],
+        [
+          "E18",
+          "inverse",
+          "E05"
+        ],
+        [
+          "E06",
+          "advection",
+          "E07"
+        ],
+        [
+          "E18",
+          "inverse",
+          "E26"
+        ],
+        [
+          "E18",
+          "noise",
+          "E17"
+        ]
+      ],
+      "raw_response": "```json\n{\n  \"hypotheses\": [\n    {\n      \"terms\": [\"u_xx\", \"u_x\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Advection and diffusion are fundamental processes that can explain the observed behavior.\",\n      \"prediction\": \"The local evolution law should include advection (u_xx) and diffusion (u_x).\"\n    },\n    {\n      \"terms\": [\"u_x\", \"u\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Diffusion alone cannot fully capture the dynamics described by the given equations.\",\n      \"prediction\": \"The local evolution law should also incorporate diffusion (u_x) along with the concentration gradient (u).\"\n    },\n    {\n      \"terms\": [\"u_x\", \"u2\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Higher-order derivatives like u2 can help capture more complex behaviors.\",\n      \"prediction\": \"The local evolution law should consider higher-order derivatives (u_x * u2) to better describe the system's dynamics.\"\n    }\n  ]\n}\n```",
+      "cache_key": "b2587cfbc780a8519d3b63147612235e21d0332f2ff3d78d085a125d05b69af0",
+      "provenance_policy": "The model proposes structure. The evidence graph resolves support and term semantics independently; model citations and prose are not accepted as proof.",
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "attempts": [
+        {
+          "cache_key": "b2587cfbc780a8519d3b63147612235e21d0332f2ff3d78d085a125d05b69af0",
+          "response": "```json\n{\n  \"hypotheses\": [\n    {\n      \"terms\": [\"u_xx\", \"u_x\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Advection and diffusion are fundamental processes that can explain the observed behavior.\",\n      \"prediction\": \"The local evolution law should include advection (u_xx) and diffusion (u_x).\"\n    },\n    {\n      \"terms\": [\"u_x\", \"u\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Diffusion alone cannot fully capture the dynamics described by the given equations.\",\n      \"prediction\": \"The local evolution law should also incorporate diffusion (u_x) along with the concentration gradient (u).\"\n    },\n    {\n      \"terms\": [\"u_x\", \"u2\"],\n      \"evidence\": [\"E06\", \"E08\"],\n      \"reason\": \"Higher-order derivatives like u2 can help capture more complex behaviors.\",\n      \"prediction\": \"The local evolution law should consider higher-order derivatives (u_x * u2) to better describe the system's dynamics.\"\n    }\n  ]\n}\n```"
+        }
+      ]
+    },
+    "evaluated_proposals": [
+      {
+        "equation": {
+          "terms": [
+            "u_xx",
+            "u_x"
+          ],
+          "coefficients": [
+            0.021303556426032294,
+            -0.19835311140767004
+          ],
+          "coefficient_dimensions_U_L_T": {
+            "u_xx": [
+              0,
+              2,
+              -1
+            ],
+            "u_x": [
+              0,
+              1,
+              -1
+            ]
+          },
+          "expression": "u_t = (0.021303556)*u_xx + (-0.19835311)*u_x"
+        },
+        "validation_data_loss": 0.005464781527792315
+      },
+      {
+        "equation": {
+          "terms": [
+            "u_x",
+            "u"
+          ],
+          "coefficients": [
+            -0.13595427363726803,
+            0.4293242656594752
+          ],
+          "coefficient_dimensions_U_L_T": {
+            "u_x": [
+              0,
+              1,
+              -1
+            ],
+            "u": [
+              0,
+              0,
+              -1
+            ]
+          },
+          "expression": "u_t = (-0.13595427)*u_x + (0.42932427)*u"
+        },
+        "validation_data_loss": 0.009894710938345472
+      },
+      {
+        "equation": {
+          "terms": [
+            "u_x",
+            "u2"
+          ],
+          "coefficients": [
+            -0.13113682109147523,
+            0.6543791657449597
+          ],
+          "coefficient_dimensions_U_L_T": {
+            "u_x": [
+              0,
+              1,
+              -1
+            ],
+            "u2": [
+              -1,
+              0,
+              -1
+            ]
+          },
+          "expression": "u_t = (-0.13113682)*u_x + (0.65437917)*u2"
+        },
+        "validation_data_loss": 0.01726666611007286
+      }
+    ],
+    "equation": {
+      "terms": [
+        "u_xx",
+        "u_x"
+      ],
+      "coefficients": [
+        0.021303556426032294,
+        -0.19835311140767004
+      ],
+      "coefficient_dimensions_U_L_T": {
+        "u_xx": [
+          0,
+          2,
+          -1
+        ],
+        "u_x": [
+          0,
+          1,
+          -1
+        ]
+      },
+      "expression": "u_t = (0.021303556)*u_xx + (-0.19835311)*u_x"
+    },
+    "validation_data_loss": 0.005464781527792315,
+    "parameter_relative_error": 0.9926246107605868,
+    "prediction_relative_error": 0.15610949674912467,
+    "ood_relative_error": 0.2811754387865615,
+    "support_exact": false,
+    "evaluation_note": "Weak coefficient fitting and numerical rollout are evaluator tools; the retrieval arm supplies structure only."
+  },
+  "predefined_pinn": {
+    "equation": {
+      "terms": [
+        "u_xx",
+        "u_x"
+      ],
+      "coefficients": [
+        0.014205336069580939,
+        -0.16662879616665088
+      ],
+      "coefficient_dimensions_U_L_T": {
+        "u_xx": [
+          0,
+          2,
+          -1
+        ],
+        "u_x": [
+          0,
+          1,
+          -1
+        ]
+      },
+      "expression": "u_t = (0.014205336)*u_xx + (-0.1666288)*u_x"
+    },
+    "data_loss": 0.00010932082285829027,
+    "validation_data_loss": 0.00037724802269140014,
+    "pde_residual_mse": 0.023584732906871717,
+    "balance_rms": 0.14659407759784532,
+    "parameter_relative_error": 0.9921627295092197,
+    "boundary_loss": 2.8560131858230227e-32,
+    "dimensional_consistency": true,
+    "support_exact": false,
+    "coefficient_errors": {
+      "u_xx": 0.18377800579841155,
+      "u_x": 0.041429976041568,
+      "u": 1.0,
+      "u2": 1.0
+    },
+    "prediction_relative_error": 0.017998024008581408,
+    "ood_relative_error": 0.0733226775226427,
+    "initial_loss": 0.0008785670497777197,
+    "minimum_prediction": 0.20970006757422877,
+    "training": {
+      "seed": 11,
+      "seconds": 7.164883431000362,
+      "train_data_loss": 0.00010932082285829027,
+      "train_initial_loss": 0.0,
+      "train_pde_loss": 0.02209849549461233,
+      "final_objective": 0.0543992795103085,
+      "history": [
+        {
+          "step": 0,
+          "data": 0.9999999999999999,
+          "initial": 0.0,
+          "pde": 0.0,
+          "total": 49.99999999999999
+        },
+        {
+          "step": 100,
+          "data": 0.0010912541512120967,
+          "initial": 0.0,
+          "pde": 0.13340396806788996,
+          "total": 0.054562707560604835
+        },
+        {
+          "step": 200,
+          "data": 0.0004049385988466598,
+          "initial": 0.0,
+          "pde": 0.09320109162300597,
+          "total": 0.02024692994233299
+        },
+        {
+          "step": 300,
+          "data": 0.00019929672503375085,
+          "initial": 0.0,
+          "pde": 0.07853086761949829,
+          "total": 0.009964836251687542
+        },
+        {
+          "step": 400,
+          "data": 0.0001251454308081113,
+          "initial": 0.0,
+          "pde": 0.07706225851858221,
+          "total": 0.08331953005898778
+        },
+        {
+          "step": 500,
+          "data": 0.0002958269795960443,
+          "initial": 0.0,
+          "pde": 0.04212733010717659,
+          "total": 0.056918679086978806
+        },
+        {
+          "step": 600,
+          "data": 0.00029291578324223917,
+          "initial": 0.0,
+          "pde": 0.04145671269144951,
+          "total": 0.05610250185356147
+        },
+        {
+          "step": 700,
+          "data": 0.0002924012657149005,
+          "initial": 0.0,
+          "pde": 0.04106692682255387,
+          "total": 0.055686990108298896
+        },
+        {
+          "step": 800,
+          "data": 0.0002926737101955524,
+          "initial": 0.0,
+          "pde": 0.04667497165828238,
+          "total": 0.06130865716806
+        },
+        {
+          "step": 900,
+          "data": 0.0003076795505755082,
+          "initial": 0.0,
+          "pde": 0.04399015436804339,
+          "total": 0.059374131896818796
+        },
+        {
+          "step": 1000,
+          "data": 0.00030617149553530386,
+          "initial": 0.0,
+          "pde": 0.04386856948405571,
+          "total": 0.0591771442608209
+        },
+        {
+          "step": 1100,
+          "data": 0.0003062086452954373,
+          "initial": 0.0,
+          "pde": 0.04341721065521033,
+          "total": 0.05872764291998219
+        },
+        {
+          "step": 1200,
+          "data": 0.0003066995145880171,
+          "initial": 0.0,
+          "pde": 0.044929188742415076,
+          "total": 0.06026416447181593
+        },
+        {
+          "step": 1300,
+          "data": 0.0003114722776303598,
+          "initial": 0.0,
+          "pde": 0.0418862452803049,
+          "total": 0.05745985916182289
+        },
+        {
+          "step": 1400,
+          "data": 0.0003091962108186932,
+          "initial": 0.0,
+          "pde": 0.04163081168405024,
+          "total": 0.0570906222249849
+        },
+        {
+          "step": 1500,
+          "data": 0.00040506804446715963,
+          "initial": 0.0,
+          "pde": 0.041404076244062005,
+          "total": 0.061657478467419986
+        },
+        {
+          "step": 1599,
+          "data": 0.00030692525851387214,
+          "initial": 0.0,
+          "pde": 0.04140502245707876,
+          "total": 0.05675128538277237
+        }
+      ],
+      "adaptive_collocation": [
+        {
+          "step": 800,
+          "pool_residual_mse": 0.02367514647100802,
+          "selected_residual_mse": 0.026288640109430304,
+          "points": 700
+        },
+        {
+          "step": 1200,
+          "pool_residual_mse": 0.022892383394685727,
+          "selected_residual_mse": 0.02530536669428118,
+          "points": 700
+        }
+      ],
+      "collocation_rule": "half uniform, half residual-energy sampling",
+      "mode": "inverse",
+      "physics_end": 0.8,
+      "parameter_count": 1419
+    },
+    "evaluation_note": "The best graph proposal is supplied as a fixed support. Coefficients are inferred; no structural search."
+  },
+  "generative_pinn_discovery": {
+    "equation": {
+      "terms": [
+        "u_xx",
+        "u_x",
+        "u",
+        "u2"
+      ],
+      "coefficients": [
+        0.012142458053398838,
+        -0.15995702533161216,
+        0.89950596510673,
+        -0.8990505571565891
+      ],
+      "coefficient_dimensions_U_L_T": {
+        "u_xx": [
+          0,
+          2,
+          -1
+        ],
+        "u_x": [
+          0,
+          1,
+          -1
+        ],
+        "u": [
+          0,
+          0,
+          -1
+        ],
+        "u2": [
+          -1,
+          0,
+          -1
+        ]
+      },
+      "expression": "u_t = (0.012142458)*u_xx + (-0.15995703)*u_x + (0.89950597)*u + (-0.89905056)*u2"
+    },
+    "data_loss": 2.9575793973239477e-05,
+    "validation_data_loss": 4.052982976310103e-05,
+    "pde_residual_mse": 5.774519055758728e-05,
+    "balance_rms": 0.00352081031035242,
+    "parameter_relative_error": 0.0008423174865506689,
+    "boundary_loss": 3.3971525262947533e-32,
+    "dimensional_consistency": true,
+    "support_exact": true,
+    "coefficient_errors": {
+      "u_xx": 0.011871504449903104,
+      "u_x": 0.00026859167742403905,
+      "u": 0.0005489276591889395,
+      "u2": 0.001054936492678799
+    },
+    "prediction_relative_error": 0.0017263451910947772,
+    "ood_relative_error": 0.010862410231284115,
+    "initial_loss": 5.428304932855448e-06,
+    "minimum_prediction": 0.1737820013467204
+  },
+  "comparability": "Same observation split and reference. RAG arms propose support; coefficients and rollouts are fitted by a common evaluator. The predefined PINN fixes the best graph support; the full engine searches support."
+}

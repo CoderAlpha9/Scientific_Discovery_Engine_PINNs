@@ -1,0 +1,8 @@
+{
+  "command": "python -m pytest -q",
+  "exit_code": 0,
+  "passed": 28,
+  "seconds": 7.02,
+  "python": "3.12.14",
+  "output": "............................ [100%]\n28 passed in 7.02s\n"
+}

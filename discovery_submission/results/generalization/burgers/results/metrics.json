@@ -1,0 +1,366 @@
+{
+  "inverse": {
+    "data_loss": 6.7940725145799574e-06,
+    "validation_data_loss": 6.697347162261026e-06,
+    "pde_residual_mse": 4.7716628732816016e-05,
+    "balance_rms": 0.0016278982263278389,
+    "parameter_relative_error": 0.002442595324948805,
+    "boundary_loss": 3.570016482278779e-32,
+    "dimensional_consistency": true,
+    "support_exact": true,
+    "coefficient_errors": {
+      "u_xx": 0.009943980079281179,
+      "u*u_x": 0.0022923525501404585
+    },
+    "prediction_relative_error": 0.0012555743769080054,
+    "ood_relative_error": 0.03248976701230613,
+    "initial_loss": 2.245089891567825e-06,
+    "minimum_prediction": 0.17479001429693197
+  },
+  "uncertainty": {
+    "method": "bootstrap ensemble with calibration on reserved noisy sensors",
+    "members": 3,
+    "nominal_coverage": 0.9,
+    "calibration_size": 36,
+    "calibration_multiplier": 1.3728864689882834,
+    "clean_reference_coverage_id": 1.0,
+    "clean_reference_coverage_ood": 0.5958984375,
+    "independent_noisy_coverage_id": 0.8199266975308642,
+    "independent_noisy_coverage_ood": 0.5337890625,
+    "calibration_rank": 34,
+    "mean_interval_width": 0.010730246410456813,
+    "coefficient_mean": [
+      0.034683338689846015,
+      -0.3990311397239275
+    ],
+    "coefficient_std": [
+      8.928820795047002e-05,
+      4.508174203189976e-05
+    ],
+    "coefficient_percentile_interval": [
+      [
+        0.03461777361818188,
+        -0.39907559753611044
+      ],
+      [
+        0.03477086835634475,
+        -0.3990025685393671
+      ]
+    ],
+    "interpretation": "Approximate predictive intervals. Clean-reference coverage is empirical; no OOD coverage guarantee."
+  },
+  "training": {
+    "ensemble": [
+      {
+        "seed": 35,
+        "seconds": 7.362213607000285,
+        "train_data_loss": 7.600490921513218e-06,
+        "train_initial_loss": 0.0,
+        "train_pde_loss": 3.7335118696368985e-05,
+        "final_objective": 0.0015268062339149602,
+        "history": [
+          {
+            "step": 0,
+            "data": 1.0144789307759556,
+            "initial": 0.0,
+            "pde": 0.0,
+            "total": 50.72394653879778
+          },
+          {
+            "step": 100,
+            "data": 0.0013337633026229054,
+            "initial": 0.0,
+            "pde": 0.08238308217677448,
+            "total": 0.06668816513114527
+          },
+          {
+            "step": 200,
+            "data": 0.00047881762746944444,
+            "initial": 0.0,
+            "pde": 0.03501470601735291,
+            "total": 0.023940881373472223
+          },
+          {
+            "step": 300,
+            "data": 0.00022978890477350257,
+            "initial": 0.0,
+            "pde": 0.021804184553271582,
+            "total": 0.01148944523867513
+          },
+          {
+            "step": 400,
+            "data": 0.00014714540450982465,
+            "initial": 0.0,
+            "pde": 0.01576739968178925,
+            "total": 0.023124669907280484
+          },
+          {
+            "step": 500,
+            "data": 0.0001235021888968961,
+            "initial": 0.0,
+            "pde": 0.005974997453399857,
+            "total": 0.01215010689824466
+          },
+          {
+            "step": 600,
+            "data": 8.752579523757855e-05,
+            "initial": 0.0,
+            "pde": 0.004324921877997911,
+            "total": 0.00870121163987684
+          },
+          {
+            "step": 700,
+            "data": 6.530167097522604e-05,
+            "initial": 0.0,
+            "pde": 0.003188231502438257,
+            "total": 0.00645331505119956
+          },
+          {
+            "step": 800,
+            "data": 5.2646782674797596e-05,
+            "initial": 0.0,
+            "pde": 0.0054042519209750485,
+            "total": 0.008036591054714928
+          },
+          {
+            "step": 900,
+            "data": 5.040133125806068e-05,
+            "initial": 0.0,
+            "pde": 0.003142586717926617,
+            "total": 0.005662653280829651
+          },
+          {
+            "step": 1000,
+            "data": 4.544505668596667e-05,
+            "initial": 0.0,
+            "pde": 0.002444182325931875,
+            "total": 0.004716435160230208
+          },
+          {
+            "step": 1100,
+            "data": 4.2337144605887694e-05,
+            "initial": 0.0,
+            "pde": 0.0019709238901226113,
+            "total": 0.004087781120416996
+          },
+          {
+            "step": 1200,
+            "data": 3.990657663182243e-05,
+            "initial": 0.0,
+            "pde": 0.0017953711882905774,
+            "total": 0.003790700019881699
+          },
+          {
+            "step": 1300,
+            "data": 3.770854022995938e-05,
+            "initial": 0.0,
+            "pde": 0.0012761218520981224,
+            "total": 0.0031615488635960915
+          },
+          {
+            "step": 1400,
+            "data": 3.627118879397124e-05,
+            "initial": 0.0,
+            "pde": 0.001098285891199317,
+            "total": 0.002911845330897879
+          },
+          {
+            "step": 1500,
+            "data": 3.5200530092439e-05,
+            "initial": 0.0,
+            "pde": 0.000954843340446858,
+            "total": 0.002714869845068808
+          },
+          {
+            "step": 1599,
+            "data": 3.438952070356182e-05,
+            "initial": 0.0,
+            "pde": 0.0008375386514699968,
+            "total": 0.0025570146866480876
+          }
+        ],
+        "adaptive_collocation": [
+          {
+            "step": 800,
+            "pool_residual_mse": 0.0011676823070090887,
+            "selected_residual_mse": 0.0022339116515501054,
+            "points": 700
+          },
+          {
+            "step": 1200,
+            "pool_residual_mse": 0.0004333053377587294,
+            "selected_residual_mse": 0.0007421379822826727,
+            "points": 700
+          }
+        ],
+        "collocation_rule": "half uniform, half residual-energy sampling",
+        "mode": "inverse",
+        "physics_end": 0.8,
+        "parameter_count": 1419
+      },
+      {
+        "seed": 49,
+        "seconds": 7.157662780999999,
+        "train_data_loss": 6.1814679422443055e-06,
+        "train_initial_loss": 0.0,
+        "train_pde_loss": 6.42921136102405e-05,
+        "final_objective": 0.001323826272530832,
+        "history": [
+          {
+            "step": 0,
+            "data": 0.9947110676586999,
+            "initial": 0.0,
+            "pde": 0.0,
+            "total": 49.735553382934995
+          },
+          {
+            "step": 100,
+            "data": 0.0016735886610348579,
+            "initial": 0.0,
+            "pde": 0.09655375256847522,
+            "total": 0.0836794330517429
+          },
+          {
+            "step": 200,
+            "data": 0.0005463523279367529,
+            "initial": 0.0,
+            "pde": 0.044692219509032134,
+            "total": 0.027317616396837646
+          },
+          {
+            "step": 300,
+            "data": 0.00019346237480809795,
+            "initial": 0.0,
+            "pde": 0.02466782641906561,
+            "total": 0.009673118740404898
+          },
+          {
+            "step": 400,
+            "data": 0.00011020757873736377,
+            "initial": 0.0,
+            "pde": 0.016726072581675914,
+            "total": 0.0222364515185441
+          },
+          {
+            "step": 500,
+            "data": 0.00011088738057120156,
+            "initial": 0.0,
+            "pde": 0.00774596206590585,
+            "total": 0.013290331094465927
+          },
+          {
+            "step": 600,
+            "data": 9.124340861280277e-05,
+            "initial": 0.0,
+            "pde": 0.006216258612464191,
+            "total": 0.010778429043104328
+          },
+          {
+            "step": 700,
+            "data": 7.715790590192579e-05,
+            "initial": 0.0,
+            "pde": 0.005215594154478155,
+            "total": 0.009073489449574444
+          },
+          {
+            "step": 800,
+            "data": 6.602003904545801e-05,
+            "initial": 0.0,
+            "pde": 0.00726730485009783,
+            "total": 0.01056830680237073
+          },
+          {
+            "step": 900,
+            "data": 6.526429951525996e-05,
+            "initial": 0.0,
+            "pde": 0.005186229842949072,
+            "total": 0.00844944481871207
+          },
+          {
+            "step": 1000,
+            "data": 5.729092840239667e-05,
+            "initial": 0.0,
+            "pde": 0.004363412380028919,
+            "total": 0.007227958800148752
+          },
+          {
+            "step": 1100,
+            "data": 5.173663542909125e-05,
+            "initial": 0.0,
+            "pde": 0.003727893336387191,
+            "total": 0.006314725107841753
+          },
+          {
+            "step": 1200,
+            "data": 4.7524234974377095e-05,
+            "initial": 0.0,
+            "pde": 0.0038958528556767087,
+            "total": 0.006272064604395564
+          },
+          {
+            "step": 1300,
+            "data": 4.462273750426454e-05,
+            "initial": 0.0,
+            "pde": 0.0032499888678803215,
+            "total": 0.005481125743093548
+          },
+          {
+            "step": 1400,
+            "data": 4.181474156235157e-05,
+            "initial": 0.0,
+            "pde": 0.0028468484895258607,
+            "total": 0.004937585567643439
+          },
+          {
+            "step": 1500,
+            "data": 3.9127876788023e-05,
+            "initial": 0.0,
+            "pde": 0.002457106756318754,
+            "total": 0.004413500595719904
+          },
+          {
+            "step": 1599,
+            "data": 3.65232758017754e-05,
+            "initial": 0.0,
+            "pde": 0.0020563539093517978,
+            "total": 0.003882517699440568
+          }
+        ],
+        "adaptive_collocation": [
+          {
+            "step": 800,
+            "pool_residual_mse": 0.0016794969774635998,
+            "selected_residual_mse": 0.0030040266844316666,
+            "points": 700
+          },
+          {
+            "step": 1200,
+            "pool_residual_mse": 0.0009087247647408734,
+            "selected_residual_mse": 0.0016103970011543682,
+            "points": 700
+          }
+        ],
+        "collocation_rule": "half uniform, half residual-energy sampling",
+        "mode": "inverse",
+        "physics_end": 0.8,
+        "parameter_count": 1419
+      }
+    ]
+  },
+  "experiment": {
+    "example": "burgers",
+    "title": "Nonlinear transport",
+    "seed": 23,
+    "sensors": 24,
+    "noise_rms_fraction": 0.005,
+    "length": 1.0,
+    "observation_end": 0.8,
+    "prediction_end": 1.2,
+    "boundary": "periodic",
+    "training_points": 450,
+    "selection_points": 114,
+    "calibration_points": 36,
+    "origin": "software-generated controlled observations"
+  },
+  "seconds": 53.30429648399968
+}
